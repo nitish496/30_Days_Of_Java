@@ -181,6 +181,25 @@ It motivates me to continue improving this project and helps others discover it.
 
 ---
 
+# 📄 License
+
+This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** License.
+
+You are welcome to:
+
+- 📖 Learn from this repository.
+- 🔄 Share the content with proper attribution.
+- 🛠️ Adapt the material for personal and educational purposes.
+
+You may **not**:
+
+- 💰 Sell this course or any part of it.
+- 📦 Redistribute it commercially without permission.
+
+For the complete license terms, see the **LICENSE** file.
+
+---
+
 <div align="center">
 
 ## Happy Coding! ☕
