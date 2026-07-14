@@ -1,4 +1,8 @@
-//example 1:
+/*
+===========================================
+        DAY 01 - INTRODUCTION TO JAVA
+===========================================
+*/
 public class Main{
     public static void main(String[]args){
         //program 1
