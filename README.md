@@ -1,14 +1,15 @@
 <div align="center">
 
-# 🐍 30 Days of Python
+# ☕ 30 Days of Java
 
-### Learn • Practice • Revise • Build Consistency
+### Learn • Build • Revise • Grow
 
-A structured **30-day Python learning journey** designed for beginners, students, and anyone looking to strengthen or refresh their Python fundamentals.
+A structured **30-day Java learning journey** designed for beginners, students, and anyone who wants to build a strong foundation in Java through hands-on coding, clear explanations, and daily practice.
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![Days](https://img.shields.io/badge/Challenge-30%20Days-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-21+-orange?style=for-the-badge&logo=openjdk)
+![Challenge](https://img.shields.io/badge/Challenge-30%20Days-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 </div>
 
@@ -16,151 +17,172 @@ A structured **30-day Python learning journey** designed for beginners, students
 
 # 📖 About This Repository
 
-Learning Python can feel overwhelming when jumping between different tutorials and resources.
+Learning Java can feel overwhelming because there are countless tutorials, books, and courses available. This repository organizes the learning process into **30 structured days**, making it easier to build concepts step by step.
 
-This repository provides a **structured day-by-day roadmap**, documenting concepts, code, notes, and practice exercises completed throughout a 30-day challenge.
+Each day contains:
 
-The objective isn't just to complete 30 days—it's to create a resource that anyone can revisit to quickly understand or revise Python fundamentals.
+- 📚 Beginner-friendly notes
+- ☕ Java code examples
+- 💡 Important concepts
+- ⚠️ Common mistakes
+- ❓ Interview questions
+- 💪 Practice problems
+- 📝 Quick revision notes
 
-Whether you're learning Python for the first time or brushing up before interviews, exams, or projects, this repository is designed to be a practical reference.
+This repository serves both as a **learning journal** and as a **revision guide** for anyone preparing for interviews, exams, or programming fundamentals.
 
 ---
 
 # 🎯 Objectives
 
-- Build a strong Python foundation
-- Practice writing clean and readable code
-- Develop consistency through daily coding
-- Document key concepts with concise notes
-- Create a beginner-friendly revision guide
-- Share a complete learning journey publicly
+- Build a strong foundation in Java.
+- Learn by writing code every day.
+- Develop consistency and problem-solving skills.
+- Create high-quality notes for future revision.
+- Share a beginner-friendly learning resource with the community.
 
 ---
 
-# 👥 Who Is This Repository For?
+# 👨‍💻 Who Is This Repository For?
 
-This repository is suitable for:
+This repository is perfect for:
 
-- 🌱 Complete beginners starting Python
-- 🎓 Students preparing for coursework or exams
-- 💼 Developers revising Python fundamentals
-- 💻 Anyone looking for a structured learning path
+- 🌱 Beginners learning Java for the first time.
+- 🎓 College students.
+- 💼 Developers revising Java fundamentals.
+- 🧠 Students preparing for coding interviews.
+- 🚀 Anyone who enjoys learning by building.
 
 ---
 
 # 📂 Repository Structure
 
 ```text
-30-days-of-python/
+30-Days-of-Java/
 │
 ├── README.md
+├── .gitignore
 │
 ├── Day01/
-│   ├── main.py
-│   └── notes.md
+│   ├── Main.java
+│   ├── notes.md
+│   └── images/
 │
 ├── Day02/
-│   ├── main.py
-│   └── notes.md
-│
-├── Day03/
-│   ├── main.py
-│   └── notes.md
+│   ├── Main.java
+│   ├── notes.md
+│   └── images/
 │
 ...
 │
 └── Day30/
-    ├── main.py
-    └── notes.md
+    ├── Main.java
+    ├── notes.md
+    └── images/
 ```
 
-Each day's folder contains:
-
-| File | Description |
-|------|-------------|
-| `main.py` | Python programs and practice exercises |
-| `notes.md` | Concepts learned, explanations, and revision notes |
-
 ---
 
-# 📅 Learning Progress
+# 📅 30-Day Roadmap
 
 | Day | Topic | Status |
-|:---:|------------------------------|:------:|
-| 01 | Introduction & Variables | ✅ |
-| 02 | Data Types | ⬜ |
+|:---:|-------------------------------|:------:|
+| 01 | Introduction, JDK, JVM & JRE | ⬜ |
+| 02 | Variables & Data Types | ⬜ |
 | 03 | Operators | ⬜ |
-| 04 | Conditional Statements | ⬜ |
-| 05 | Loops | ⬜ |
-| 06 | Functions | ⬜ |
-| 07 | Lists | ⬜ |
-| 08 | Tuples | ⬜ |
-| 09 | Dictionaries | ⬜ |
-| 10 | Sets | ⬜ |
-| ... | ... | ... |
-| 30 | Final Python Project | ⬜ |
+| 04 | Input & Output | ⬜ |
+| 05 | Conditional Statements | ⬜ |
+| 06 | Loops | ⬜ |
+| 07 | Pattern Printing | ⬜ |
+| 08 | Methods | ⬜ |
+| 09 | Arrays | ⬜ |
+| 10 | Strings | ⬜ |
+| 11 | ArrayList | ⬜ |
+| 12 | 2D Arrays | ⬜ |
+| 13 | OOP Basics | ⬜ |
+| 14 | Classes & Objects | ⬜ |
+| 15 | Constructors | ⬜ |
+| 16 | Encapsulation | ⬜ |
+| 17 | Inheritance | ⬜ |
+| 18 | Polymorphism | ⬜ |
+| 19 | Abstraction | ⬜ |
+| 20 | Interfaces | ⬜ |
+| 21 | Exception Handling | ⬜ |
+| 22 | File Handling | ⬜ |
+| 23 | Collections Framework | ⬜ |
+| 24 | Generics | ⬜ |
+| 25 | Lambda Expressions | ⬜ |
+| 26 | Streams API | ⬜ |
+| 27 | Mini Project 1 | ⬜ |
+| 28 | Mini Project 2 | ⬜ |
+| 29 | DSA Preparation | ⬜ |
+| 30 | Final Project | ⬜ |
 
 ---
 
-# 📚 What You'll Learn
+# 📚 Daily Learning Format
 
-- Python Syntax
-- Variables & Data Types
-- Operators
-- Conditional Statements
-- Loops
-- Functions
-- Strings
-- Lists
-- Tuples
-- Dictionaries
-- Sets
-- File Handling
-- Exception Handling
-- Object-Oriented Programming
-- Modules & Packages
-- NumPy
-- Pandas
-- Matplotlib
-- APIs
-- Mini Projects
+Every day's folder follows the same structure.
+
+### ☕ Main.java
+
+Contains all the Java programs and examples covered on that day.
+
+### 📝 notes.md
+
+Contains:
+
+- Theory
+- Concepts
+- Syntax
+- Real-world examples
+- Common mistakes
+- Practice questions
+- Interview questions
+- Quick revision
 
 ---
 
-# 💡 Why This Repository?
+# 🚀 Learning Workflow
 
-Instead of simply uploading code every day, this repository documents:
-
-- ✔️ Concepts learned
-- ✔️ Practice programs
-- ✔️ Personal notes
-- ✔️ Common mistakes
-- ✔️ Daily progress
-
-The goal is to make learning transparent while creating a resource that others can learn from.
+```text
+Learn
+   ↓
+Write Notes
+   ↓
+Write Java Code
+   ↓
+Practice Problems
+   ↓
+Review
+   ↓
+Commit
+   ↓
+Push to GitHub
+```
 
 ---
 
 # 🤝 Contributions
 
-Suggestions, improvements, and corrections are always welcome.
+Suggestions, corrections, and improvements are always welcome.
 
-If you find an error or have a better explanation for a concept, feel free to open an issue or submit a pull request.
+If you notice an error or have a better explanation, feel free to open an issue or submit a pull request.
 
 ---
 
 # ⭐ Support
 
-If this repository helps you learn Python or revise important concepts, consider giving it a **⭐ Star**.
+If this repository helps you learn or revise Java, consider giving it a **⭐ Star**.
 
-It helps others discover the project and motivates continued improvements.
+It motivates me to continue improving this project and helps others discover it.
 
 ---
 
 <div align="center">
 
-### Thank you for visiting!
+## Happy Coding! ☕
 
-**Happy Coding! 🚀**
+**Learning one day at a time.**
 
 </div>
