@@ -157,10 +157,6 @@ Write Java Code
 Practice Problems
    ↓
 Review
-   ↓
-Commit
-   ↓
-Push to GitHub
 ```
 
 ---
