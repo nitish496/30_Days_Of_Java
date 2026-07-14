@@ -1,5 +1,7 @@
 <div align="center">
+> This repository documents my personal journey of learning Java while building a beginner-friendly course for anyone who wants to learn alongside me.
 
+> Every explanation, example, and note has been written and refined as part of my own learning process.
 # ☕ 30 Days of Java
 
 ### Learn • Build • Revise • Grow
