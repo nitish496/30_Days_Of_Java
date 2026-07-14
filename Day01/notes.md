@@ -339,11 +339,7 @@ multi-line comment.
 
 ---
 
-# 🪞 Daily Reflection
-
-- What was the most surprising thing I learned today about how Java works under the hood?
-- Can I comfortably explain the journey from writing code to seeing it run on the screen?
-- Did I run into any errors while installing Java, and how did I fix them?
+> *"First, solve the problem. Then, write the code." — John Johnson*
 
 ---
 
