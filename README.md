@@ -90,7 +90,7 @@ This repository is perfect for:
 | Day | Topic | Status |
 |:---:|-------------------------------|:------:|
 | 01 | Introduction, JDK, JVM & JRE | ✅ |
-| 02 | Variables & Data Types | ⬜ |
+| 02 | Variables & Data Types | ✅ |
 | 03 | Operators | ⬜ |
 | 04 | Input & Output | ⬜ |
 | 05 | Conditional Statements | ⬜ |
