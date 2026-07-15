@@ -85,8 +85,8 @@ System.out.println();
 
 System.out.println("isStudent && hasID : " + (isStudent && hasID));//both statements must be true
 System.out.println("isStudent || hasID : " + (isStudent || hasID));//reverse's the result
-System.out.println("!isStudent         : " + (!isStudent));
-System.out.println("!hasID             : " + (!hasID));
+System.out.println("!isStudent         : " + (!isStudent));//filps the result
+System.out.println("!hasID             : " + (!hasID));//filps the resilt
 
 System.out.println();
 
