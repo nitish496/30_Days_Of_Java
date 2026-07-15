@@ -53,5 +53,24 @@ System.out.println("After %= 3    : " + number);
 
 System.out.println();
 
+
+// =========================================
+// Program 3 - Relational Operators
+// =========================================
+
+int x = 20;
+int y = 10;
+
+System.out.println("========== RELATIONAL OPERATORS ==========");
+System.out.println();
+
+System.out.println("x == y : " + (x == y));
+System.out.println("x != y : " + (x != y));
+System.out.println("x > y  : " + (x > y));
+System.out.println("x < y  : " + (x < y));
+System.out.println("x >= y : " + (x >= y));
+System.out.println("x <= y : " + (x <= y));
+
+System.out.println();
     }
 }
