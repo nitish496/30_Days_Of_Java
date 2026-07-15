@@ -72,5 +72,23 @@ System.out.println("x >= y : " + (x >= y));
 System.out.println("x <= y : " + (x <= y));
 
 System.out.println();
+
+// =========================================
+// Program 4 - Logical Operators
+// =========================================
+
+boolean isStudent = true;
+boolean hasID = false;
+
+System.out.println("========== LOGICAL OPERATORS ==========");
+System.out.println();
+
+System.out.println("isStudent && hasID : " + (isStudent && hasID));//both statements must be true
+System.out.println("isStudent || hasID : " + (isStudent || hasID));//reverse's the result
+System.out.println("!isStudent         : " + (!isStudent));
+System.out.println("!hasID             : " + (!hasID));
+
+System.out.println();
+
     }
 }
