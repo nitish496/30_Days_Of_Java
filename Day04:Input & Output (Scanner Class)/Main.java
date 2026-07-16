@@ -35,6 +35,22 @@ public class Main {
         int age = input.nextInt();
 
         System.out.println("Your age is: " + age);
+        
+// =========================================
+// Program 2 - Reading a Double
+// =========================================
+
+System.out.println("========== DOUBLE INPUT ==========");
+System.out.println();
+
+System.out.print("Enter your CGPA: ");
+
+double cgpa = input.nextDouble();
+
+System.out.println("Your CGPA is: " + cgpa);
+
+System.out.println();
+      
 
     }
 }
