@@ -9,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // =========================================
+    // =========================================
         // Program 1 - Arithmetic Operators
-        // =========================================
+   // =========================================
 
         int a = 10;
         int b = 10;
@@ -89,6 +89,28 @@ System.out.println("!isStudent         : " + (!isStudent));//filps the result
 System.out.println("!hasID             : " + (!hasID));//filps the resilt
 
 System.out.println();
+
+// =========================================
+// Program 5 - Unary Operators
+// =========================================
+
+int num = 10;
+
+System.out.println("========== UNARY OPERATORS ==========");
+System.out.println();
+
+System.out.println("Initial Value : " + num);
+
+num++;
+System.out.println("After ++      : " + num);
+
+num--;
+System.out.println("After --      : " + num);
+
+System.out.println();
+
+
+
 
     }
 }
