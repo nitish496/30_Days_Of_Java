@@ -89,9 +89,9 @@ This repository is perfect for:
 
 | Day | Topic | Status |
 |:---:|-------------------------------|:------:|
-| 01 | Introduction, JDK, JVM & JRE | ✅ |
-| 02 | Variables & Data Types | ✅ |
-| 03 | Operators | ⬜ |
+| 01 | Introduction, JDK, JVM & JRE | ✅ Completed |
+| 02 | Variables & Data Types | ✅ Completed |
+| 03 | Operators | ✅ Completed  |
 | 04 | Input & Output | ⬜ |
 | 05 | Conditional Statements | ⬜ |
 | 06 | Loops | ⬜ |
