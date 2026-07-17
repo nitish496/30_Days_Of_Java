@@ -62,6 +62,20 @@ public class Main {
       }else{
         System.out.println("Grade:F");
       }
+      //program-4:
+
+      System.out.println("Did you pass the driving test (true/false):");
+      boolean DrivingTest=input.nextBoolean();
+      if(age>=18){
+        if(DrivingTest){
+            System.out.println("Your approved for driving license");
+        }else{
+            System.out.println("U did not passed your driving test BETTER LUCK NEXT TIME");
+        }
+      }else{
+        System.out.println("You are not eligible for Driving test");
+      }
+
         input.close();
     }
 }
