@@ -105,7 +105,7 @@ public class Main {
         }
 
 
-        System.out.println("Menu")
+        System.out.println("Menu");
         System.out.println("1.tea");
         System.out.println("2.coffee");
         System.out.println("3.cool drink");
@@ -127,6 +127,25 @@ public class Main {
                 System.out.println("You choose cold coffee");
                 break;
         }
+        System.out.println();
+
+System.out.println("Menu");
+System.out.println("1. Pizza");
+System.out.println("2. Burger");
+System.out.println("3. Sandwich");
+System.out.println("4. Pasta");
+
+System.out.print("\nEnter your choice: ");
+int food = input.nextInt();
+
+switch(food){
+    case 1 ->System.out.println("You choose pizza");
+    case 2 ->System.out.println("You choose burger");
+    case 3 -> System.out.println("You choose sandwich");
+    case 4 -> System.out.println("You choose pasta");
+    
+}
+System.out.println();
         input.close();
     }
 }
