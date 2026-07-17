@@ -93,7 +93,7 @@ This repository is perfect for:
 | 02 | Variables & Data Types | ✅ Completed |
 | 03 | Operators | ✅ Completed  |
 | 04 | Input & Output | ✅ Completed  |
-| 05 | Conditional Statements | ⬜ |
+| 05 | Conditional Statements |  ✅ Completed  |
 | 06 | Loops | ⬜ |
 | 07 | Pattern Printing | ⬜ |
 | 08 | Methods | ⬜ |
