@@ -104,48 +104,79 @@ public class Main {
             System.out.println("You are not eligible to apply for a driving license.");
         }
 
-
-        System.out.println("Menu");
-        System.out.println("1.tea");
-        System.out.println("2.coffee");
-        System.out.println("3.cool drink");
-        System.out.println("4.cold coffee");
-        System.out.println("choose your drink:");
-
-        int inner= input.nextInt();
-        switch(inner){
-            case 1:
-                System.out.println("You choose tea");
-                break;
-            case 2:
-                System.out.println("You choose coffee");
-                break;
-            case 3:
-                System.out.println("You choose cool drink");
-                break;
-            case 4:
-                System.out.println("You choose cold coffee");
-                break;
-        }
         System.out.println();
 
-System.out.println("Menu");
-System.out.println("1. Pizza");
-System.out.println("2. Burger");
-System.out.println("3. Sandwich");
-System.out.println("4. Pasta");
+        // =========================================
+        // Program 5 - switch Statement
+        // =========================================
 
-System.out.print("\nEnter your choice: ");
-int food = input.nextInt();
+        System.out.println("========== SWITCH STATEMENT ==========");
+        System.out.println();
 
-switch(food){
-    case 1 ->System.out.println("You choose pizza");
-    case 2 ->System.out.println("You choose burger");
-    case 3 -> System.out.println("You choose sandwich");
-    case 4 -> System.out.println("You choose pasta");
-    
-}
-System.out.println();
+        System.out.println("Menu");
+        System.out.println("1. Tea");
+        System.out.println("2. Coffee");
+        System.out.println("3. Cool Drink");
+        System.out.println("4. Cold Coffee");
+
+        System.out.print("Enter your choice: ");
+        int drinkChoice = input.nextInt();
+
+        switch (drinkChoice) {
+
+            case 1:
+                System.out.println("You selected Tea.");
+                break;
+
+            case 2:
+                System.out.println("You selected Coffee.");
+                break;
+
+            case 3:
+                System.out.println("You selected Cool Drink.");
+                break;
+
+            case 4:
+                System.out.println("You selected Cold Coffee.");
+                break;
+
+            default:
+                System.out.println("Invalid Choice!");
+        }
+
+        System.out.println();
+
+        // =========================================
+        // Program 6 - Switch Expression
+        // =========================================
+
+        System.out.println("========== SWITCH EXPRESSION ==========");
+        System.out.println();
+
+        System.out.println("Menu");
+        System.out.println("1. Pizza");
+        System.out.println("2. Burger");
+        System.out.println("3. Sandwich");
+        System.out.println("4. Pasta");
+
+        System.out.print("Enter your choice: ");
+        int foodChoice = input.nextInt();
+
+        switch (foodChoice) {
+
+            case 1 -> System.out.println("You selected Pizza.");
+
+            case 2 -> System.out.println("You selected Burger.");
+
+            case 3 -> System.out.println("You selected Sandwich.");
+
+            case 4 -> System.out.println("You selected Pasta.");
+
+            default -> System.out.println("Invalid Choice!");
+        }
+
+        System.out.println();
+
         input.close();
     }
 }
@@ -155,7 +186,7 @@ System.out.println();
 End of Day 05
 
 Next Topic:
-switch Statement
+Loops
 
 ==========================================
 */
