@@ -92,7 +92,7 @@ This repository is perfect for:
 | 01 | Introduction, JDK, JVM & JRE | ✅ Completed |
 | 02 | Variables & Data Types | ✅ Completed |
 | 03 | Operators | ✅ Completed  |
-| 04 | Input & Output | ⬜ |
+| 04 | Input & Output | ✅ Completed  |
 | 05 | Conditional Statements | ⬜ |
 | 06 | Loops | ⬜ |
 | 07 | Pattern Printing | ⬜ |
