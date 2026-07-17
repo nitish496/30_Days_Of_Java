@@ -36,7 +36,15 @@ public class Main {
         if (age >= 18) {
             System.out.println("You are eligible to vote.");
         }
+      //program-2:
+      System.out.println("Enter your marks:");
+      int marks = input.nextInt();
 
+      if(marks>=40){
+        System.out.println("Pass");
+      }else{
+        System.out.println("Fail");
+      }
         input.close();
     }
 }
