@@ -9,6 +9,21 @@ for(int row =1;row<=5;row++){
         System.out.print("*");
     }
     System.out.println();
+
+    //program-2:inverted star triangle
+    for(int i =5; i>=1;i--){
+        for(int j =1;j<=i;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    //program-3:Number triangle
+    for(int q=1;q<=5;q++){
+        for(int w=1;w<=q;w++){
+            System.out.print(w+" ");
+        }
+        System.out.println();
+    }
 }
  } 
 }
