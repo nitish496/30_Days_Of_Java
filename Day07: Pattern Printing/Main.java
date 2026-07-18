@@ -56,7 +56,21 @@ for(int row =1;row<=5;row++){
         System.out.println();
     }
     System.out.println();
-   
+  
+
+   for (int c = 1; c <= 5; c++) {
+
+    char alphabet = 'A';
+
+    for (int v = 1; v <= c; v++) {
+        System.out.print(alphabet + " ");
+        alphabet++;
+    }
+
+    System.out.println();
+}
+
+System.out.println();
    
 
  } 
