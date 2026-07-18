@@ -42,7 +42,14 @@ public class Main{
         System.out.println(q);
       }
       System.out.println();
-      
+
+      //program-7:continue
+      for(int m=1;i<=10;i++){
+       if(m==7){
+        continue;
+       }
+       System.out.println(m);
+      }
     }
 
 }
