@@ -66,9 +66,23 @@ public class Main {
       }
       }System.out.println("Min:"+min);
    
+      System.out.println();
+     //program-7:linear search
+      int numa[] = {10,20,30,40,50};
+      boolean found = false;
+      int target = 30;
+      for(int w=0;w<numa.length;w++){
+     if(numa[w]==target){
+      System.out.println("Target has been found at index "+w);
+      found = true;
+      break;
+     }
+    }
+    if(!found){
+        System.out.println("Target has not been found");
+    }
     }
 }
-
 /*
 ==========================================
 End of Program 1
