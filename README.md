@@ -94,7 +94,7 @@ This repository is perfect for:
 | 03 | Operators | ✅ Completed  |
 | 04 | Input & Output | ✅ Completed  |
 | 05 | Conditional Statements |  ✅ Completed  |
-| 06 | Loops | ⬜ |
+| 06 | Loops | ✅ Completed |
 | 07 | Pattern Printing | ⬜ |
 | 08 | Methods | ⬜ |
 | 09 | Arrays | ⬜ |
