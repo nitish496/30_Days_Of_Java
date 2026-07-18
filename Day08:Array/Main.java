@@ -24,7 +24,11 @@ public class Main {
         System.out.println("Third Element  : " + numbers[2]);
         System.out.println("Fourth Element : " + numbers[3]);
         System.out.println("Fifth Element  : " + numbers[4]);
-
+       //program-2:
+       int [] arr= {10,20,30,40,50};
+       for(int i=0;i<arr.length;i++){
+        System.out.println(arr[i]);
+       }
     }
 }
 
