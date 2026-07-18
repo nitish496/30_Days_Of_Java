@@ -87,19 +87,33 @@ int arre [] = {10,20,30,40,50};
 for(int y=arre.length-1;y>=0;y--){
     System.out.println(arre[y]);
 }
+
+//program-9:
+int source[]={10,20,30,40,50};
+int destination[]= new int [source.length];
+
+for(int v=0;v<source.length;v++){
+  destination[v]=source[v];
+}
+System.out.println("Copied:");
+for(int v=0;v<destination.length;v++){
+    System.out.println(destination[v]);
+}
 System.out.println();
 //program-10:
-int arrs[] = {10,20,30,40,50};
+int arrs[] = {1,2,3,4,5};
 int evenCount =0;
 int oddCount = 0;
 
 for(int g=0;g<arrs.length;g++){
-    if(arrs%2==0){
-        System.out.println("Even number");
+    if(arrs[g]%2==0){
+       evenCount++;
     }else{
-        System.out.println("Odd number");
+       oddCount++;
     }
 }
+System.out.println("Even odd = "+evenCount);
+System.out.println("Odd count = "+oddCount);
     }
 }
 /*
