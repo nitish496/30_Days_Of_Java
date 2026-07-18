@@ -27,7 +27,18 @@ public class Main{
         System.out.println(even);
        }
        System.out.println();
-     
+     //program-5:
+     System.out.println("Enter the number to multiply:");
+      int num = sc.nextInt();
+      for(int z=0;z<=10;z++){
+        System.out.println(num+"*"+z+" = "+ (num * z));
+      }
+      //program-6:Break
+      for(q=1;q<=10;q++){
+        if(q==6){
+            break;
+        }
+      }
       
     }
 
