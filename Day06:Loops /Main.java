@@ -33,12 +33,15 @@ public class Main{
       for(int z=0;z<=10;z++){
         System.out.println(num+"*"+z+" = "+ (num * z));
       }
+      System.out.println();
       //program-6:Break
-      for(q=1;q<=10;q++){
+      for(int q=1;q<=10;q++){
         if(q==6){
             break;
         }
+        System.out.println(q);
       }
+      System.out.println();
       
     }
 
