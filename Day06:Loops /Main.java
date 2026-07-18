@@ -11,5 +11,16 @@ public class Main{
             i++;
         }
         System.out.println();
+        //program-3
+
+        int number = 1;
+        do{
+            System.out.println("Hello");
+            i++;
+        }while(num<=5);
+       System.out.println();
+
+       //program-4:
     }
 }
+
