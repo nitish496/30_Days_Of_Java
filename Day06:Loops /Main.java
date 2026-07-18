@@ -1,5 +1,7 @@
+import java.util.Scanner;
 public class Main{
     public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
         for(int i=0;i<5;i++){
             System.out.println("Hello");
         }
@@ -16,11 +18,18 @@ public class Main{
         int number = 1;
         do{
             System.out.println("Hello");
-            i++;
-        }while(num<=5);
+            number++;
+        }while(number<=5);
        System.out.println();
 
        //program-4:
+       for(int even=2;even<=10;even+=2){
+        System.out.println(even);
+       }
+       System.out.println();
+     
+      
     }
+
 }
 
