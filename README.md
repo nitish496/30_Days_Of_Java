@@ -95,9 +95,9 @@ This repository is perfect for:
 | 04 | Input & Output | ✅ Completed  |
 | 05 | Conditional Statements |  ✅ Completed  |
 | 06 | Loops | ✅ Completed |
-| 07 | Pattern Printing | ⬜ |
-| 08 | Methods | ⬜ |
-| 09 | Arrays | ⬜ |
+| 07 | Pattern Printing |✅ Completed|
+| 08 | Array | ✅ Completed |
+| 09 | Methods | ⬜ |
 | 10 | Strings | ⬜ |
 | 11 | ArrayList | ⬜ |
 | 12 | 2D Arrays | ⬜ |
