@@ -10,6 +10,7 @@ for(int row =1;row<=5;row++){
     }
     System.out.println();
 }
+  System.out.println();
     //program-2:inverted star triangle
     for(int i =5; i>=1;i--){
         for(int j =1;j<=i;j++){
@@ -23,6 +24,15 @@ for(int row =1;row<=5;row++){
     for(int q=1;q<=5;q++){
         for(int w=1;w<=q;w++){
             System.out.print(w+" ");
+        }
+        System.out.println();
+    }
+    System.out.println();
+    
+    //program-4:Inverted number triangle
+     for(int z=5;z>=1;z--){
+        for(int x =1;x<=z;x++){
+            System.out.print(x+" ");
         }
         System.out.println();
     }
