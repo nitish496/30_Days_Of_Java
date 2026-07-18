@@ -57,6 +57,14 @@ public class Main {
         }
       }
       System.out.println("MAX:"+max);
+      //program-6:
+      int numz[]={10,20,30,40,50};
+      int min = numz[0];
+      for(int d=0;d<numz.length;d++){
+      if(numz[d]<min){
+        min=nums[d];
+      }
+      }System.out.println("Min:"+min);
    
     }
 }
