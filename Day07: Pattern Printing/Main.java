@@ -73,5 +73,17 @@ for(int row =1;row<=5;row++){
 System.out.println();
    
 
+//program-8:
+for(int a =1;a<=5;a++){
+    for(int s=1;s<=5;s++){
+        if(a==1||a== 5||s==1||s==5){
+            System.out.print("*");
+        }else{
+            System.out.print(" ");
+        }
+    }
+    System.out.println();
+}
+System.out.println();
  } 
 }
