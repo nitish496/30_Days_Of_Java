@@ -39,7 +39,7 @@ public class Main {
        }
        System.out.println("Sum:"+sum);
        System.out.println();
-       //program-4:
+          //program-4:
        int summ =0;
       int arrn[]={10,20,30,40,50};
       for(int k=0;k<arr.length;k++){
@@ -49,15 +49,7 @@ public class Main {
       System.out.println("Average:"+avg);
       System.out.println();
 
-      //program-5
-      int[]nums = {10,20,30,40,50};
-      int max = nums[0];
-      for(int f=0;f<nums.length;f++){
-        if(nums[f]>max){
-            max = nums[f];
-        }
-      }
-      System.out.println("MAX:"+max);
+   
     }
 }
 
