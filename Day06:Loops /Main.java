@@ -44,11 +44,20 @@ public class Main{
       System.out.println();
 
       //program-7:continue
-      for(int m=1;i<=10;i++){
+      for(int m=1;m<=10;m++){
        if(m==7){
         continue;
        }
        System.out.println(m);
+      }
+      System.out.println();
+      //program-8:number pattern
+
+      for(int j=1;j<=5;j++){
+        for(int k=1;k<=j;k++){
+            System.out.print("* ");
+        }
+        System.out.println();
       }
     }
 
