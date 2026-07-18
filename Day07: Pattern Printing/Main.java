@@ -28,7 +28,7 @@ for(int row =1;row<=5;row++){
         System.out.println();
     }
     System.out.println();
-    
+
     //program-4:Inverted number triangle
      for(int z=5;z>=1;z--){
         for(int x =1;x<=z;x++){
@@ -36,6 +36,16 @@ for(int row =1;row<=5;row++){
         }
         System.out.println();
     }
+    System.out.println();
+    
+    //program-5:repeated number pattern
+    for(int m=1;m<=5;m++){
+        for(int n=1;n<=m;n++){
+            System.out.print(m+" ");
+        }
+        System.out.println();
+    }
+    System.out.println();
 
    
    
