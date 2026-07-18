@@ -62,7 +62,7 @@ public class Main {
       int min = numz[0];
       for(int d=0;d<numz.length;d++){
       if(numz[d]<min){
-        min=nums[d];
+        min=numz[d];
       }
       }System.out.println("Min:"+min);
    
