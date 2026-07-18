@@ -37,7 +37,7 @@ for(int row =1;row<=5;row++){
         System.out.println();
     }
     System.out.println();
-    
+
     //program-5:repeated number pattern
     for(int m=1;m<=5;m++){
         for(int n=1;n<=m;n++){
@@ -46,7 +46,16 @@ for(int row =1;row<=5;row++){
         System.out.println();
     }
     System.out.println();
-
+    //program-6:
+    int num=1;
+    for(int v=1;v<=5;v++){
+        for(int b=1;b<=v;b++){
+            System.out.print(num+" ");
+            num++;
+        }
+        System.out.println();
+    }
+    System.out.println();
    
    
 
