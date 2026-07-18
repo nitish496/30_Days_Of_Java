@@ -81,6 +81,25 @@ public class Main {
     if(!found){
         System.out.println("Target has not been found");
     }
+    System.out.println();
+    //program-8:
+int arre [] = {10,20,30,40,50};
+for(int y=arre.length-1;y>=0;y--){
+    System.out.println(arre[y]);
+}
+System.out.println();
+
+//program-9:
+int source[]={10,20,30,40,50};
+int destination[]= new int [source.length];
+
+for(int v=0;v<source.length;v++){
+  destination[v]=source[v];
+}
+System.out.println("Copied");
+for(int v=0;v<destination.length;v++){
+    System.out.println(destination[v]);
+}
     }
 }
 /*
