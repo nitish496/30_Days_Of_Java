@@ -31,7 +31,14 @@ public class Main{
         }
     }
     //program-7:
-    
+    public static void EvenOdd(int num6){
+        if(num6%2==0){
+            System.out.println("Even number");
+        }else{
+            System.out.println("Odd number");
+        }
+    }
+
         public static void main(String[] args) {
         printHello();
         System.out.println();
@@ -53,5 +60,12 @@ public class Main{
         MaxNum(10, 20);
         MaxNum(10,10);
         System.out.println();
+        EvenOdd(10);
+        System.out.println();
+        int result1 = addNum(10, 20);
+        System.out.println("Sum = "+result1);
+        System.out.println();
+        int result = findfactorial(5);
+        System.out.println("result:"+result);
     }
 }
