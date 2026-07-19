@@ -3,8 +3,6 @@ public class Main{
     public static void printHello(){
         System.out.println("Hello,Java");
     }
-
-
     //program-2:
     public static void printMessage(){
         System.out.println("Welcome to java");
@@ -18,6 +16,11 @@ public class Main{
     public static void addNumbers(int num1,int num2){
         System.out.println(num1+num2);
     }
+    //program-5:
+    public static void squareNum(int num3){
+        System.out.println(num3*num3);
+    }
+    //program-6:
     
         public static void main(String[] args) {
         printHello();
@@ -35,6 +38,7 @@ public class Main{
         addNumbers(20,30);
         addNumbers(50, 60);
         System.out.println();
-        
+        squareNum(5);
+        System.out.println();
     }
 }
