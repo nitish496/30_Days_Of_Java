@@ -38,6 +38,11 @@ public class Main{
             System.out.println("Odd number");
         }
     }
+    //program-8:
+    public static int addNum(int num7,int num8){
+        int sum = num7+num8;
+        return sum;
+    }
 
         public static void main(String[] args) {
         printHello();
