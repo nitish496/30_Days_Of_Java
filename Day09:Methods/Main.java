@@ -9,7 +9,12 @@ public class Main{
     public static void printMessage(){
         System.out.println("Welcome to java");
     }
-    public static void main(String[] args) {
+
+    //program-3:
+    public static void greet(String name){
+        System.out.println("Hello, "+name+" !");
+    }
+        public static void main(String[] args) {
         printHello();
         System.out.println();
         printMessage();
@@ -17,5 +22,11 @@ public class Main{
         printMessage();
         printMessage();
         printMessage();
+        System.out.println();
+        greet("nitish");
+        greet("ram");
+        greet("king");
+        System.out.println();
+        
     }
 }
