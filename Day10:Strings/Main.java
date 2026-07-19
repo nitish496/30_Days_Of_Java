@@ -27,12 +27,16 @@ public class Main {
 
         System.out.print("Enter the language:");
 
+        //program-3:
         String language = sc.nextLine();
         int length = language.length();
 
         System.out.println("lang :"+language);
         System.out.println("length:"+length);
-
+        //program-4:
+        for(int index=0;index<language;index++){
+         System.out.println(language.charAt(i));
+        }
         sc.close();
 
     }
