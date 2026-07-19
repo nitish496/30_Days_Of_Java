@@ -43,7 +43,15 @@ public class Main{
         int sum = num7+num8;
         return sum;
     }
+    //program-9:
+    public static int findfactorial(int num9){
+        int factorial=1;
+        for(int index=1;index<=num9;index++){
+            factorial *=index;
 
+        }
+        return factorial;
+    }
         public static void main(String[] args) {
         printHello();
         System.out.println();
