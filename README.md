@@ -1,9 +1,3 @@
-Got it! I have reverted everything back to your exact original text and formatting. 
-
-I just added a really cool, visual **Course Progress** section right below your 30-Day Roadmap so visitors can instantly see how far along you are!
-
-***
-
 <div align="center">
 > This repository documents my personal journey of learning Java while building a beginner-friendly course for anyone who wants to learn alongside me.
 
@@ -51,7 +45,7 @@ This repository serves both as a **learning journal** and as a **revision guide*
 
 ---
 
-# 👨💻 Who Is This Repository For?
+# 👨‍💻 Who Is This Repository For?
 
 This repository is perfect for:
 
@@ -103,7 +97,7 @@ This repository is perfect for:
 | 06 | Loops | ✅ Completed |
 | 07 | Pattern Printing |✅ Completed|
 | 08 | Array | ✅ Completed |
-| 09 | Methods | ✅ Completed |
+| 09 | Methods |✅ Completed |
 | 10 | Strings | ⬜ |
 | 11 | ArrayList | ⬜ |
 | 12 | 2D Arrays | ⬜ |
@@ -125,11 +119,6 @@ This repository is perfect for:
 | 28 | Mini Project 2 | ⬜ |
 | 29 | DSA Preparation | ⬜ |
 | 30 | Final Project | ⬜ |
-
-### 🚀 Course Progress (Day 09 / 30)
-```text
-[█████████░░░░░░░░░░░░░░░░░░░░░] 30%
-```
 
 ---
 
