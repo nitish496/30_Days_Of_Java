@@ -1,4 +1,4 @@
-Here is the streamlined version! I have completely stripped out the overwhelming number of extra questions, takeaways, and challenges, leaving only the most essential, high-impact content so it is quick and easy to digest.
+Here is the final, polished version! I have removed Programs 10, 11, and 12, cleaned up the summary table, and added a great motivational quote right at the end for your readers!
 
 ***
 
@@ -236,51 +236,6 @@ public class Program9 {
 ```
 **Output:** `Factorial is: 120`
 
-### 🔟 Calculate Simple Interest (`double`)
-```java
-public class Program10 {
-    public static double calculateSimpleInterest(double p, double r, int t) {
-        return (p * r * t) / 100.0;
-    }
-    public static void main(String[] args) {
-        System.out.println("Interest is: $" + calculateSimpleInterest(1000.0, 5.5, 2));
-    }
-}
-```
-**Output:** `Interest is: $110.0`
-
-### 1️⃣1️⃣ Find Largest of Three Numbers
-```java
-public class Program11 {
-    public static int findLargest(int a, int b, int c) {
-        if (a >= b && a >= c) return a;
-        else if (b >= a && b >= c) return b;
-        else return c;
-    }
-    public static void main(String[] args) {
-        System.out.println("Largest is: " + findLargest(15, 42, 8));
-    }
-}
-```
-**Output:** `Largest is: 42`
-
-### 1️⃣2️⃣ Method Overloading (Intro)
-Same method name, different parameters! (Compile-Time Polymorphism)
-```java
-public class Program12 {
-    public static void add(int a, int b) {
-        System.out.println("Sum of two: " + (a + b));
-    }
-    public static void add(int a, int b, int c) {
-        System.out.println("Sum of three: " + (a + b + c));
-    }
-    public static void main(String[] args) {
-        add(10, 20);      // Calls two-parameter version
-        add(10, 20, 30);  // Calls three-parameter version
-    }
-}
-```
-
 ---
 
 # 🧠 Dry Run: Factorial `findFactorial(5)`
@@ -331,9 +286,7 @@ public class Program12 {
 | **3. Parameters** | Passing Arguments into Parameters. |
 | **4-5. Add / Square** | Internal arithmetic calculations in a `void` method. |
 | **6-7. Max / EvenOdd** | Using conditionals (`if-else`, `%`) inside methods. |
-| **8-10. Returns** | Using the `return` keyword for `int` and `double`. |
-| **11. Largest of 3** | Early exiting using multiple `return` statements. |
-| **12. Overloading** | Using the same method name with different parameters. |
+| **8-9. Returns** | Using the `return` keyword for `int`. |
 
 ---
 
@@ -358,6 +311,12 @@ public class Program12 {
 # 🏆 Conclusion
 
 Absolutely phenomenal job! By mastering **Methods**, you are no longer writing messy, amateur scripts—you are writing modular, professional, and reusable software!
+
+---
+
+> *"First, solve the problem. Then, write the code." — John Johnson*
+
+---
 
 ### 📅 What's Next?
 Tomorrow, in **Day 10 – Strings**, you will learn how to manipulate text, passwords, and sentences like a wizard! 🚀
