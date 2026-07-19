@@ -23,6 +23,15 @@ public class Main {
         String name = sc.nextLine();
 
         System.out.println("Hello, " + name + "!");
+        System.out.println();
+
+        System.out.print("Enter the language:");
+
+        String language = sc.nextLine();
+        int length = language.length();
+
+        System.out.println("lang :"+language);
+        System.out.println("length:"+length);
 
         sc.close();
 
