@@ -34,8 +34,8 @@ public class Main {
         System.out.println("lang :"+language);
         System.out.println("length:"+length);
         //program-4:
-        for(int index=0;index<language;index++){
-         System.out.println(language.charAt(i));
+        for(int index=0;index<language.length();index++){
+         System.out.println(language.charAt(index));
         }
         sc.close();
 
