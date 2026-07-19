@@ -37,6 +37,13 @@ public class Main {
         for(int index=0;index<language.length();index++){
          System.out.println(language.charAt(index));
         }
+        //program-5
+        String firstName = "Nitish";
+        String secName = "Kumar";
+        String fullName = firstName +" "+secName;
+        System.out.println("firstName:"+firstName);
+        System.out.println("lastName:"+secName);
+        System.out.println("fullName:"+fullName);
         sc.close();
 
     }
