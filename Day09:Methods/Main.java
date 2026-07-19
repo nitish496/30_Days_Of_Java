@@ -24,8 +24,10 @@ public class Main{
     public static void MaxNum(int num4,int num5){
         if(num4>num5){
             System.out.println("Maximum number is :"+num4);
-        }else{
+        }else if (num5>num4){
             System.out.println("Maximum number is:"+num5);
+        }else{
+            System.out.println("Both are equal");
         }
     }
     //program-7:
@@ -49,6 +51,7 @@ public class Main{
         squareNum(5);
         System.out.println();
         MaxNum(10, 20);
+        MaxNum(10,10);
         System.out.println();
     }
 }
