@@ -14,6 +14,11 @@ public class Main{
     public static void greet(String name){
         System.out.println("Hello, "+name+" !");
     }
+    //program-4:
+    public static void addNumbers(int num1,int num2){
+        System.out.println(num1+num2);
+    }
+    
         public static void main(String[] args) {
         printHello();
         System.out.println();
@@ -26,6 +31,9 @@ public class Main{
         greet("nitish");
         greet("ram");
         greet("king");
+        System.out.println();
+        addNumbers(20,30);
+        addNumbers(50, 60);
         System.out.println();
         
     }
