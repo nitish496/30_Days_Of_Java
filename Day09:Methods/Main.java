@@ -21,6 +21,14 @@ public class Main{
         System.out.println(num3*num3);
     }
     //program-6:
+    public static void MaxNum(int num4,int num5){
+        if(num4>num5){
+            System.out.println("Maximum number is :"+num4);
+        }else{
+            System.out.println("Maximum number is:"+num5);
+        }
+    }
+    //program-7:
     
         public static void main(String[] args) {
         printHello();
@@ -39,6 +47,8 @@ public class Main{
         addNumbers(50, 60);
         System.out.println();
         squareNum(5);
+        System.out.println();
+        MaxNum(10, 20);
         System.out.println();
     }
 }
