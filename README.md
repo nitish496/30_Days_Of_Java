@@ -97,7 +97,7 @@ This repository is perfect for:
 | 06 | Loops | ✅ Completed |
 | 07 | Pattern Printing |✅ Completed|
 | 08 | Array | ✅ Completed |
-| 09 | Methods | ⬜ |
+| 09 | Methods | ✅ Completed |
 | 10 | Strings | ⬜ |
 | 11 | ArrayList | ⬜ |
 | 12 | 2D Arrays | ⬜ |
