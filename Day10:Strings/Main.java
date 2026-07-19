@@ -7,27 +7,34 @@ Author: Nitish
 ==========================================
 */
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
         // =========================================
-        // Program 1 - Create and Print a String
+        // Program 2 - Take String Input
         // =========================================
 
-        String name = "Nitish";
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println(name);
+        System.out.print("Enter Your Name: ");
+        String name = sc.nextLine();
+
+        System.out.println("Hello, " + name + "!");
+
+        sc.close();
 
     }
 }
 
 /*
 ==========================================
-End of Day 10
+End of Program 2
 
 Next Program:
-Take String Input
+Find String Length
 
 ==========================================
 */
