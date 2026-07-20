@@ -44,7 +44,18 @@ public class Main {
         System.out.println("firstName:"+firstName);
         System.out.println("lastName:"+secName);
         System.out.println("fullName:"+fullName);
-        sc.close();
+       //program-6:
+        System.out.print("Enter the first language:");
+        String lang1=sc.nextLine();
+        System.out.print("Enter the second language:");
+        String lang2 = sc.nextLine();
+        if(lang1.equals(lang2)){
+            System.out.println("Both are equal");
+        }else{
+            System.out.println("Both are not equal");
+        }
+        sc.close(); 
+
 
     }
 }
