@@ -74,7 +74,13 @@ public class Main {
           System.out.println("Original:"+sen1);
           String newLang = sen1.replace("java", "python");
           System.out.println("Updated String:"+newLang);
-
+        //program-10:
+        System.out.print("enter the word to reverse the sentence:");
+        String gem = sc.nextLine();
+        for(int i=gem.length()-1;i>=0;i--){
+            System.out.print(gem.charAt(i));
+        }
+        System.out.println();
         sc.close(); 
 
 
