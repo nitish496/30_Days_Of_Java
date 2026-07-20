@@ -3,6 +3,18 @@
         DAY 10 - STRINGS
 ==========================================
 
+Topics Covered:
+1. Create and Print a String
+2. Take String Input
+3. Find String Length
+4. Print Each Character using charAt()
+5. Concatenate Two Strings
+6. Compare Two Strings
+7. Convert to Uppercase and Lowercase
+8. Check if a String Contains a Word
+9. Replace Characters in a String
+10. Reverse a String
+
 Author: Nitish
 ==========================================
 */
@@ -13,11 +25,20 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+
+        // =========================================
+        // Program 1 - Create and Print a String
+        // =========================================
+
+        String message = "Welcome to Java Programming";
+
+        System.out.println("Message : " + message);
+        System.out.println();
+
         // =========================================
         // Program 2 - Take String Input
         // =========================================
-
-        Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Your Name: ");
         String name = sc.nextLine();
@@ -25,74 +46,129 @@ public class Main {
         System.out.println("Hello, " + name + "!");
         System.out.println();
 
-        System.out.print("Enter the language:");
+        // =========================================
+        // Program 3 - Find String Length
+        // =========================================
 
-        //program-3:
+        System.out.print("Enter a Language: ");
         String language = sc.nextLine();
+
         int length = language.length();
 
-        System.out.println("lang :"+language);
-        System.out.println("length:"+length);
-        //program-4:
-        for(int index=0;index<language.length();index++){
-         System.out.println(language.charAt(index));
-        }
-        //program-5
-        String firstName = "Nitish";
-        String secName = "Kumar";
-        String fullName = firstName +" "+secName;
-        System.out.println("firstName:"+firstName);
-        System.out.println("lastName:"+secName);
-        System.out.println("fullName:"+fullName);
-       //program-6:
-        System.out.print("Enter the first language:");
-        String lang1=sc.nextLine();
-        System.out.print("Enter the second language:");
-        String lang2 = sc.nextLine();
-        if(lang1.equals(lang2)){
-            System.out.println("Both are equal");
-        }else{
-            System.out.println("Both are not equal");
-        }
-        //program-7:
-        System.out.print("Enter any word:");
-        String lang3=sc.nextLine();
-        System.out.println("Language:"+lang3);
-        System.out.println("UpperCase:"+lang3.toUpperCase());
-        System.out.println("LowerCase:"+lang3.toLowerCase());
-        //program-8:
-        System.out.print("Enter the sentence:");
-        String sen = sc.nextLine();
-        if(sen.contains("java")){
-            System.out.println("the word java has been found in sentence");
-        }else{
-          System.out.println("the word java has not been found in sentence");
-        }
-        //program-9:
-        System.out.print("Enter the sentence to change the word:");
-         String sen1 = sc.nextLine();
-          System.out.println("Original:"+sen1);
-          String newLang = sen1.replace("java", "python");
-          System.out.println("Updated String:"+newLang);
-        //program-10:
-        System.out.print("enter the word to reverse the sentence:");
-        String gem = sc.nextLine();
-        for(int i=gem.length()-1;i>=0;i--){
-            System.out.print(gem.charAt(i));
-        }
+        System.out.println("Language : " + language);
+        System.out.println("Length   : " + length);
         System.out.println();
-        sc.close(); 
 
+        // =========================================
+        // Program 4 - Print Each Character Using charAt()
+        // =========================================
 
+        System.out.println("Characters in the String:");
+
+        for (int index = 0; index < language.length(); index++) {
+            System.out.println(language.charAt(index));
+        }
+
+        System.out.println();
+
+        // =========================================
+        // Program 5 - Concatenate Two Strings
+        // =========================================
+
+        String firstName = "Nitish";
+        String lastName = "Kumar";
+        String fullName = firstName + " " + lastName;
+
+        System.out.println("First Name : " + firstName);
+        System.out.println("Last Name  : " + lastName);
+        System.out.println("Full Name  : " + fullName);
+        System.out.println();
+
+        // =========================================
+        // Program 6 - Compare Two Strings
+        // =========================================
+
+        System.out.print("Enter First Language: ");
+        String firstLanguage = sc.nextLine();
+
+        System.out.print("Enter Second Language: ");
+        String secondLanguage = sc.nextLine();
+
+        if (firstLanguage.equals(secondLanguage)) {
+            System.out.println("Both Strings are Equal.");
+        } else {
+            System.out.println("Both Strings are Not Equal.");
+        }
+
+        System.out.println();
+
+        // =========================================
+        // Program 7 - Convert String to Uppercase and Lowercase
+        // =========================================
+
+        System.out.print("Enter Any Word: ");
+        String word = sc.nextLine();
+
+        System.out.println("Original String  : " + word);
+        System.out.println("Uppercase String : " + word.toUpperCase());
+        System.out.println("Lowercase String : " + word.toLowerCase());
+
+        System.out.println();
+
+        // =========================================
+        // Program 8 - Check if a String Contains a Word
+        // =========================================
+
+        System.out.print("Enter a Sentence: ");
+        String sentence = sc.nextLine();
+
+        if (sentence.contains("Java")) {
+            System.out.println("The word 'Java' is found.");
+        } else {
+            System.out.println("The word 'Java' is not found.");
+        }
+
+        System.out.println();
+
+        // =========================================
+        // Program 9 - Replace Characters in a String
+        // =========================================
+
+        System.out.print("Enter a Sentence: ");
+        String originalSentence = sc.nextLine();
+
+        String updatedSentence = originalSentence.replace("Java", "Python");
+
+        System.out.println("Original String : " + originalSentence);
+        System.out.println("Updated String  : " + updatedSentence);
+
+        System.out.println();
+
+        // =========================================
+        // Program 10 - Reverse a String
+        // =========================================
+
+        System.out.print("Enter a Word: ");
+        String reverseWord = sc.nextLine();
+
+        System.out.print("Reversed String : ");
+
+        for (int index = reverseWord.length() - 1; index >= 0; index--) {
+            System.out.print(reverseWord.charAt(index));
+        }
+
+        System.out.println();
+
+        sc.close();
     }
 }
 
 /*
 ==========================================
-End of Program 2
+End of Day 10
 
-Next Program:
-Find String Length
+Next Topic:
+2D Arrays
 
 ==========================================
 */
