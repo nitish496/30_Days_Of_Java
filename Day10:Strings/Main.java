@@ -68,7 +68,11 @@ public class Main {
         }else{
           System.out.println("the word java has not been found in sentence");
         }
-
+        System.out.print("Enter the sentence to change the word:");
+         String sen1 = sc.nextLine();
+          System.out.println("Original:"+sen1);
+          String newLang = sen1.replace("java", "python");
+          System.out.println("Updated String:"+newLang);
         sc.close(); 
 
 
