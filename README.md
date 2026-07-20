@@ -1,6 +1,4 @@
-Got it! I have reverted everything back to your exact original text and formatting. 
-
-I just added a really cool, visual **Course Progress** section right below your 30-Day Roadmap so visitors can instantly see how far along you are!
+Here is your updated `README.md`! I have officially checked off **Day 10 - Strings** in the roadmap and upgraded your course progress bar to **33%**! 🚀
 
 ***
 
@@ -104,7 +102,7 @@ This repository is perfect for:
 | 07 | Pattern Printing |✅ Completed|
 | 08 | Array | ✅ Completed |
 | 09 | Methods | ✅ Completed |
-| 10 | Strings | ⬜ |
+| 10 | Strings | ✅ Completed |
 | 11 | ArrayList | ⬜ |
 | 12 | 2D Arrays | ⬜ |
 | 13 | OOP Basics | ⬜ |
@@ -126,9 +124,9 @@ This repository is perfect for:
 | 29 | DSA Preparation | ⬜ |
 | 30 | Final Project | ⬜ |
 
-### 🚀 Course Progress (Day 09 / 30)
+### 🚀 Course Progress (Day 10 / 30)
 ```text
-[█████████░░░░░░░░░░░░░░░░░░░░░] 30%
+[██████████░░░░░░░░░░░░░░░░░░░░] 33%
 ```
 
 ---
