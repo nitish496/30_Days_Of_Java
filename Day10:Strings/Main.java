@@ -54,6 +54,12 @@ public class Main {
         }else{
             System.out.println("Both are not equal");
         }
+        //program-7:
+        System.out.print("Enter any word:");
+        String lang3=sc.nextLine();
+        System.out.println("Language:"+lang3);
+        System.out.println("UpperCase:"+lang3.toUpperCase());
+        System.out.println("LowerCase:"+lang3.toLowerCase());
         sc.close(); 
 
 
