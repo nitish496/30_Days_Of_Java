@@ -60,6 +60,15 @@ public class Main {
         System.out.println("Language:"+lang3);
         System.out.println("UpperCase:"+lang3.toUpperCase());
         System.out.println("LowerCase:"+lang3.toLowerCase());
+        //program-8:
+        System.out.print("Enter the sentence:");
+        String sen = sc.nextLine();
+        if(sen.contains("java")){
+            System.out.println("the word java has been found in sentence");
+        }else{
+          System.out.println("the word java has not been found in sentence");
+        }
+
         sc.close(); 
 
 
