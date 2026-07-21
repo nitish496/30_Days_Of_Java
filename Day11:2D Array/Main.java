@@ -11,7 +11,23 @@ public class Main {
         }
         System.out.println();
      }
- 
+     //p-2:
+     Scanner sc = new Scanner(System.in);
+     System.out.println("Enter 6 elements:");
+     int[][]num=new int[2][3];
+     for(int row=0;row<num.length;row++){
+        for(int column =0;column<num[row].length;column++){
+            num[row][column]=sc.nextInt();
+        }
+     }
+     System.out.println("Entered Matrix:");
+     for(int row=0;row<num.length;row++){
+        for(int column=0;column<num[row].length;column++){
+            System.out.print(num[row][column]+" ");
+        }
+        System.out.println();
+     }
+     sc.close();
      
     }
 }
