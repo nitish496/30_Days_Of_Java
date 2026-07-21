@@ -83,7 +83,7 @@ boolean found = false;
 
 for (int e = 0; e < numz.length; e++) {
 
-    for (int r = 0; r < numz[row].length; r++) {
+    for (int r = 0; r < numz[e].length; r++) {
 
         if (numz[e][r] == key) {
             found = true;
@@ -101,6 +101,22 @@ if (found) {
 } else {
     System.out.println("Element has not been found.");
 }
+//p-8:
+int [][] m1 = {{1,2,3},{4,5,6}};
+int [][] m2 = {{7,8,9},{10,11,12}};
+int[][] result = new int[2][3];
 
+for(int o =0;o<m1.length;o++){
+    for(int p=0;p<m1[o].length;p++){
+        result[o][o]=m1[o][p]+m2[o][p];
+    }
+}
+System.out.println("sum of two matrices:");
+for(int o=0;o<result.length;o++){
+    for(int p=0;o<result[o].length;p++){
+        System.out.print(result[o][p]+" ");
+    }
+    System.out.println();
+}
     }
 }
