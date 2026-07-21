@@ -57,5 +57,16 @@ public class Main {
         }
      }
      System.out.println("Largest:"+largest);
+     //p-6:
+  int[][]array = {{10,20,30},{40,50,60},{70,80,90}};
+   int smallest = array[0][0];
+   for(int z=0;z<array.length;z++){
+    for(int x=0;x<array[z].length;x++){
+        if(array[z][x]<smallest){
+            smallest=array[z][x];
+        }
+    }
+   }
+   System.out.println("Smallest:"+smallest);
     }
 }
