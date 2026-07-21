@@ -64,5 +64,10 @@ System.out.println(names);
 names.set(1,"premam");
 System.out.println("Updated values:");
 System.out.println(names);
+System.out.println();
+//p-5:
+names.remove(1);
+System.out.println("after removing the element at Index 1");
+System.out.println(names);
    } 
 }
