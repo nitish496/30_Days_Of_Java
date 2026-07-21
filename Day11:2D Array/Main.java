@@ -118,5 +118,27 @@ for(int o=0;o<result.length;o++){
     }
     System.out.println();
 }
+//p-9:
+int [][]m = {{1,2,3},{4,5,6}};
+int[][]transpose = new int [3][2];
+for(int y=0;y<m.length;y++){
+    for(int u=0;u<m[y].length;u++){
+        transpose[u][y]=m[y][u];
+    }
+}
+System.out.println("Original matrix:");
+for(int y=0;y<m.length;y++){
+    for(int u =0;u<m[y].length;u++){
+        System.out.print(m[y][u]+" ");
+    }
+    System.out.println();
+}
+System.out.println("Transpose martrix:");
+for(int y=0;y<transpose.length;y++){
+    for(int u=0;u<transpose[y].length;u++){
+        System.out.print(transpose[y][u]+" ");
+    }
+    System.out.println();
+}
     }
 }
