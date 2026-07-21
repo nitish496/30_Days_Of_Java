@@ -37,6 +37,20 @@ System.out.println("ArrayList:");
 System.out.println(num);
        sc.close();
 
+//p-3:
+ArrayList<Integer>nums = new  ArrayList<>();
+nums.add(10);
+nums.add(20);
+nums.add(30);
+nums.add(40);
+nums.add(50);
+
+System.out.println("ArrayList:");
+System.out.println(nums);
+System.out.println("Elements at Index 0:"+nums.get(0));
+System.out.println("Elements at Index 0:"+nums.get(2));
+System.out.println("Elements at Index 0:"+nums.get(4));
+
 
    } 
 }
