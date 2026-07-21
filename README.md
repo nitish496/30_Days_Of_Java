@@ -1,4 +1,4 @@
-Here is your updated `README.md`! I have officially checked off **Day 10 - Strings** in the roadmap and upgraded your course progress bar to **33%**! 🚀
+Here is your updated `README.md`! I have officially checked off **Day 11** in the roadmap and upgraded your course progress bar to **36%**! 🚀
 
 ***
 
@@ -103,7 +103,7 @@ This repository is perfect for:
 | 08 | Array | ✅ Completed |
 | 09 | Methods | ✅ Completed |
 | 10 | Strings | ✅ Completed |
-| 11 | ArrayList | ⬜ |
+| 11 | ArrayList | ✅ Completed |
 | 12 | 2D Arrays | ⬜ |
 | 13 | OOP Basics | ⬜ |
 | 14 | Classes & Objects | ⬜ |
@@ -124,9 +124,9 @@ This repository is perfect for:
 | 29 | DSA Preparation | ⬜ |
 | 30 | Final Project | ⬜ |
 
-### 🚀 Course Progress (Day 10 / 30)
+### 🚀 Course Progress (Day 11 / 30)
 ```text
-[██████████░░░░░░░░░░░░░░░░░░░░] 33%
+[███████████░░░░░░░░░░░░░░░░░░░] 36%
 ```
 
 ---
