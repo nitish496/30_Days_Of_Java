@@ -27,7 +27,7 @@ public class Main {
         }
         System.out.println();
      }
-     sc.close();
+     
      //p-3:
      int[][]nums = {{10,20,30},{40,50,60},{70,80,90}};
      System.out.println("2D Array elements:");
@@ -68,5 +68,39 @@ public class Main {
     }
    }
    System.out.println("Smallest:"+smallest);
+   //p-7:
+  
+int[][] numz = {
+        {10,20,30},
+        {40,50,60},
+        {70,80,90}
+};
+
+System.out.print("Enter the element to search: ");
+int key = sc.nextInt();
+
+boolean found = false;
+
+for (int e = 0; e < numz.length; e++) {
+
+    for (int r = 0; r < numz[row].length; r++) {
+
+        if (numz[e][r] == key) {
+            found = true;
+            break;
+        }
+    }
+
+    if (found) {
+        break;
+    }
+}
+
+if (found) {
+    System.out.println("Element has been found.");
+} else {
+    System.out.println("Element has not been found.");
+}
+
     }
 }
