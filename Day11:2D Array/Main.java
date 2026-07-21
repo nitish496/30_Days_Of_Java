@@ -140,5 +140,23 @@ for(int y=0;y<transpose.length;y++){
     }
     System.out.println();
 }
+//p-10:
+ int [][]mat = {{1,2,3},{4,5,6},{7,8,9}};
+ System.out.println("Matrix:");
+ for(int d=0;d<mat.length;d++){
+    for(int f =0;f<mat[d].length;f++){
+        System.out.print(mat[d][f]+" ");
+    }
+    System.out.println();
+ }
+ System.out.println("Diagonal matrix:");
+ for(int d=0;d<mat.length;d++){
+    for(int f=0;f<mat[d].length;f++){
+        if(d==f){
+            System.out.print(mat[d][f]+" ");
+        }
+    }
+ }
+ System.out.println();
     }
 }
