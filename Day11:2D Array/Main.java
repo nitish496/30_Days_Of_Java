@@ -46,6 +46,16 @@ public class Main {
             }
         }
         System.out.println("Sum of all elements:"+sum);
-     
+     //p-5:
+     int[][]n={{10,20,30},{40,50,60},{70,80,90}};
+     int largest = n[0][0];
+     for(int a =0;a<n.length;a++){
+        for(int s =0;s<n[a].length;s++){
+           if(n[a][s]>largest){
+            largest=n[a][s];
+           }
+        }
+     }
+     System.out.println("Largest:"+largest);
     }
 }
