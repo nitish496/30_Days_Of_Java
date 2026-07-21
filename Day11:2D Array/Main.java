@@ -1,162 +1,355 @@
+/*
+==========================================
+        DAY 11 - 2D ARRAYS
+==========================================
+
+Topics Covered:
+1. Declare and Print a 2D Array
+2. Take Input in a 2D Array
+3. Print a 2D Array
+4. Find Sum of All Elements
+5. Find Largest Element
+6. Find Smallest Element
+7. Search an Element
+8. Add Two Matrices
+9. Transpose of a Matrix
+10. Print Diagonal Elements
+
+Author: Nitish
+==========================================
+*/
+
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        //p-1:
-     int[][] numbers={{10,20,30},{40,50,60}};
-     System.out.println("Elements of 2D array:");
-     for(int r=0;r<numbers.length;r++){
-        for(int c=0;c<numbers[r].length;c++){
-            System.out.print(numbers[r][c]+" ");
-        }
-        System.out.println();
-     }
-     //p-2:
-     Scanner sc = new Scanner(System.in);
-     System.out.println("Enter 6 elements:");
-     int[][]num=new int[2][3];
-     for(int row=0;row<num.length;row++){
-        for(int column =0;column<num[row].length;column++){
-            num[row][column]=sc.nextInt();
-        }
-     }
-     System.out.println("Entered Matrix:");
-     for(int row=0;row<num.length;row++){
-        for(int column=0;column<num[row].length;column++){
-            System.out.print(num[row][column]+" ");
-        }
-        System.out.println();
-     }
-     
-     //p-3:
-     int[][]nums = {{10,20,30},{40,50,60},{70,80,90}};
-     System.out.println("2D Array elements:");
-     for(int ro=0;ro<nums.length;ro++){
-        for(int co=0;co<nums[ro].length;co++){
-            System.out.print(nums[ro][co]+" ");
-        }
-        System.out.println();
-    }
-        //p-4:
-        int[][]nu={{10,20,30},{40,50,60},{70,80,90}};
-        int sum =0;
-        for(int w=0;w<nu.length;w++){
-            for(int q=0;q<nu[w].length;q++){
-                sum+=nu[w][q];
+
+        Scanner sc = new Scanner(System.in);
+
+        // =========================================
+        // Program 1 - Declare and Print a 2D Array
+        // =========================================
+
+        int[][] numbers = {
+                {10, 20, 30},
+                {40, 50, 60}
+        };
+
+        System.out.println("Elements of 2D Array:");
+
+        for (int row = 0; row < numbers.length; row++) {
+
+            for (int column = 0; column < numbers[row].length; column++) {
+
+                System.out.print(numbers[row][column] + " ");
+
             }
+
+            System.out.println();
+
         }
-        System.out.println("Sum of all elements:"+sum);
-     //p-5:
-     int[][]n={{10,20,30},{40,50,60},{70,80,90}};
-     int largest = n[0][0];
-     for(int a =0;a<n.length;a++){
-        for(int s =0;s<n[a].length;s++){
-           if(n[a][s]>largest){
-            largest=n[a][s];
-           }
+
+        // =========================================
+        // Program 2 - Take Input in a 2D Array
+        // =========================================
+
+        int[][] inputMatrix = new int[2][3];
+
+        System.out.println("\nEnter 6 Elements:");
+
+        for (int row = 0; row < inputMatrix.length; row++) {
+
+            for (int column = 0; column < inputMatrix[row].length; column++) {
+
+                inputMatrix[row][column] = sc.nextInt();
+
+            }
+
         }
-     }
-     System.out.println("Largest:"+largest);
-     //p-6:
-  int[][]array = {{10,20,30},{40,50,60},{70,80,90}};
-   int smallest = array[0][0];
-   for(int z=0;z<array.length;z++){
-    for(int x=0;x<array[z].length;x++){
-        if(array[z][x]<smallest){
-            smallest=array[z][x];
+
+        System.out.println("Entered Matrix:");
+
+        for (int row = 0; row < inputMatrix.length; row++) {
+
+            for (int column = 0; column < inputMatrix[row].length; column++) {
+
+                System.out.print(inputMatrix[row][column] + " ");
+
+            }
+
+            System.out.println();
+
         }
-    }
-   }
-   System.out.println("Smallest:"+smallest);
-   //p-7:
-  
-int[][] numz = {
-        {10,20,30},
-        {40,50,60},
-        {70,80,90}
-};
 
-System.out.print("Enter the element to search: ");
-int key = sc.nextInt();
+        // =========================================
+        // Program 3 - Print a 2D Array
+        // =========================================
 
-boolean found = false;
+        int[][] matrix = {
+                {10, 20, 30},
+                {40, 50, 60},
+                {70, 80, 90}
+        };
 
-for (int e = 0; e < numz.length; e++) {
+        System.out.println("\n2D Array Elements:");
 
-    for (int r = 0; r < numz[e].length; r++) {
+        for (int row = 0; row < matrix.length; row++) {
 
-        if (numz[e][r] == key) {
-            found = true;
-            break;
+            for (int column = 0; column < matrix[row].length; column++) {
+
+                System.out.print(matrix[row][column] + " ");
+
+            }
+
+            System.out.println();
+
         }
-    }
 
-    if (found) {
-        break;
-    }
-}
+        // =========================================
+        // Program 4 - Find Sum of All Elements
+        // =========================================
 
-if (found) {
-    System.out.println("Element has been found.");
-} else {
-    System.out.println("Element has not been found.");
-}
-//p-8:
-int [][] m1 = {{1,2,3},{4,5,6}};
-int [][] m2 = {{7,8,9},{10,11,12}};
-int[][] result = new int[2][3];
+        int sum = 0;
 
-for(int o =0;o<m1.length;o++){
-    for(int p=0;p<m1[o].length;p++){
-        result[o][p]=m1[o][p]+m2[o][p];
-    }
-}
-System.out.println("sum of two matrices:");
-for(int o=0;o<result.length;o++){
-    for(int p=0;p<result[o].length;p++){
-        System.out.print(result[o][p]+" ");
-    }
-    System.out.println();
-}
-//p-9:
-int [][]m = {{1,2,3},{4,5,6}};
-int[][]transpose = new int [3][2];
-for(int y=0;y<m.length;y++){
-    for(int u=0;u<m[y].length;u++){
-        transpose[u][y]=m[y][u];
-    }
-}
-System.out.println("Original matrix:");
-for(int y=0;y<m.length;y++){
-    for(int u =0;u<m[y].length;u++){
-        System.out.print(m[y][u]+" ");
-    }
-    System.out.println();
-}
-System.out.println("Transpose martrix:");
-for(int y=0;y<transpose.length;y++){
-    for(int u=0;u<transpose[y].length;u++){
-        System.out.print(transpose[y][u]+" ");
-    }
-    System.out.println();
-}
-//p-10:
- int [][]mat = {{1,2,3},{4,5,6},{7,8,9}};
- System.out.println("Matrix:");
- for(int d=0;d<mat.length;d++){
-    for(int f =0;f<mat[d].length;f++){
-        System.out.print(mat[d][f]+" ");
-    }
-    System.out.println();
- }
- System.out.println("Diagonal matrix:");
- for(int d=0;d<mat.length;d++){
-    for(int f=0;f<mat[d].length;f++){
-        if(d==f){
-            System.out.print(mat[d][f]+" ");
+        for (int row = 0; row < matrix.length; row++) {
+
+            for (int column = 0; column < matrix[row].length; column++) {
+
+                sum += matrix[row][column];
+
+            }
+
         }
-    }
- }
- System.out.println();
+
+        System.out.println("\nSum of All Elements: " + sum);
+
+        // =========================================
+        // Program 5 - Find the Largest Element
+        // =========================================
+
+        int largest = matrix[0][0];
+
+        for (int row = 0; row < matrix.length; row++) {
+
+            for (int column = 0; column < matrix[row].length; column++) {
+
+                if (matrix[row][column] > largest) {
+
+                    largest = matrix[row][column];
+
+                }
+
+            }
+
+        }
+
+        System.out.println("Largest Element: " + largest);
+
+        // =========================================
+        // Program 6 - Find the Smallest Element
+        // =========================================
+
+        int smallest = matrix[0][0];
+
+        for (int row = 0; row < matrix.length; row++) {
+
+            for (int column = 0; column < matrix[row].length; column++) {
+
+                if (matrix[row][column] < smallest) {
+
+                    smallest = matrix[row][column];
+
+                }
+
+            }
+
+        }
+
+        System.out.println("Smallest Element: " + smallest);
+
+        // =========================================
+        // Program 7 - Search an Element
+        // =========================================
+
+        System.out.print("\nEnter Element to Search: ");
+        int key = sc.nextInt();
+
+        boolean found = false;
+
+        for (int row = 0; row < matrix.length; row++) {
+
+            for (int column = 0; column < matrix[row].length; column++) {
+
+                if (matrix[row][column] == key) {
+
+                    found = true;
+                    break;
+
+                }
+
+            }
+
+            if (found) {
+
+                break;
+
+            }
+
+        }
+
+        if (found) {
+
+            System.out.println("Element Found.");
+
+        } else {
+
+            System.out.println("Element Not Found.");
+
+        }
+
+        // =========================================
+        // Program 8 - Add Two Matrices
+        // =========================================
+
+        int[][] matrix1 = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        int[][] matrix2 = {
+                {7, 8, 9},
+                {10, 11, 12}
+        };
+
+        int[][] result = new int[2][3];
+
+        for (int row = 0; row < matrix1.length; row++) {
+
+            for (int column = 0; column < matrix1[row].length; column++) {
+
+                result[row][column] = matrix1[row][column] + matrix2[row][column];
+
+            }
+
+        }
+
+        System.out.println("\nSum of Two Matrices:");
+
+        for (int row = 0; row < result.length; row++) {
+
+            for (int column = 0; column < result[row].length; column++) {
+
+                System.out.print(result[row][column] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+        // =========================================
+        // Program 9 - Transpose of a Matrix
+        // =========================================
+
+        int[][] originalMatrix = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        int[][] transpose = new int[3][2];
+
+        for (int row = 0; row < originalMatrix.length; row++) {
+
+            for (int column = 0; column < originalMatrix[row].length; column++) {
+
+                transpose[column][row] = originalMatrix[row][column];
+
+            }
+
+        }
+
+        System.out.println("\nOriginal Matrix:");
+
+        for (int row = 0; row < originalMatrix.length; row++) {
+
+            for (int column = 0; column < originalMatrix[row].length; column++) {
+
+                System.out.print(originalMatrix[row][column] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+        System.out.println("Transpose Matrix:");
+
+        for (int row = 0; row < transpose.length; row++) {
+
+            for (int column = 0; column < transpose[row].length; column++) {
+
+                System.out.print(transpose[row][column] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+        // =========================================
+        // Program 10 - Print Diagonal Elements
+        // =========================================
+
+        int[][] diagonalMatrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        System.out.println("\nMatrix:");
+
+        for (int row = 0; row < diagonalMatrix.length; row++) {
+
+            for (int column = 0; column < diagonalMatrix[row].length; column++) {
+
+                System.out.print(diagonalMatrix[row][column] + " ");
+
+            }
+
+            System.out.println();
+
+        }
+
+        System.out.print("Diagonal Elements: ");
+
+        for (int row = 0; row < diagonalMatrix.length; row++) {
+
+            for (int column = 0; column < diagonalMatrix[row].length; column++) {
+
+                if (row == column) {
+
+                    System.out.print(diagonalMatrix[row][column] + " ");
+
+                }
+
+            }
+
+        }
+
+        System.out.println();
+
+        sc.close();
+
     }
 }
+
+/*
+==========================================
+End of Day 11
+
+Next Topic:
+ArrayList
+
+==========================================
+*/
