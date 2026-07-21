@@ -51,6 +51,18 @@ System.out.println("Elements at Index 0:"+nums.get(0));
 System.out.println("Elements at Index 0:"+nums.get(2));
 System.out.println("Elements at Index 0:"+nums.get(4));
 
+//p-4:
+ArrayList<String>names = new ArrayList<>();
+names.add("Nitish");
+names.add("rahul");
+names.add("king");
 
+System.out.println("ArrayList:");
+System.out.println(names);
+
+//updating the values
+names.set(1,"premam");
+System.out.println("Updated values:");
+System.out.println(names);
    } 
 }
