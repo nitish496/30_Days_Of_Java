@@ -28,6 +28,14 @@ public class Main {
         System.out.println();
      }
      sc.close();
-     
+     //p-3:
+     int[][]nums = {{10,20,30},{40,50,60},{70,80,90}};
+     System.out.println("2D Array elements:");
+     for(int ro=0;ro<nums.length;ro++){
+        for(int co=0;co<nums[ro].length;co++){
+            System.out.print(nums[ro][co]+" ");
+        }
+        System.out.println();
+     }
     }
 }
