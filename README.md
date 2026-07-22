@@ -105,7 +105,7 @@ This repository is perfect for:
 | 10 | Strings | ✅ Completed |
   11 | 2D Arrays | ✅ Completed|
 | 12 | ArrayList | ✅ Completed |
-| 13 | OOP Basics | ⬜ |
+| 13 | Wrapper Classes & Autoboxing | ✅ Completed |
 | 14 | Classes & Objects | ⬜ |
 | 15 | Constructors | ⬜ |
 | 16 | Encapsulation | ⬜ |
@@ -124,9 +124,9 @@ This repository is perfect for:
 | 29 | DSA Preparation | ⬜ |
 | 30 | Final Project | ⬜ |
 
-### 🚀 Course Progress (Day 12 / 30)
+### 🚀 Course Progress (Day 13 / 30)
 ```text
-[████████████░░░░░░░░░░░░░░░░░░] 40%
+[█████████████░░░░░░░░░░░░░░░░░] 43%
 ```
 
 ---
