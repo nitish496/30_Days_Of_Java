@@ -108,6 +108,13 @@ System.out.print("Enter element to search:");
   }
      System.out.print("largest:"+largest);
    System.out.println();
-
+   //p-10:
+  int sum = 0;
+  for(int z=0;z<numz.size();z++){
+    sum+=numz.get(z);
+  }
+  System.out.print("Sum of all elements:"+sum);
+  System.out.println();
+  
    } 
 }
