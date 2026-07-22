@@ -55,6 +55,29 @@ public class Main {
      System.out.println("salary:"+wrapperSal);
      System.out.println("grade:"+wrapperGrader);
      System.out.println("passed:"+wrapperPassed);
+     System.out.println();
+     //p-5:
+         Integer wrapperNumz = 150;
+
+        int numz = wrapperNumz;
+
+        Double wrapperSala = 50000.75;
+
+        double sala = wrapperSala;
+
+        Character wrapperGrad = 'A';
+
+        char grad = wrapperGrad;
+
+        Boolean wrapperPasse = true;
+
+        boolean passe = wrapperPasse;
+
+        System.out.println("Integer : " + numz);
+        System.out.println("Double  : " + sala);
+        System.out.println("Character : " + grad);
+        System.out.println("Boolean : " + passe);
+
 
     }
 }
