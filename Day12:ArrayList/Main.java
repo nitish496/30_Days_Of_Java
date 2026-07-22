@@ -83,5 +83,13 @@ System.out.print("Enter element to search:");
    System.out.println(search+" is not present in the ArrayList");
  }
  sc.close();
+ //p-8:
+ for(int i=0;i<names.size();i++){
+   System.out.println(names.get(i));
+ }
+ //now using enchaned loop:
+ for(String name:names){
+   System.out.println(names);
+ }
    } 
 }
