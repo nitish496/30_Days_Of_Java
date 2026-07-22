@@ -26,7 +26,17 @@ public class Main {
         System.out.println("age:"+wrapperAge);
         System.out.println("num:"+wrapperNumber);
        System.out.println("grade:"+wrapperGrade);
+     //p-3:
+     ///method-1:
+     Integer number1 = 100;
+     ///method-2:
+     Integer number2 = Integer.valueOf(200);
+     ///method-3:
+     Integer number3 = new Integer(300);
 
+     System.out.println("Method1:"+number1);
+     System.out.println("Method2:"+number2);
+     System.out.println("Method3:"+number3);
 
     }
 }
