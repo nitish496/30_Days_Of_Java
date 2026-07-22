@@ -1,7 +1,8 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         //p-1:
         int number = 100;
         Integer wrapperNumber = 100;
@@ -115,6 +116,30 @@ public class Main {
           int firstNumbers = numbers.get(0);
           System.out.println("first number:"+firstNumbers);
           System.out.println();
+          //p-9:
+          System.out.print("Enter the first number:");
+          String secondNumber = sc.next();
+           System.out.print("Enter the second number:");
+          String thirdNumber = sc.next();
+          int num3 = Integer.parseInt(secondNumber);
+          int num4  = Integer.parseInt(thirdNumber);
+          int sume = num3 + num4;
+        int difference = num3 - num4;
+        int product = num3 * num4;
+        int quotient = num3 / num4;
+        int remainder = num3 % num4;
+
+            System.out.println("First Number : " + num3);
+        System.out.println("Second Number: " + num4);
+
+        System.out.println();
+
+        System.out.println("Addition       : " + sume);
+        System.out.println("Subtraction    : " + difference);
+        System.out.println("Multiplication : " + product);
+        System.out.println("Division       : " + quotient);
+        System.out.println("Remainder      : " + remainder);
+
 
     }
 }
