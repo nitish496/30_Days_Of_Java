@@ -69,5 +69,10 @@ System.out.println();
 names.remove(1);
 System.out.println("after removing the element at Index 1");
 System.out.println(names);
+//p-6:
+int totalElements = names.size();
+System.out.print("Total Elements:"+totalElements);
+System.out.println();
+//
    } 
 }
