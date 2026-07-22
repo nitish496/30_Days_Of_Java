@@ -13,7 +13,7 @@ public class Main {
        System.out.println(numbers);
 
 // =========================================
-// Program 2 - Take Input into an ArrayList
+// Program 2 - Take Inadd into an ArrayList
 // =========================================
 
 Scanner sc = new Scanner(System.in);
@@ -91,5 +91,23 @@ System.out.print("Enter element to search:");
  for(String name:names){
    System.out.println(names);
  }
+ //p-9:
+  ArrayList<Integer>numz = new ArrayList<>();
+  numz.add(10);
+  numz.add(20);
+  numz.add(30);
+  numz.add(40);
+  System.out.println("ArrayList:");
+  System.out.println(numz);
+
+  int largest = numz.get(0);
+  for(int i=0;i<numz.size();i++){
+   if(numz.get(i)>largest){
+      largest= numz.get(i);
+   }
+  }
+     System.out.print("largest:"+largest);
+   System.out.println();
+
    } 
 }
