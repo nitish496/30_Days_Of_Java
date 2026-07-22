@@ -35,7 +35,7 @@ for (int i = 0; i < size; i++) {
 
 System.out.println("ArrayList:");
 System.out.println(num);
-       sc.close();
+       
 
 //p-3:
 ArrayList<Integer>nums = new  ArrayList<>();
@@ -73,6 +73,15 @@ System.out.println(names);
 int totalElements = names.size();
 System.out.print("Total Elements:"+totalElements);
 System.out.println();
-//
+//p-7:
+System.out.print("Enter element to search:");
+ String search = sc.next();
+
+ if(names.contains(search)){
+   System.out.println(search+" is present in the ArrayList");
+ }else{
+   System.out.println(search+" is not present in the ArrayList");
+ }
+ sc.close();
    } 
 }
