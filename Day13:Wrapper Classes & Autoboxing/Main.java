@@ -77,7 +77,15 @@ public class Main {
         System.out.println("Double  : " + sala);
         System.out.println("Character : " + grad);
         System.out.println("Boolean : " + passe);
+       //p-6:
+       String number01 = "100";
+       String number4= "200";
 
-
+       int num1 = Integer.parseInt(number01);
+       int num2 = Integer.parseInt(number4);
+        int sum = num1+num2;
+        System.out.println("number 1:"+num1);
+         System.out.println("number 2:"+num2);
+          System.out.println("Sum :"+sum);
     }
 }
