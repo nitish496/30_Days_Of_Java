@@ -140,6 +140,44 @@ public class Main {
         System.out.println("Division       : " + quotient);
         System.out.println("Remainder      : " + remainder);
 
+       //p-10;
+             // Parsing
+         String firstValue = "50";
+        String secondValue = "80";
+        int num5 = Integer.parseInt(firstValue);
+        int num6 = Integer.parseInt(secondValue);
+
+        // Autoboxing
+        Integer wrapper1 = num5;
+        Integer wrapper2 = num6;
+
+        // ArrayList
+        ArrayList<Integer> nnumbers = new ArrayList<>();
+
+        nnumbers.add(wrapper1);
+        nnumbers.add(wrapper2);
+
+        // Unboxing
+        int fourthNumber = numbers.get(0);
+        int fifthNumber = numbers.get(1);
+
+        // Wrapper methods
+        int maximum = Integer.max(fourthNumber, fifthNumber);
+        int minimum = Integer.min(fourthNumber, fifthNumber);
+        int comparison = Integer.compare(fourthNumber, fifthNumber);
+
+        // Convert to String
+        String texter = wrapper1.toString();
+
+        // Display Output
+        System.out.println("ArrayList        : " + nnumbers);
+        System.out.println("First Number     : " + fourthNumber);
+        System.out.println("Second Number    : " + fifthNumber);
+        System.out.println("Maximum          : " + maximum);
+        System.out.println("Minimum          : " + minimum);
+        System.out.println("Comparison       : " + comparison);
+        System.out.println("String Value     : " + texter);
+
 
     }
 }
