@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         //p-1:
@@ -88,6 +90,7 @@ public class Main {
         System.out.println("number 1:"+num1);
          System.out.println("number 2:"+num2);
           System.out.println("Sum :"+sum);
+          System.out.println();
           //p-7:
           Integer phoneNumber = Integer.valueOf(100);
           String text = phoneNumber.toString();
@@ -100,5 +103,18 @@ public class Main {
           System.out.println("Maximum:"+max);
           System.out.println("Minimum:"+min);
           System.out.println("Compare:"+compare);
+          System.out.println();
+          //p-8:
+          ArrayList<Integer>numbers = new ArrayList<>();
+          numbers.add(100);
+          numbers.add(200);
+          numbers.add(300);
+
+          System.out.println("ArrayList:"+numbers);
+
+          int firstNumbers = numbers.get(0);
+          System.out.println("first number:"+firstNumbers);
+          System.out.println();
+
     }
 }
