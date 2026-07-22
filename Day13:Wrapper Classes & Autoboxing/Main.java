@@ -6,6 +6,7 @@ public class Main {
 
         System.out.println("primirtive value:"+number);
         System.out.println("Wrapper value:"+wrapperNumber);
+        System.out.println();
 
             //p-2:
         //primitive values:
@@ -26,6 +27,7 @@ public class Main {
         System.out.println("age:"+wrapperAge);
         System.out.println("num:"+wrapperNumber);
        System.out.println("grade:"+wrapperGrade);
+       System.out.println();
      //p-3:
      ///method-1:
      Integer number1 = 100;
@@ -37,6 +39,22 @@ public class Main {
      System.out.println("Method1:"+number1);
      System.out.println("Method2:"+number2);
      System.out.println("Method3:"+number3);
+     System.out.println();
+
+     //p-4:
+     int time = 5;
+     Integer wrapperTime = time;
+     double sal = 75000.5;
+     Double wrapperSal = sal;
+     char garder = 'B';
+     Character wrapperGrader = garder;
+     boolean passed = true;
+     Boolean wrapperPassed = passed;
+
+     System.out.println("Time:"+wrapperTime);
+     System.out.println("salary:"+wrapperSal);
+     System.out.println("grade:"+wrapperGrader);
+     System.out.println("passed:"+wrapperPassed);
 
     }
 }
