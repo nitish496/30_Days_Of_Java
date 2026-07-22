@@ -77,6 +77,7 @@ public class Main {
         System.out.println("Double  : " + sala);
         System.out.println("Character : " + grad);
         System.out.println("Boolean : " + passe);
+        System.out.println();
        //p-6:
        String number01 = "100";
        String number4= "200";
@@ -87,5 +88,17 @@ public class Main {
         System.out.println("number 1:"+num1);
          System.out.println("number 2:"+num2);
           System.out.println("Sum :"+sum);
+          //p-7:
+          Integer phoneNumber = Integer.valueOf(100);
+          String text = phoneNumber.toString();
+          int max = Integer.max(10, 1000);
+          int min = Integer.min(1000,100);
+          int compare = Integer.compare(10, 1000);
+
+          System.out.println("phone number:"+phoneNumber);
+          System.out.println("text:"+text);
+          System.out.println("Maximum:"+max);
+          System.out.println("Minimum:"+min);
+          System.out.println("Compare:"+compare);
     }
 }
