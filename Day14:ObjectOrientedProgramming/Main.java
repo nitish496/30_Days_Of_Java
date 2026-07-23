@@ -175,7 +175,24 @@ public class Main {
 
         System.out.println("Java is one of the most popular and beginner-friendly OOP languages.");
        
-        
+            System.out.println("===== Complete OOP Flow =====\n");
+
+        // Step 1: Create an object
+        Student student2 = new Student();
+
+        // Step 2: Store data
+        student2.name = "Nitish";
+        student2.age = 19;
+        student2.course = "CSE-AI&ML";
+
+        // Step 3: Display data
+        System.out.println("Student Details");
+        System.out.println("Name   : " + student2.name);
+        System.out.println("Age    : " + student2.age);
+        System.out.println("Course : " + student2.course);
+
+        // Step 4: Call method
+        student2.study();
         }
 
     }
