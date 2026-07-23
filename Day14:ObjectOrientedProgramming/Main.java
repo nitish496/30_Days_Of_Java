@@ -103,31 +103,8 @@ public class Main {
          System.out.println("Name:"+s1.name);
           System.out.println("Age:"+s1.age);
 
-
-         s1.study();
-
-        }
-
-    }
-        //example:
-        class Student{
-            String name;
-            int age;
-            String course;
-            void study(){
-                System.out.println("Student is studing...");
-            }
-        }   
-       //p-5:
-       // =========================================
-// Program 5 - Four Pillars of OOP
-// =========================================
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        System.out.println("===== Four Pillars of OOP =====\n");
+          //p-5;
+                System.out.println("===== Four Pillars of OOP =====\n");
 
         System.out.println("1. Encapsulation");
         System.out.println("   -> Wrapping data and methods together.");
@@ -146,5 +123,25 @@ public class Main {
         System.out.println("   Example: Driving a Car\n");
 
         System.out.println("These concepts will be covered in detail in upcoming days.");
+
+
+         s1.study();
+
+        }
+
     }
-} 
+        //example:
+        class Student{
+            String name;
+            int age;
+            String course;
+            void study(){
+                System.out.println("Student is studing...");
+            }
+        }   
+       //p-5:
+// =========================================
+// Program 5 - Four Pillars of OOP
+// =========================================
+
+
