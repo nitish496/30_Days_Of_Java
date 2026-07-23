@@ -102,6 +102,7 @@ public class Main {
          s1.age = 19;
          System.out.println("Name:"+s1.name);
           System.out.println("Age:"+s1.age);
+          s1.study();
 
           //p-5;
                 System.out.println("===== Four Pillars of OOP =====\n");
@@ -125,7 +126,31 @@ public class Main {
         System.out.println("These concepts will be covered in detail in upcoming days.");
 
 
-         s1.study();
+       //p-6:
+       System.out.println("===== Benefits of Object-Oriented Programming =====\n");
+
+        System.out.println("1. Code Reusability");
+        System.out.println("2. Better Code Organization");
+        System.out.println("3. Easy Maintenance");
+        System.out.println("4. Improved Security");
+        System.out.println("5. Scalability");
+        System.out.println("6. Real-World Modeling\n");
+
+        Student student1 = new Student();
+        Student student2 = new Student();
+
+        student1.name = "Nitish";
+        student2.name = "Rahul";
+
+        System.out.println("Student 1: " + student1.name);
+        System.out.println("Student 2: " + student2.name);
+
+        System.out.println("\nBoth objects are created from the same Student class.");
+        System.out.println("This demonstrates code reusability.");
+
+         
+
+
 
         }
 
@@ -139,9 +164,7 @@ public class Main {
                 System.out.println("Student is studing...");
             }
         }   
-       //p-5:
-// =========================================
-// Program 5 - Four Pillars of OOP
-// =========================================
+       
+
 
 
