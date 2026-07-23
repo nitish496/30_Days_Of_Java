@@ -69,5 +69,36 @@ public class Main {
         System.out.println("2. Behavior (Actions)");
         System.out.println("3. Identity (Unique Identification)");
 
+          //p-3:
+        System.out.println("===== What is a Class? =====\n");
+
+        System.out.println("A Class is a blueprint or template used to create objects.\n");
+
+        System.out.println("Example: Student Class");
+
+        System.out.println("State (Fields):");
+        System.out.println("- Name");
+        System.out.println("- Age");
+        System.out.println("- Course");
+
+        System.out.println("\nBehavior (Methods):");
+        System.out.println("- Study()");
+        System.out.println("- AttendClass()");
+        System.out.println("- WriteExam()");
+
+        System.out.println("\nNote:");
+        System.out.println("Creating a class does NOT create an object.");
+        System.out.println("Objects will be created from classes in the next lesson (Day 15).");
+        //example:
+        class Student{
+            String name;
+            int age;
+            String course;
+            void study(){
+                System.out.println("Student is studing...");
+            }
+            
+        }
+
     }
 }
