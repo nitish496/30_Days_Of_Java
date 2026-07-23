@@ -106,7 +106,7 @@ This repository is perfect for:
   11 | 2D Arrays | ✅ Completed|
 | 12 | ArrayList | ✅ Completed |
 | 13 | Wrapper Classes & Autoboxing | ✅ Completed |
-| 14 | Classes & Objects | ⬜ |
+| 14 |  OOP BASICS | ✅ Completed |
 | 15 | Constructors | ⬜ |
 | 16 | Encapsulation | ⬜ |
 | 17 | Inheritance | ⬜ |
@@ -124,9 +124,9 @@ This repository is perfect for:
 | 29 | DSA Preparation | ⬜ |
 | 30 | Final Project | ⬜ |
 
-### 🚀 Course Progress (Day 13 / 30)
+### 🚀 Course Progress (Day 14 / 30)
 ```text
-[█████████████░░░░░░░░░░░░░░░░░] 43%
+[██████████████░░░░░░░░░░░░░░░░] 47%
 ```
 
 ---
