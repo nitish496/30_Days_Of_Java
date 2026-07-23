@@ -118,3 +118,33 @@ public class Main {
                 System.out.println("Student is studing...");
             }
         }   
+       //p-5:
+       // =========================================
+// Program 5 - Four Pillars of OOP
+// =========================================
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("===== Four Pillars of OOP =====\n");
+
+        System.out.println("1. Encapsulation");
+        System.out.println("   -> Wrapping data and methods together.");
+        System.out.println("   Example: ATM Machine\n");
+
+        System.out.println("2. Inheritance");
+        System.out.println("   -> One class acquires properties of another.");
+        System.out.println("   Example: Child inherits from Parents\n");
+
+        System.out.println("3. Polymorphism");
+        System.out.println("   -> One method, many forms.");
+        System.out.println("   Example: Same person, different roles\n");
+
+        System.out.println("4. Abstraction");
+        System.out.println("   -> Hiding implementation details.");
+        System.out.println("   Example: Driving a Car\n");
+
+        System.out.println("These concepts will be covered in detail in upcoming days.");
+    }
+} 
