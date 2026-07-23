@@ -148,10 +148,34 @@ public class Main {
         System.out.println("\nBoth objects are created from the same Student class.");
         System.out.println("This demonstrates code reusability.");
 
-         
+       //p-7:
+               System.out.println("===== Popular Object-Oriented Programming Languages =====\n");
 
+        System.out.println("1. Java");
+        System.out.println("   - Android Apps");
+        System.out.println("   - Banking Systems");
+        System.out.println("   - Enterprise Applications\n");
 
+        System.out.println("2. C++");
+        System.out.println("   - Game Development");
+        System.out.println("   - Operating Systems\n");
 
+        System.out.println("3. Python");
+        System.out.println("   - Artificial Intelligence");
+        System.out.println("   - Machine Learning");
+        System.out.println("   - Automation\n");
+
+        System.out.println("4. C#");
+        System.out.println("   - Windows Applications");
+        System.out.println("   - Unity Game Development\n");
+
+        System.out.println("5. Kotlin");
+        System.out.println("   - Android Development");
+        System.out.println("   - Backend Development\n");
+
+        System.out.println("Java is one of the most popular and beginner-friendly OOP languages.");
+       
+        
         }
 
     }
