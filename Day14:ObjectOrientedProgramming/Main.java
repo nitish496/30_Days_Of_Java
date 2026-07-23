@@ -89,6 +89,26 @@ public class Main {
         System.out.println("\nNote:");
         System.out.println("Creating a class does NOT create an object.");
         System.out.println("Objects will be created from classes in the next lesson (Day 15).");
+
+         //p-4:
+           System.out.println("===== Class vs Object =====\n");
+
+         System.out.println("Class : Blueprint used to create objects.");
+         System.out.println("Object: A real instance created from the class.\n");
+
+         Student s1 = new Student();
+         System.out.println("Student Details:");
+         s1.name = "Nitish";
+         s1.age = 19;
+         System.out.println("Name:"+s1.name);
+          System.out.println("Age:"+s1.age);
+
+
+         s1.study();
+
+        }
+
+    }
         //example:
         class Student{
             String name;
@@ -97,8 +117,4 @@ public class Main {
             void study(){
                 System.out.println("Student is studing...");
             }
-            
-        }
-
-    }
-}
+        }   
