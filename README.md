@@ -1,21 +1,12 @@
-Here is your updated `README.md`! I have officially checked off **Day 11** in the roadmap and upgraded your course progress bar to **36%**! 🚀
-
-***
-
 <div align="center">
-> This repository documents my personal journey of learning Java while building a beginner-friendly course for anyone who wants to learn alongside me.
 
-> Every explanation, example, and note has been written and refined as part of my own learning process.
 # ☕ 30 Days of Java
 
-### Learn • Build • Revise • Grow
+### 📘 Learn • 💻 Practice • 🚀 Build • 🎯 Master
 
-A structured **30-day Java learning journey** designed for beginners, students, and anyone who wants to build a strong foundation in Java through hands-on coding, clear explanations, and daily practice.
+> **Master Java from scratch in 30 days through structured lessons, hands-on coding, detailed notes, real-world examples, interview questions, and practical mini projects.**
 
-![Java](https://img.shields.io/badge/Java-21+-orange?style=for-the-badge&logo=openjdk)
-![Challenge](https://img.shields.io/badge/Challenge-30%20Days-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-In%20Progress-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+🟧 **Java 21+** • 📅 **30 Days Challenge** • 🟢 **Status: In Progress** • 📄 **MIT License**
 
 </div>
 
@@ -23,192 +14,147 @@ A structured **30-day Java learning journey** designed for beginners, students, 
 
 # 📖 About This Repository
 
-Learning Java can feel overwhelming because there are countless tutorials, books, and courses available. This repository organizes the learning process into **30 structured days**, making it easier to build concepts step by step.
+Welcome to **30 Days of Java** — a structured, beginner-friendly Java course designed to help you build a strong foundation in Java programming through consistent daily learning.
 
-Each day contains:
+Instead of jumping between random tutorials and videos, this repository follows a carefully planned roadmap where each day introduces new concepts step by step. Every topic includes clear explanations, well-commented Java programs, practical examples, and revision material to reinforce learning.
 
-- 📚 Beginner-friendly notes
-- ☕ Java code examples
-- 💡 Important concepts
-- ⚠️ Common mistakes
-- ❓ Interview questions
-- 💪 Practice problems
-- 📝 Quick revision notes
+Whether you're learning Java for the first time or revising the fundamentals, this repository provides everything you need in one place.
 
-This repository serves both as a **learning journal** and as a **revision guide** for anyone preparing for interviews, exams, or programming fundamentals.
+---
+
+# ✨ What You'll Find
+
+Every day includes:
+
+- 📘 Beginner-friendly notes with detailed explanations
+- 💻 Well-commented Java programs
+- 📊 Simple diagrams and visual illustrations
+- 💡 Important concepts and key points
+- ⚠️ Common beginner mistakes
+- 🎤 Interview questions with answers
+- 📝 Practice exercises
+- 📌 Quick revision notes
+- 🎯 Chapter summary and key takeaways
 
 ---
 
 # 🎯 Objectives
 
-- Build a strong foundation in Java.
-- Learn by writing code every day.
-- Develop consistency and problem-solving skills.
-- Create high-quality notes for future revision.
-- Share a beginner-friendly learning resource with the community.
+- ☕ Build a strong foundation in Java.
+- 💻 Learn by writing clean and structured Java code.
+- 📚 Understand concepts through simple explanations.
+- 🧠 Improve logical thinking and problem-solving skills.
+- 🎯 Prepare for college exams and coding interviews.
+- 🚀 Build confidence through daily hands-on practice.
+- 🌍 Create a free, beginner-friendly Java learning resource.
 
 ---
 
-# 👨💻 Who Is This Repository For?
+# 👨‍💻 Who Is This Repository For?
 
 This repository is perfect for:
 
-- 🌱 Beginners learning Java for the first time.
-- 🎓 College students.
+- 🌱 Complete beginners learning Java from scratch.
+- 🎓 School and college students.
 - 💼 Developers revising Java fundamentals.
-- 🧠 Students preparing for coding interviews.
-- 🚀 Anyone who enjoys learning by building.
+- 🎤 Students preparing for coding interviews.
+- 📚 Self-learners looking for a structured roadmap.
+- 🚀 Anyone interested in mastering Java step by step.
 
 ---
 
 # 📂 Repository Structure
 
 ```text
-30-Days-of-Java/
+30_Days_Of_Java/
 │
 ├── README.md
+├── LICENSE
 ├── .gitignore
 │
-├── Day01/
+├── Day01_Introduction/
 │   ├── Main.java
-│   ├── notes.md
-│   └── images/
+│   └── notes.md
 │
-├── Day02/
+├── Day02_Variables_And_Data_Types/
 │   ├── Main.java
-│   ├── notes.md
-│   └── images/
+│   └── notes.md
 │
-...
+├── Day03_Operators/
+│   ├── Main.java
+│   └── notes.md
 │
-└── Day30/
+├── Day04_Input_And_Output/
+│   ├── Main.java
+│   └── notes.md
+│
+├── ...
+│
+└── Day30_Final_Project/
     ├── Main.java
-    ├── notes.md
-    └── images/
+    └── notes.md
 ```
 
 ---
 
-# 📅 30-Day Roadmap
+# 🗺️ Learning Roadmap
 
 | Day | Topic | Status |
-|:---:|-------------------------------|:------:|
-| 01 | Introduction, JDK, JVM & JRE | ✅ Completed |
-| 02 | Variables & Data Types | ✅ Completed |
-| 03 | Operators | ✅ Completed  |
-| 04 | Input & Output | ✅ Completed  |
-| 05 | Conditional Statements |  ✅ Completed  |
-| 06 | Loops | ✅ Completed |
-| 07 | Pattern Printing |✅ Completed|
-| 08 | Array | ✅ Completed |
-| 09 | Methods | ✅ Completed |
-| 10 | Strings | ✅ Completed |
-  11 | 2D Arrays | ✅ Completed|
-| 12 | ArrayList | ✅ Completed |
-| 13 | Wrapper Classes & Autoboxing | ✅ Completed |
-| 14 |  OOP BASICS | ✅ Completed |
-| 15 | Constructors | ⬜ |
-| 16 | Encapsulation | ⬜ |
-| 17 | Inheritance | ⬜ |
-| 18 | Polymorphism | ⬜ |
-| 19 | Abstraction | ⬜ |
-| 20 | Interfaces | ⬜ |
-| 21 | Exception Handling | ⬜ |
-| 22 | File Handling | ⬜ |
-| 23 | Collections Framework | ⬜ |
-| 24 | Generics | ⬜ |
-| 25 | Lambda Expressions | ⬜ |
-| 26 | Streams API | ⬜ |
-| 27 | Mini Project 1 | ⬜ |
-| 28 | Mini Project 2 | ⬜ |
-| 29 | DSA Preparation | ⬜ |
-| 30 | Final Project | ⬜ |
-
-### 🚀 Course Progress (Day 14 / 30)
-```text
-[██████████████░░░░░░░░░░░░░░░░] 47%
-```
+|------|-------------------------------|--------|
+| ✅ Day 01 | Introduction to Java | Completed |
+| ✅ Day 02 | Variables & Data Types | Completed |
+| ✅ Day 03 | Operators | Completed |
+| ✅ Day 04 | Input & Output | Completed |
+| ✅ Day 05 | Conditionals | Completed |
+| ✅ Day 06 | Loops | Completed |
+| ✅ Day 07 | Pattern Printing | Completed |
+| ✅ Day 08 | Arrays | Completed |
+| ✅ Day 09 | Methods | Completed |
+| ✅ Day 10 | Strings | Completed |
+| ✅ Day 11 | 2D Arrays | Completed |
+| ✅ Day 12 | ArrayList | Completed |
+| ✅ Day 13 | Wrapper Classes & Autoboxing | Completed |
+| ✅ Day 14 | OOP Basics | Completed |
+| 🚧 Day 15 | Classes & Objects | In Progress |
+| ⏳ Day 16 | Constructors | Coming Soon |
+| ⏳ Day 17–30 | More Java Concepts & Projects | Planned |
 
 ---
 
-# 📚 Daily Learning Format
+# 🌟 Why This Repository?
 
-Every day's folder follows the same structure.
+✅ Beginner-Friendly Explanations
 
-### ☕ Main.java
+✅ Hands-on Coding Practice
 
-Contains all the Java programs and examples covered on that day.
+✅ Well-Structured Learning Path
 
-### 📝 notes.md
+✅ Interview Preparation
 
-Contains:
+✅ Daily Revision Material
 
-- Theory
-- Concepts
-- Syntax
-- Real-world examples
-- Common mistakes
-- Practice questions
-- Interview questions
-- Quick revision
+✅ Real-World Mini Projects
 
----
+✅ Clean & Readable Code
 
-# 🚀 Learning Workflow
-
-```text
-Learn
-   ↓
-Write Notes
-   ↓
-Write Java Code
-   ↓
-Practice Problems
-   ↓
-Review
-```
+✅ Open Source and Free to Learn
 
 ---
 
 # 🤝 Contributions
 
-Suggestions, corrections, and improvements are always welcome.
+Contributions are always welcome!
 
-If you notice an error or have a better explanation, feel free to open an issue or submit a pull request.
+If you'd like to improve explanations, fix issues, or add better examples, feel free to fork the repository and submit a pull request.
 
----
-
-# ⭐ Support
-
-If this repository helps you learn or revise Java, consider giving it a **⭐ Star**.
-
-It motivates me to continue improving this project and helps others discover it.
-
----
-
-# 📄 License
-
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)** License.
-
-You are welcome to:
-
-- 📖 Learn from this repository.
-- 🔄 Share the content with proper attribution.
-- 🛠️ Adapt the material for personal and educational purposes.
-
-You may **not**:
-
-- 💰 Sell this course or any part of it.
-- 📦 Redistribute it commercially without permission.
-
-For the complete license terms, see the **LICENSE** file.
+If you find this repository helpful, don't forget to ⭐ **star the repository** to support the project!
 
 ---
 
 <div align="center">
 
-## Happy Coding! ☕
+### ☕ Happy Coding!
 
-**Learning one day at a time.**
+**Learn • Practice • Build • Master 🚀**
 
 </div>
