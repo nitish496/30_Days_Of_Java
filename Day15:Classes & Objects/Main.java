@@ -1,24 +1,38 @@
-// =========================================
-// Program 1 - Creating Your First Class
-// =========================================
+/*
+==========================================
+        DAY 15 - CLASSES & OBJECTS
+==========================================
+
+Topics Covered:
+1. Creating Your First Class
+2. Creating Objects
+3. Creating Multiple Objects
+4. Accessing Fields & Calling Methods
+5. Understanding Object References
+6. Stack & Heap Memory
+
+Author: Nitish
+==========================================
+*/
 
 class Student {
 
-    
+    // Instance Variables (Fields)
     String name;
     int age;
     String course;
 
     // Method
     void study() {
-        System.out.println(name+" is studying Java.");
+        System.out.println(name + " is studying Java.");
     }
-    void display(){
-       
+
+    // Method to display student details
+    void displayDetails() {
         System.out.println("Name   : " + name);
         System.out.println("Age    : " + age);
         System.out.println("Course : " + course);
-        System.out.println("--------------------------");
+        System.out.println("--------------------------------");
     }
 }
 
@@ -26,61 +40,102 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Student class created successfully.");
+        // =========================================
+        // Program 1 - Creating Your First Class
+        // =========================================
 
-        //p-2 creating an object
+        System.out.println("========== DAY 15 - CLASSES & OBJECTS ==========\n");
+        System.out.println("Student class created successfully.\n");
+
+        // =========================================
+        // Program 2 - Creating Objects
+        // =========================================
+
         Student student1 = new Student();
-        student1.name="Raju";
-        student1.age=23;
-        student1.course="CSE-CORE";
 
-        //p-3:creating different objects at a time
-         Student student2 = new Student();
-        student2.name="Aman";
-        student2.age=18;
-        student2.course="CSE-AI-ML";
-        
+        student1.name = "Raju";
+        student1.age = 23;
+        student1.course = "CSE-Core";
+
+        // =========================================
+        // Program 3 - Creating Multiple Objects
+        // =========================================
+
+        Student student2 = new Student();
+
+        student2.name = "Aman";
+        student2.age = 18;
+        student2.course = "CSE-AI-ML";
+
         Student student3 = new Student();
-        student3.name="daniel";
-        student3.age=19;
-        student3.course="CSE-BLOCKCHAIN";
-       System.out.println("Student 1 Details");
-        System.out.println("Name   : " + student1.name);
-        System.out.println("Age    : " + student1.age);
-        System.out.println("Course : " + student1.course);
+
+        student3.name = "Daniel";
+        student3.age = 19;
+        student3.course = "CSE-Blockchain";
+
+        // =========================================
+        // Program 4 - Accessing Fields & Calling Methods
+        // =========================================
+
+        System.out.println("Student 1 Details");
+        student1.displayDetails();
         student1.study();
+
         System.out.println();
 
         System.out.println("Student 2 Details");
-        System.out.println("Name   : " + student2.name);
-        System.out.println("Age    : " + student2.age);
-        System.out.println("Course : " + student2.course);
+        student2.displayDetails();
         student2.study();
+
         System.out.println();
 
         System.out.println("Student 3 Details");
-        System.out.println("Name   : " + student3.name);
-        System.out.println("Age    : " + student3.age);
-        System.out.println("Course : " + student3.course);
+        student3.displayDetails();
         student3.study();
-        System.out.println();
 
-        //p-4:calling methods:
-        System.out.println("NOW WE ARE CALLING METHODS:");
-         System.out.println("Student 1 Details:");
-           student1.display();
-            System.out.println("Student 2  Details:");
-           student2.display();
-            System.out.println("Student 3 Details:");
-           student3.display();
-           //p-5
-          /// A reference variable stores the reference (memory location) of an object, allowing us to access its fields and methods.
-         System.out.println("Reference Variable : student1 , Student2 , Student3");
-         //p-6:
-         System.out.println("The object is stored in Heap Memory.");
-         System.out.println("The reference variable is stored in Stack Memory.\n");
-         System.out.println();
+        // =========================================
+        // Program 5 - Understanding Object References
+        // =========================================
 
+        System.out.println("\n========== OBJECT REFERENCES ==========");
+        System.out.println("student1 -> Refers to the first Student object.");
+        System.out.println("student2 -> Refers to the second Student object.");
+        System.out.println("student3 -> Refers to the third Student object.");
 
+        // =========================================
+        // Program 6 - Understanding Stack & Heap Memory
+        // =========================================
+
+        System.out.println("\n========== STACK & HEAP MEMORY ==========");
+        System.out.println("Reference variables are stored in Stack Memory.");
+        System.out.println("Objects are stored in Heap Memory.");
+
+        // =========================================
+        // Program 7 - Student Management System
+        // =========================================
+
+        System.out.println("\n========== MINI PROJECT ==========");
+        System.out.println("Program 7 : Student Management System");
+        System.out.println("-> Implemented in MiniProject.java");
+
+        // =========================================
+        // Program 8 - Comprehensive Practice
+        // =========================================
+
+        System.out.println("\nProgram 8 : Comprehensive Classes & Objects Practice");
+        System.out.println("-> Implemented in MiniProject2.java");
+
+        System.out.println("\n========== DAY 15 COMPLETED ==========");
+        System.out.println("Next Topic : Constructors");
     }
 }
+
+/*
+==========================================
+End of Day 15
+
+Next Topic:
+Constructors
+
+==========================================
+*/
