@@ -73,6 +73,11 @@ public class Main {
            student2.display();
             System.out.println("Student 3 Details:");
            student3.display();
+           //p-5
+         System.out.println("Reference Variable : student1");
+          System.out.println("Reference Variable : student2");
+           System.out.println("Reference Variable : student3");
+           System.out.println();
 
 
     }
