@@ -74,10 +74,12 @@ public class Main {
             System.out.println("Student 3 Details:");
            student3.display();
            //p-5
-         System.out.println("Reference Variable : student1");
-          System.out.println("Reference Variable : student2");
-           System.out.println("Reference Variable : student3");
-           System.out.println();
+          /// A reference variable stores the reference (memory location) of an object, allowing us to access its fields and methods.
+         System.out.println("Reference Variable : student1 , Student2 , Student3");
+         //p-6:
+         System.out.println("The object is stored in Heap Memory.");
+         System.out.println("The reference variable is stored in Stack Memory.\n");
+         System.out.println();
 
 
     }
