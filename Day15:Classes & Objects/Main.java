@@ -13,6 +13,13 @@ class Student {
     void study() {
         System.out.println(name+" is studying Java.");
     }
+    void display(){
+       
+        System.out.println("Name   : " + name);
+        System.out.println("Age    : " + age);
+        System.out.println("Course : " + course);
+        System.out.println("--------------------------");
+    }
 }
 
 public class Main {
@@ -58,6 +65,14 @@ public class Main {
         student3.study();
         System.out.println();
 
+        //p-4:calling methods:
+        System.out.println("NOW WE ARE CALLING METHODS:");
+         System.out.println("Student 1 Details:");
+           student1.display();
+            System.out.println("Student 2  Details:");
+           student2.display();
+            System.out.println("Student 3 Details:");
+           student3.display();
 
 
     }
