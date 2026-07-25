@@ -121,7 +121,20 @@ This repository is perfect for:
 | ✅ Day 14 | OOP Basics | Completed |
 | ✅ Day 15 | Classes & Objects | Completed |
 | ✅ Day 16 | Constructors | Completed |
-| ⏳ Day 17–30 | More Java Concepts & Projects | Planned |
+| ⏳ Day 17 | Encapsulation | Planned |
+| ⏳ Day 18 | Inheritance | Planned |
+| ⏳ Day 19 | Polymorphism | Planned |
+| ⏳ Day 20 | Abstraction | Planned |
+| ⏳ Day 21 | Interfaces | Planned |
+| ⏳ Day 22 | Exception Handling | Planned |
+| ⏳ Day 23 | File Handling | Planned |
+| ⏳ Day 24 | Collections Framework | Planned |
+| ⏳ Day 25 | Generics | Planned |
+| ⏳ Day 26 | Multithreading | Planned |
+| ⏳ Day 27 | Java 8 Features | Planned |
+| ⏳ Day 28 | JDBC | Planned |
+| ⏳ Day 29 | Mini Project | Planned |
+| ⏳ Day 30 | Final Project | Planned |
 
 ---
 
