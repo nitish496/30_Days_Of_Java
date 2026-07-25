@@ -176,6 +176,32 @@ class space{
           System.out.println("Numbers:"+numbers);
     }
 }
+//p-8:
+class player{
+    String name;
+    String country;
+ 
+    player(){
+        name = "Unknown";
+        country = "Unknown";
+        System.out.println("Default constructor");
+    }
+    player(String name){
+        this();
+        this.name = name;
+        System.out.println("one-parameter");
+    }
+    player(String name,String country){
+        this.name = name;
+        this.country = country;
+        System.out.println("Two-parameter");
+    }
+
+    void displayq(){
+        System.out.println("Name:"+name);
+        System.out.println("Country:"+country);
+    }
+}
 
 // =========================================l
 // Main Method
@@ -259,6 +285,16 @@ public class Main {
 
         space q1 = new space("yes","Found",1);
        q1.displayz();
+
+       player p1 = new player();
+       player p2 = new player("nitish");
+       player p3 = new player("nitish","India");
+
+       p1.displayq();
+       System.out.println();
+       p2.displayq();
+       System.out.println();
+       p3.displayq();
     }
 
 }
