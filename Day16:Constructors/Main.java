@@ -147,19 +147,37 @@ class Employee {
     }
 
 }
-System.out.println();
+
+//p-6
 class car{
     String brand;
     car(){
     brand = "Toyota";
     System.out.println("Constructor has been deployed.");
     }
+
     void displayer(){
         System.out.println("brand:"+brand);
     }
 }
+//p-7:
+class space{
+    String blackholes;
+    String rocks;
+    int numbers;
+    space(String blackholes,String rocks,int numbers){
+      this.blackholes = blackholes;
+      this.rocks = rocks;
+      this.numbers = numbers;
+    }
+    void displayz(){
+                System.out.println("Blockholes:"+blackholes);
+         System.out.println("Rocks:"+rocks);
+          System.out.println("Numbers:"+numbers);
+    }
+}
 
-// =========================================
+// =========================================l
 // Main Method
 // =========================================
 
@@ -239,6 +257,8 @@ public class Main {
         car c1 = new car();
         c1.displayer();
 
+        space q1 = new space("yes","Found",1);
+       q1.displayz();
     }
 
 }
