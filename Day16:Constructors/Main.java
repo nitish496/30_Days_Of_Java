@@ -14,7 +14,7 @@ class Student {
 // Program 2 - No-Argument Constructor
 // =========================================
 
-class Teacher {
+class Teach {
 
     // Java automatically provides a Default Constructor
 
@@ -43,6 +43,7 @@ class StudentDetails {
     }
 
 }
+//p-5:
 class Students{
     String n;
     int a;
@@ -57,7 +58,54 @@ class Students{
         System.out.println("Name:"+n);
         System.out.println("Age:"+a);
         System.out.println("Course:"+c);
+        System.out.println(-------------------);
     }
+}
+// =========================================
+// Program 5 - Constructor Overloading
+// =========================================
+
+class Employee {
+
+    String name;
+    int age;
+    String department;
+
+    // Constructor 1 - No-Argument Constructor
+    Employee() {
+
+        name = "Unknown";
+        age = 18;
+        department = "Not Assigned";
+
+    }
+
+    // Constructor 2 - One Parameter
+    Employee(String employeeName) {
+
+        name = employeeName;
+        age = 18;
+        department = "Not Assigned";
+
+    }
+
+    // Constructor 3 - Three Parameters
+    Employee(String employeeName, int employeeAge, String employeeDepartment) {
+
+        name = employeeName;
+        age = employeeAge;
+        department = employeeDepartment;
+
+    }
+
+    void display() {
+
+        System.out.println("Name       : " + name);
+        System.out.println("Age        : " + age);
+        System.out.println("Department : " + department);
+
+    }
+
 }
 
 public class Main {
