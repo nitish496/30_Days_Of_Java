@@ -147,6 +147,17 @@ class Employee {
     }
 
 }
+System.out.println();
+class car{
+    String brand;
+    car(){
+    brand = "Toyota";
+    System.out.println("Constructor has been deployed.");
+    }
+    void displayer(){
+        System.out.println("brand:"+brand);
+    }
+}
 
 // =========================================
 // Main Method
@@ -224,6 +235,9 @@ public class Main {
         System.out.println();
 
         e4.displayName();
+
+        car c1 = new car();
+        c1.displayer();
 
     }
 
