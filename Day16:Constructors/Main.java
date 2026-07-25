@@ -1,3 +1,19 @@
+/*
+==========================================
+        DAY 16 - CONSTRUCTORS
+==========================================
+
+Topics Covered:
+1. Introduction to Constructors
+2. Default Constructor
+3. No-Argument Constructor
+4. Parameterized Constructor
+5. Constructor Overloading
+
+Author: Nitish
+==========================================
+*/
+
 // =========================================
 // Program 1 - Introduction to Constructor
 // =========================================
@@ -11,15 +27,19 @@ class Student {
 }
 
 // =========================================
-// Program 2 - No-Argument Constructor
+// Program 2 - Default Constructor
 // =========================================
 
-class Teach {
+class Teacher {
 
     // Java automatically provides a Default Constructor
 
 }
-//p-3:
+
+// =========================================
+// Program 3 - No-Argument Constructor
+// =========================================
+
 class StudentDetails {
 
     String name;
@@ -43,24 +63,35 @@ class StudentDetails {
     }
 
 }
-//p-5:
-class Students{
-    String n;
-    int a;
-    String c;
 
-    Students(String nz, int az,String cz){
-        n = nz;
-        a = az;
-        c = cz;
+// =========================================
+// Program 4 - Parameterized Constructor
+// =========================================
+
+class Students {
+
+    String name;
+    int age;
+    String course;
+
+    Students(String studentName, int studentAge, String studentCourse) {
+
+        name = studentName;
+        age = studentAge;
+        course = studentCourse;
+
     }
-    void studentsDisplay(){
-        System.out.println("Name:"+n);
-        System.out.println("Age:"+a);
-        System.out.println("Course:"+c);
-        System.out.println(-------------------);
+
+    void studentsDisplay() {
+
+        System.out.println("Name   : " + name);
+        System.out.println("Age    : " + age);
+        System.out.println("Course : " + course);
+
     }
+
 }
+
 // =========================================
 // Program 5 - Constructor Overloading
 // =========================================
@@ -71,25 +102,34 @@ class Employee {
     int age;
     String department;
 
-    // Constructor 1 - No-Argument Constructor
+    // Constructor 1
     Employee() {
 
         name = "Unknown";
         age = 18;
-        department = "Not Assigned";
+        department = "Unknown";
 
     }
 
-    // Constructor 2 - One Parameter
+    // Constructor 2
     Employee(String employeeName) {
 
         name = employeeName;
         age = 18;
-        department = "Not Assigned";
+        department = "Unknown";
 
     }
 
-    // Constructor 3 - Three Parameters
+    // Constructor 3
+    Employee(String employeeName, String employeeDepartment) {
+
+        name = employeeName;
+        age = 18;
+        department = employeeDepartment;
+
+    }
+
+    // Constructor 4
     Employee(String employeeName, int employeeAge, String employeeDepartment) {
 
         name = employeeName;
@@ -98,7 +138,7 @@ class Employee {
 
     }
 
-    void display() {
+    void displayName() {
 
         System.out.println("Name       : " + name);
         System.out.println("Age        : " + age);
@@ -108,21 +148,93 @@ class Employee {
 
 }
 
+// =========================================
+// Main Method
+// =========================================
+
 public class Main {
 
     public static void main(String[] args) {
 
+        // =========================================
+        // Program 1 - Introduction to Constructor
+        // =========================================
+
         Student s1 = new Student();
+
+        System.out.println();
+
+        // =========================================
+        // Program 2 - Default Constructor
+        // =========================================
+
+        Teacher t1 = new Teacher();
+
+        System.out.println("Teacher object created successfully using the Default Constructor.");
+
+        System.out.println();
+
+        // =========================================
+        // Program 3 - No-Argument Constructor
+        // =========================================
 
         StudentDetails s2 = new StudentDetails();
 
         s2.display();
 
-        Students s3 = new Students("Alice",20,"CSE");
-        Students s4 = new Students("king", 20, "ECE");
-         s3.studentsDisplay();
-         s4.studentsDisplay();
+        System.out.println();
+
+        // =========================================
+        // Program 4 - Parameterized Constructor
+        // =========================================
+
+        Students s3 = new Students("Alice", 20, "Computer Science");
+        Students s4 = new Students("Bob", 19, "Information Technology");
+
+        s3.studentsDisplay();
+
+        System.out.println();
+
+        s4.studentsDisplay();
+
+        System.out.println();
+
+        // =========================================
+        // Program 5 - Constructor Overloading
+        // =========================================
+
+        Employee e1 = new Employee();
+
+        Employee e2 = new Employee("Charlie");
+
+        Employee e3 = new Employee("David", "Human Resources");
+
+        Employee e4 = new Employee("Emma", 25, "Finance");
+
+        e1.displayName();
+
+        System.out.println();
+
+        e2.displayName();
+
+        System.out.println();
+
+        e3.displayName();
+
+        System.out.println();
+
+        e4.displayName();
 
     }
 
 }
+
+/*
+==========================================
+End of Day 16
+
+Next Topic:
+Encapsulation
+
+==========================================
+*/
