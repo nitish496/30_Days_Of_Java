@@ -43,6 +43,22 @@ class StudentDetails {
     }
 
 }
+class Students{
+    String n;
+    int a;
+    String c;
+
+    Students(String nz, int az,String cz){
+        n = nz;
+        a = az;
+        c = cz;
+    }
+    void studentsDisplay(){
+        System.out.println("Name:"+n);
+        System.out.println("Age:"+a);
+        System.out.println("Course:"+c);
+    }
+}
 
 public class Main {
 
@@ -53,6 +69,11 @@ public class Main {
         StudentDetails s2 = new StudentDetails();
 
         s2.display();
+
+        Students s3 = new Students("Alice",20,"CSE");
+        Students s4 = new Students("king", 20, "ECE");
+         s3.studentsDisplay();
+         s4.studentsDisplay();
 
     }
 
