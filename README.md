@@ -8,6 +8,10 @@
 
 🟧 **Java 21+** • 📅 **30 Days Challenge** • 🟢 **Status: In Progress** • 📄 **MIT License**
 
+### 📈 Course Progress
+
+`[████████████████░░░░░░░░░░░░] 16 / 30 days — 53.3%`
+
 </div>
 
 ---
@@ -115,8 +119,8 @@ This repository is perfect for:
 | ✅ Day 12 | ArrayList | Completed |
 | ✅ Day 13 | Wrapper Classes & Autoboxing | Completed |
 | ✅ Day 14 | OOP Basics | Completed |
-| 🚧 Day 15 | Classes & Objects | In Progress |
-| ⏳ Day 16 | Constructors | Coming Soon |
+| ✅ Day 15 | Classes & Objects | Completed |
+| ✅ Day 16 | Constructors | Completed |
 | ⏳ Day 17–30 | More Java Concepts & Projects | Planned |
 
 ---
