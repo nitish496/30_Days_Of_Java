@@ -217,8 +217,38 @@ class StudentManagement {
         System.out.println("Marks : " + getMarks());
 
     }
+}    
+//p-10:
+    class Employee{
+        private int employeeId;
+        private String employeeName;
+        private Double employeeSalary;
 
-}
+        public void setEmployeeeId(int employeeId){
+            this.employeeId= employeeId;
+        }
+        public void setEmployeeName(String employeeName){
+            this.employeeName = employeeName;
+        }
+        public void setEmployeeSalary(double employeeSalary){
+            this.employeeSalary= employeeSalary;
+        }
+        public  String getEmployeeName(){
+            return employeeName;
+        }
+        public int getEmployeeId(){
+            return employeeId;
+        }
+        public double getEmployeeSalary(){
+            return employeeSalary;
+        }
+        public void cvb(){
+            System.out.println("Name:"+employeeName);
+            System.out.println("Id:"+employeeId);
+            System.out.println("Salary:"+employeeSalary);
+        }
+    }
+
 public class Main{
     public static void main(String[]args){
         student s1 = new student();
@@ -300,5 +330,13 @@ System.out.println();
 
 System.out.println("Student 2 Details");
 student2.display();
+System.out.println();
+//p-10:
+Employee e1 = new Employee();
+e1.setEmployeeName("Nitish");
+e1.setEmployeeeId(7459);
+e1.setEmployeeSalary(35000.5);
+e1.cvb();
+
     }
 }
