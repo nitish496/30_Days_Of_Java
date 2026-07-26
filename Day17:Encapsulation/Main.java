@@ -107,6 +107,33 @@ class Stuer{
     }
 }
 
+//p-7:
+
+class qwerty{
+    private String name;
+    private int marks;
+    private String job;
+
+    public void setName(String name){
+        this.name= name;
+    }
+    public void setMarks(int marks){
+        this.marks = marks;
+    }
+    public void setJob(String job){
+        this.job = job;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public int getMarks(){
+        return marks;
+    }
+    public String getJob(){
+        return job;
+    }
+}
 
 public class Main{
     public static void main(String[]args){
@@ -145,6 +172,15 @@ public class Main{
         s6.setMarks(89);
         s6.disper();
 
+        System.out.println();
+     qwerty s7 = new qwerty();
+     s7.setName("nitish");
+     s7.setMarks(98);
+     s7.setJob("programmer");
 
+
+     System.out.println("Name:" + s7.getName());
+     System.out.println("Marks:" + s7.getMarks());
+     System.out.println("Job:" + s7.getJob());
     }
 }
