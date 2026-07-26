@@ -32,6 +32,23 @@ class stud{
         System.out.println("age:"+age);
         System.out.println("By using getter method");
     }
+    //p-4:
+
+class stude{
+    private int age;
+    private String name;
+
+    public void setName(String name){
+       this.name = name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void disp(){
+        System.out.println("Name"+name);
+        System.out.println("Age:"+age);
+    }
+}
 }
 
 
@@ -49,7 +66,12 @@ public class Main{
         s3.Dsp();
         System.out.println();
         stude s4 = new stude();
-   
+         
+
+        s4.setName("King");
+        s4.setAge(20);
+        s4.disp();
+
     }
 }
 
