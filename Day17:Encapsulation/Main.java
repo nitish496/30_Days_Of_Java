@@ -1,10 +1,4 @@
- You caught a great detail! In my previous version, I renamed the `disper()` method to `display()` inside the class to make it professional, but I forgot to update the method call inside `main` (it still said `s6.disper();`). That would have caused a compile error!
 
-I have thoroughly checked every single line, fixed that method call, perfectly aligned all the terminal outputs, and ensured the entire code is absolutely flawless and **100% compile-ready**.
-
-Here is the final, ultra-refined **Day 17 Code**. Click **Copy code** and commit! 🚀
-
-```java
 /*
 ==========================================
         DAY 17 - ENCAPSULATION
