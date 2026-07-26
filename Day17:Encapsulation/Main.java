@@ -77,7 +77,35 @@ class studer{
     }
 }
 
+//p-6:
+class Stuer{
+    private String name;
+    private int age;
+    private int marks;
 
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        if(age>=0){
+            this.age = age;
+        }else{
+            System.out.println("Invaild");
+        }
+    }
+    public void setMarks(int marks){
+     if(marks>=0 && marks<=100){
+            this.marks = marks;
+        }else{
+            System.out.println("Invaild Marks");
+        }
+    }
+    public void disper(){
+        System.out.println("name:"+name);
+        System.out.println("age:"+age);
+        System.out.println("marks:"+marks);
+    }
+}
 
 
 public class Main{
@@ -109,8 +137,14 @@ public class Main{
         System.out.println("Name   : " + s5.getName());
         System.out.println("Age    : " + s5.getAge());
         System.out.println("Course : " + s5.getCourse());
-       
+        System.out.println();
+
+        Stuer s6 = new Stuer();
+        s6.setName("Nitish");
+        s6.setAge(19);
+        s6.setMarks(89);
+        s6.disper();
+
 
     }
 }
-
