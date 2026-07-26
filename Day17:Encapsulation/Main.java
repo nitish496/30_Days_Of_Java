@@ -166,6 +166,59 @@ public void display(){
 }
 }
 
+// p-9:
+
+class StudentManagement {
+
+    private String name;
+    private int age;
+    private int marks;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid Age!");
+        }
+
+    }
+
+    public void setMarks(int marks) {
+
+        if (marks >= 0 && marks <= 100) {
+            this.marks = marks;
+        } else {
+            System.out.println("Invalid Marks!");
+        }
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void display() {
+
+        System.out.println("Name  : " + getName());
+        System.out.println("Age   : " + getAge());
+        System.out.println("Marks : " + getMarks());
+
+    }
+
+}
 public class Main{
     public static void main(String[]args){
         student s1 = new student();
@@ -224,5 +277,28 @@ public class Main{
         account.withdraw(1500);
 
         account.display();
+      System.out.println();
+
+// Program 9
+
+StudentManagement student1 = new StudentManagement();
+
+student1.setName("Alice");
+student1.setAge(20);
+student1.setMarks(92);
+
+StudentManagement student2 = new StudentManagement();
+
+student2.setName("Bob");
+student2.setAge(21);
+student2.setMarks(87);
+
+System.out.println("Student 1 Details");
+student1.display();
+
+System.out.println();
+
+System.out.println("Student 2 Details");
+student2.display();
     }
 }
