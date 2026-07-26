@@ -16,7 +16,6 @@
 
 **Completed:** 17 / 30 Days
 
-**Completed:** 17 / 30 Days
 
 </div>
 
