@@ -134,6 +134,37 @@ class qwerty{
         return job;
     }
 }
+class Bank{
+    private String accountHolder;
+    private double balance;
+
+    public void setAccountHolder(String accountHolder){
+        this.accountHolder = accountHolder;
+    }
+   public void deposit(double amount){
+    if(amount>0){
+        balance+=amount;
+        System.out.println("₹"+amount+"Deposited Successfully.");
+    }else{
+        System.out.println("Invaild Deposit Amount!");
+    }
+   }
+public void withdraw(double amount){
+    if(amount >0 && amount<=balance){
+        balance-=amount;
+        System.out.println("₹"+amount+"withdraw Successfully.");
+    }else{
+        System.out.println("Insufficient balance!");
+    }
+}
+public double getBalance(){
+    return balance;
+}
+public void display(){
+    System.out.println("Account Holder : " + accountHolder);
+    System.out.println("Balance        : ₹" + getBalance());
+}
+}
 
 public class Main{
     public static void main(String[]args){
@@ -182,5 +213,16 @@ public class Main{
      System.out.println("Name:" + s7.getName());
      System.out.println("Marks:" + s7.getMarks());
      System.out.println("Job:" + s7.getJob());
+
+
+        Bank account = new Bank();
+
+        account.setAccountHolder("Nitish");
+
+        account.deposit(5000);
+
+        account.withdraw(1500);
+
+        account.display();
     }
 }
