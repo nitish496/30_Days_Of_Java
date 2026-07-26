@@ -121,7 +121,7 @@ This repository is perfect for:
 | ✅ Day 14 | OOP Basics | Completed |
 | ✅ Day 15 | Classes & Objects | Completed |
 | ✅ Day 16 | Constructors | Completed |
-| ⏳ Day 17 | Encapsulation | Planned |
+| ✅ Day 17 | Encapsulation | Completed |
 | ⏳ Day 18 | Inheritance | Planned |
 | ⏳ Day 19 | Polymorphism | Planned |
 | ⏳ Day 20 | Abstraction | Planned |
