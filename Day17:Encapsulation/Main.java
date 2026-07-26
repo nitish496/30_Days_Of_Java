@@ -32,7 +32,7 @@ class stud{
         System.out.println("age:"+age);
         System.out.println("By using getter method");
     }
-    //p-4:
+}  //p-4:
 
 class stude{
     private int age;
@@ -49,7 +49,35 @@ class stude{
         System.out.println("Age:"+age);
     }
 }
+
+//p-5:
+class studer{
+    private int age;
+    private String name;
+    private String course;
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public void setCourse(String course){
+        this.course = course;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public int  getAge(){
+        return age;
+    }
+    public String getCourse(){
+        return course;
+    }
 }
+
+
 
 
 public class Main{
@@ -71,6 +99,17 @@ public class Main{
         s4.setName("King");
         s4.setAge(20);
         s4.disp();
+        System.out.println();
+        studer s5 = new studer();
+
+        s5.setName("Nitish");
+        s5.setAge(20);
+        s5.setCourse("CSE-AI&ML");
+
+        System.out.println("Name   : " + s5.getName());
+        System.out.println("Age    : " + s5.getAge());
+        System.out.println("Course : " + s5.getCourse());
+       
 
     }
 }
