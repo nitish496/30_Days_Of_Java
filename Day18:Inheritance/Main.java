@@ -34,6 +34,22 @@ class CollegeStudent extends SchoolStudent {
         System.out.println("College: ABC Engineering College");
     }
 }
+/p-4:
+class Personq{
+    public void displayName(){
+        System.out.println("Name:Nitish");
+    }
+}
+class Normalstudent extends Personq{
+    public void displayCourse(){
+        System.out.println("Course:CSE-AI&ML");
+    }
+}
+class College extends Normalstudent{
+    public void displayCollege(){
+        System.out.println("XYZ-college");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
