@@ -7,7 +7,17 @@ class Person1 {
 class Student1 extends Person1 {
 
 }
-
+//p-2:
+class CoursePerson {
+    public void displayName() {
+        System.out.println("Name: Nitish");
+    }
+}
+class CourseStudent extends CoursePerson {
+    public void displayCourse() {
+        System.out.println("Course: CSE-AI&ML");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
