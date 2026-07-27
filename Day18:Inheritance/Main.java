@@ -50,6 +50,25 @@ class College extends Normalstudent{
         System.out.println("XYZ-college");
     }
 }
+//p-5
+class Animal {
+    String name="Dog";
+    public void sound(){
+        System.out.println("Animal makes a sound.");
+    }
+}
+class pet extends Animal{
+    String name = "Labrador";
+
+    public void display(){
+        System.out.println("Child name:"+name);
+        System.out.println("Parent name:"+super.name);
+    }
+    public void sound(){
+        super.sound();
+        System.out.println("Pet barks.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
