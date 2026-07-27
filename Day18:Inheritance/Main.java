@@ -34,7 +34,7 @@ class CollegeStudent extends SchoolStudent {
         System.out.println("College: ABC Engineering College");
     }
 }
-/p-4:
+//p-4:
 class Personq{
     public void displayName(){
         System.out.println("Name:Nitish");
