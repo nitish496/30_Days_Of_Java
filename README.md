@@ -130,7 +130,7 @@ This repository is perfect for:
 | ✅ Day 15 | Classes & Objects | Completed |
 | ✅ Day 16 | Constructors | Completed |
 | ✅ Day 17 | Encapsulation | Completed |
-| ⏳ Day 18 | Inheritance | Planned |
+| ✅ Day 18 | Inheritance | Completed |
 | ⏳ Day 19 | Polymorphism | Planned |
 | ⏳ Day 20 | Abstraction | Planned |
 | ⏳ Day 21 | Interfaces | Planned |
