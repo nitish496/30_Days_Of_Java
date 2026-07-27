@@ -81,6 +81,18 @@ class Dog extends Animal1{
         System.out.println("Dog barks.");
     }
 }
+//p-7:
+class parent{
+    public void displayParent(){
+        System.out.println("This is the parent class");
+    }
+}
+class child extends parent {
+    public void displaychild(){
+        System.out.println("This is the child class");
+    }
+}
+//p-8:
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
