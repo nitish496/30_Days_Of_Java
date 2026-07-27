@@ -69,6 +69,18 @@ class pet extends Animal{
         System.out.println("Pet barks.");
     }
 }
+//p-6:
+class Animal1{
+public void sound(){
+    System.out.println("Animal makes a sound.");
+}
+}
+class Dog extends Animal1{
+    @Override
+    public void sound(){
+        System.out.println("Dog barks.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
