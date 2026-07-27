@@ -116,6 +116,38 @@ class CatAnimal extends PetAnimal {
         System.out.println("Sound:Meow");
     }
 }
+//p-9:
+class Vehicle {
+    String brand;
+    String model;
+
+    public void setDetails(String brand,String model){
+        this.brand = brand;
+        this.model = model;
+    }
+    public void displayDetails(){
+        System.out.println("Brand:"+brand);
+        System.out.println("Model:"+model);
+    }
+}
+class Car extends Vehicle {
+    int doors;
+    public void setDoors(int doors){
+        this.doors = doors;
+    }
+    public void displayCar(){
+        System.out.println("Doors:"+doors);
+    }
+}
+class Bike extends Vehicle {
+    String engineType;
+    public void setEngineType(String engineType){
+        this.engineType = engineType;
+    }
+    public void displayBike(){
+        System.out.println("Engine type:"+engineType);
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
