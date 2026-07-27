@@ -1,261 +1,351 @@
-//p-1:
+/*
+==========================================
+        DAY 18 - INHERITANCE
+==========================================
+
+Topics Covered:
+1. Single Inheritance (Basic)
+2. Single Inheritance (Adding Methods)
+3. Multilevel Inheritance
+4. Multilevel Inheritance (Alternative)
+5. The 'super' Keyword (Variables & Methods)
+6. Method Overriding
+7. Parent and Child Demo
+8. Hierarchical Inheritance (Pets)
+9. Hierarchical Inheritance (Vehicles)
+10. Single Inheritance (Employee & Manager)
+
+Author: Nitish
+==========================================
+*/
+
+// =========================================
+// Program 1 - Single Inheritance (Basic)
+// =========================================
 class Person1 {
     public void display() {
         System.out.println("Name: Nitish");
     }
 }
-class Student1 extends Person1 {
 
+class Student1 extends Person1 {
+    // Inherits display() automatically
 }
-//p-2:
+
+// =========================================
+// Program 2 - Single Inheritance (Adding Methods)
+// =========================================
 class CoursePerson {
     public void displayName() {
         System.out.println("Name: Nitish");
     }
 }
+
 class CourseStudent extends CoursePerson {
     public void displayCourse() {
         System.out.println("Course: CSE-AI&ML");
     }
 }
-//p-3:
+
+// =========================================
+// Program 3 - Multilevel Inheritance
+// =========================================
 class SchoolPerson {
     public void displayName() {
         System.out.println("Name: Nitish");
     }
 }
+
 class SchoolStudent extends SchoolPerson {
     public void displayCourse() {
         System.out.println("Course: CSE-AI&ML");
     }
 }
+
 class CollegeStudent extends SchoolStudent {
     public void displayCollege() {
         System.out.println("College: ABC Engineering College");
     }
 }
-//p-4:
-class Personq{
-    public void displayName(){
-        System.out.println("Name:Nitish");
+
+// =========================================
+// Program 4 - Multilevel Inheritance (Alternative)
+// =========================================
+class PersonQ {
+    public void displayName() {
+        System.out.println("Name: Nitish");
     }
 }
-class Normalstudent extends Personq{
-    public void displayCourse(){
-        System.out.println("Course:CSE-AI&ML");
+
+class NormalStudent extends PersonQ {
+    public void displayCourse() {
+        System.out.println("Course: CSE-AI&ML");
     }
 }
-class College extends Normalstudent{
-    public void displayCollege(){
-        System.out.println("XYZ-college");
+
+class College extends NormalStudent {
+    public void displayCollege() {
+        System.out.println("College: XYZ-college");
     }
 }
-//p-5
+
+// =========================================
+// Program 5 - The 'super' Keyword
+// =========================================
 class Animal {
-    String name="Dog";
-    public void sound(){
+    String name = "Dog";
+    
+    public void sound() {
         System.out.println("Animal makes a sound.");
     }
 }
-class pet extends Animal{
-    String name = "Labrador";
 
-    public void display(){
-        System.out.println("Child name:"+name);
-        System.out.println("Parent name:"+super.name);
+class Pet extends Animal {
+    String name = "Labrador"; // Variable Shadowing
+
+    public void display() {
+        System.out.println("Child name  : " + name);
+        System.out.println("Parent name : " + super.name); // Using 'super' for variables
     }
-    public void sound(){
-        super.sound();
+
+    public void sound() {
+        super.sound(); // Using 'super' for methods
         System.out.println("Pet barks.");
     }
 }
-//p-6:
-class Animal1{
-public void sound(){
-    System.out.println("Animal makes a sound.");
+
+// =========================================
+// Program 6 - Method Overriding
+// =========================================
+class Animal1 {
+    public void sound() {
+        System.out.println("Animal makes a sound.");
+    }
 }
-}
-class Dog extends Animal1{
+
+class Dog extends Animal1 {
     @Override
-    public void sound(){
+    public void sound() {
         System.out.println("Dog barks.");
     }
 }
-//p-7:
-class parent{
-    public void displayParent(){
+
+// =========================================
+// Program 7 - Parent and Child Demo
+// =========================================
+class Parent {
+    public void displayParent() {
         System.out.println("This is the parent class");
     }
 }
-class child extends parent {
-    public void displaychild(){
+
+class Child extends Parent {
+    public void displayChild() {
         System.out.println("This is the child class");
     }
 }
-//p-8:
+
+// =========================================
+// Program 8 - Hierarchical Inheritance (Pets)
+// =========================================
 class PetAnimal {
     String name;
     int age;
 
-    public void setDetails(String name,int age){
+    public void setDetails(String name, int age) {
         this.name = name;
         this.age = age;
     }
-    public  void displayDetails(){
-        System.out.println("Name:"+name);
-        System.out.println("age:"+age);
+
+    public void displayDetails() {
+        System.out.println("Name : " + name);
+        System.out.println("Age  : " + age);
     }
 }
+
 class DogAnimal extends PetAnimal {
-    public void sound(){
-        System.out.println("sound:bark");
+    public void sound() {
+        System.out.println("Sound : Bark");
     }
 }
+
 class CatAnimal extends PetAnimal {
-    public void sound(){
-        System.out.println("Sound:Meow");
+    public void sound() {
+        System.out.println("Sound : Meow");
     }
 }
-//p-9:
+
+// =========================================
+// Program 9 - Hierarchical Inheritance (Vehicles)
+// =========================================
 class Vehicle {
     String brand;
     String model;
 
-    public void setDetails(String brand,String model){
+    public void setDetails(String brand, String model) {
         this.brand = brand;
         this.model = model;
     }
-    public void displayDetails(){
-        System.out.println("Brand:"+brand);
-        System.out.println("Model:"+model);
+
+    public void displayDetails() {
+        System.out.println("Brand : " + brand);
+        System.out.println("Model : " + model);
     }
 }
+
 class Car extends Vehicle {
     int doors;
-    public void setDoors(int doors){
+
+    public void setDoors(int doors) {
         this.doors = doors;
     }
-    public void displayCar(){
-        System.out.println("Doors:"+doors);
+
+    public void displayCar() {
+        System.out.println("Doors : " + doors);
     }
 }
+
 class Bike extends Vehicle {
     String engineType;
-    public void setEngineType(String engineType){
+
+    public void setEngineType(String engineType) {
         this.engineType = engineType;
     }
-    public void displayBike(){
-        System.out.println("Engine type:"+engineType);
+
+    public void displayBike() {
+        System.out.println("Engine Type : " + engineType);
     }
 }
-//p-10:
-class Employee{
+
+// =========================================
+// Program 10 - Single Inheritance (Employee & Manager)
+// =========================================
+class Employee {
     int employeeId;
     String employeeName;
+
     public void setEmployeeDetails(int employeeId, String employeeName) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
     }
 
     public void displayEmployeeDetails() {
-        System.out.println("Employee ID: " + employeeId);
-        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Employee ID   : " + employeeId);
+        System.out.println("Employee Name : " + employeeName);
     }
-
 }
-class Manager extends Employee{
+
+class Manager extends Employee {
     String department;
-    public void setDepartment(String department){
+
+    public void setDepartment(String department) {
         this.department = department;
     }
-    public void displayManagerDetails(){
-        System.out.println("Department:"+department);
 
+    public void displayManagerDetails() {
+        System.out.println("Department    : " + department);
     }
 }
-public class Main{
+
+// =========================================
+// Main Method - Execution
+// =========================================
+public class Main {
     public static void main(String[] args) {
+
+        System.out.println("===== Program 1 - Single Inheritance =====");
         Student1 s1 = new Student1();
         s1.display();
         System.out.println();
+
+        System.out.println("===== Program 2 - Adding Methods =====");
         CourseStudent s2 = new CourseStudent();
-        s2.displayCourse();
         s2.displayName();
+        s2.displayCourse();
         System.out.println();
+
+        System.out.println("===== Program 3 - Multilevel Inheritance =====");
         CollegeStudent s3 = new CollegeStudent();
-        s3.displayCourse();
         s3.displayName();
+        s3.displayCourse();
         s3.displayCollege();
         System.out.println();
+
+        System.out.println("===== Program 4 - Multilevel (Alternative) =====");
         College s4 = new College();
-        s4.displayCollege();
-        s4.displayCourse();
         s4.displayName();
+        s4.displayCourse();
+        s4.displayCollege();
         System.out.println();
-        pet p1 = new pet();
+
+        System.out.println("===== Program 5 - The 'super' Keyword =====");
+        Pet p1 = new Pet();
         p1.display();
+        System.out.println();
         p1.sound();
         System.out.println();
+
+        System.out.println("===== Program 6 - Method Overriding =====");
         Dog dog = new Dog();
         dog.sound();
-        child c1 = new child();
-        c1.displaychild();
-        c1.displayParent();
         System.out.println();
-        System.out.println("Types of Inheritance in Java:");
+
+        System.out.println("===== Program 7 - Parent & Child Demo =====");
+        Child c1 = new Child();
+        c1.displayParent();
+        c1.displayChild();
+        System.out.println();
+
+        System.out.println("===== Types of Inheritance in Java =====");
         System.out.println("1. Single Inheritance       - Supported");
         System.out.println("2. Multilevel Inheritance   - Supported");
         System.out.println("3. Hierarchical Inheritance - Supported");
         System.out.println("4. Multiple Inheritance     - Not Supported (Using Classes)");
-        System.out.println("5. Hybrid Inheritance      - Not Supported (Using Classes)");
+        System.out.println("5. Hybrid Inheritance       - Not Supported (Using Classes)");
         System.out.println();
+
+        System.out.println("===== Program 8 - Hierarchical (Pets) =====");
+        DogAnimal dogAnimal = new DogAnimal();
+        dogAnimal.setDetails("Tommy", 4);
+        dogAnimal.displayDetails();
+        dogAnimal.sound();
         System.out.println();
 
-DogAnimal dogAnimal = new DogAnimal();
+        CatAnimal cat = new CatAnimal();
+        cat.setDetails("Kitty", 2);
+        cat.displayDetails();
+        cat.sound();
+        System.out.println();
 
-dogAnimal.setDetails("Tommy", 4);
+        System.out.println("===== Program 9 - Hierarchical (Vehicles) =====");
+        Car car = new Car();
+        car.setDetails("Toyota", "Fortuner");
+        car.setDoors(4);
+        car.displayDetails();
+        car.displayCar();
+        System.out.println();
 
-dogAnimal.displayDetails();
-dogAnimal.sound();
+        Bike bike = new Bike();
+        bike.setDetails("Royal Enfield", "Classic 350");
+        bike.setEngineType("Single Cylinder");
+        bike.displayDetails();
+        bike.displayBike();
+        System.out.println();
 
-System.out.println();
-
-CatAnimal cat = new CatAnimal();
-
-cat.setDetails("Kitty", 2);
-
-cat.displayDetails();
-cat.sound();
-
-System.out.println();
-
-Car car = new Car();
-
-car.setDetails("Toyota", "Fortuner");
-car.setDoors(4);
-
-car.displayDetails();
-car.displayCar();
-
-System.out.println();
-
-Bike bike = new Bike();
-
-bike.setDetails("Royal Enfield", "Classic 350");
-bike.setEngineType("Single Cylinder");
-
-bike.displayDetails();
-bike.displayBike();
-
-System.out.println();
-
-Manager manager = new Manager();
-
-manager.setEmployeeDetails(101, "Alice");
-manager.setDepartment("Information Technology");
-
-manager.displayEmployeeDetails();
-manager.displayManagerDetails();
-
+        System.out.println("===== Program 10 - Single (Employee & Manager) =====");
+        Manager manager = new Manager();
+        manager.setEmployeeDetails(101, "Alice");
+        manager.setDepartment("Information Technology");
+        manager.displayEmployeeDetails();
+        manager.displayManagerDetails();
     }
 }
+
+/*
+==========================================
+End of Day 18
+
+Next Topic:
+Polymorphism
+==========================================
+*/
