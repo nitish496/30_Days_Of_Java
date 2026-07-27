@@ -18,6 +18,22 @@ class CourseStudent extends CoursePerson {
         System.out.println("Course: CSE-AI&ML");
     }
 }
+//p-3:
+class SchoolPerson {
+    public void displayName() {
+        System.out.println("Name: Nitish");
+    }
+}
+class SchoolStudent extends SchoolPerson {
+    public void displayCourse() {
+        System.out.println("Course: CSE-AI&ML");
+    }
+}
+class CollegeStudent extends SchoolStudent {
+    public void displayCollege() {
+        System.out.println("College: ABC Engineering College");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
