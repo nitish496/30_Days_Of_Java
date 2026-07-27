@@ -148,6 +148,31 @@ class Bike extends Vehicle {
         System.out.println("Engine type:"+engineType);
     }
 }
+//p-10:
+class Employee{
+    int employeeId;
+    String employeeName;
+    public void setEmployeeDetails(int employeeId, String employeeName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+    }
+
+    public void displayEmployeeDetails() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Employee Name: " + employeeName);
+    }
+
+}
+class Manager extends Employee{
+    String department;
+    public void setDepartment(String department){
+        this.department = department;
+    }
+    public void displayManagerDetails(){
+        System.out.println("Department:"+department);
+
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
