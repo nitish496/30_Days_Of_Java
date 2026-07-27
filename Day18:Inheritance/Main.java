@@ -93,6 +93,29 @@ class child extends parent {
     }
 }
 //p-8:
+class PetAnimal {
+    String name;
+    int age;
+
+    public void setDetails(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+    public  void displayDetails(){
+        System.out.println("Name:"+name);
+        System.out.println("age:"+age);
+    }
+}
+class DogAnimal extends PetAnimal {
+    public void sound(){
+        System.out.println("sound:bark");
+    }
+}
+class CatAnimal extends PetAnimal {
+    public void sound(){
+        System.out.println("Sound:Meow");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Student1 s1 = new Student1();
