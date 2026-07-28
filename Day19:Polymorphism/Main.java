@@ -141,6 +141,30 @@ class Triangle extends Shape {
     }
 
 }
+//p-9:
+class Animal3 {
+    public void soo(){
+        System.out.println("Animal makes the sound");
+    }
+}
+class Dog3 extends Animal3{
+    @Override
+    public void soo(){
+        System.out.println("Dog barks.");
+    }
+}
+class Cat3 extends Dog3{
+    @Override
+    public void soo(){
+        System.out.println("Cat meows.");
+    }
+}
+class Cow3 extends Cat3{
+    @Override
+    public void soo(){
+        System.out.println("cow moos.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -188,6 +212,15 @@ public class Main{
 
           shape = new Triangle(8, 6);
         shape.calculateArea();
+
+        Animal3 Animal3 = new Animal3();
+        Animal3.soo();
+        Dog3 Dog3 = new Dog3();
+        Dog3.soo();
+        Cat3 Cat3 = new Cat3();
+        Cat3.soo();
+        Cow3 Cow3 = new Cow3();
+        Cow3.soo();
 
     }
 }
