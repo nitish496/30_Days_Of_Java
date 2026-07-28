@@ -26,6 +26,17 @@ class Gamechanger{
         System.out.println("String number:"+text);
     }
 }
+class Multipler{
+    public void multi(int a, int b){
+        System.out.println("mutliplication between two numbers:"+(a*b));
+    }
+    public void multi(int a, int b,int c){
+        System.out.println("mutliplication between two numbers:"+(a*b*c));
+    }
+    public void multi(int a, int b,int c ,int d){
+        System.out.println("mutliplication between two numbers:"+(a*b*c*d));
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -41,6 +52,10 @@ public class Main{
         g1.changer(19);
         g1.changer(19.0);
         g1.changer("kick");
+        Multipler m1 = new Multipler();
+        m1.multi(10, 20);
+        m1.multi(10, 20, 30);
+        m1.multi(10, 20, 30, 40);
     }
 }
 
