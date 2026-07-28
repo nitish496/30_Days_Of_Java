@@ -68,6 +68,79 @@ class Dog2 extends Animal2{
        System.out.println("Dog barks.");
     }
 }
+//p-8:
+class Shape {
+
+    public void calculateArea() {
+
+        System.out.println("Area calculation depends on the shape.");
+
+    }
+
+}
+
+class Circle extends Shape {
+
+    double radius;
+
+    Circle(double radius) {
+
+        this.radius = radius;
+
+    }
+
+    @Override
+    public void calculateArea() {
+
+        double area = 3.14 * radius * radius;
+
+        System.out.println("Area of Circle : " + area);
+
+    }
+
+}
+
+class Rectangle extends Shape {
+
+    double length;
+    double width;
+
+    Rectangle(double length, double width) {
+
+        this.length = length;
+        this.width = width;
+
+    }
+
+    @Override
+    public void calculateArea() {
+
+        System.out.println("Area of Rectangle : " + (length * width));
+
+    }
+
+}
+
+class Triangle extends Shape {
+
+    double base;
+    double height;
+
+    Triangle(double base, double height) {
+
+        this.base = base;
+        this.height = height;
+
+    }
+
+    @Override
+    public void calculateArea() {
+
+        System.out.println("Area of Triangle : " + (0.5 * base * height));
+
+    }
+
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -103,6 +176,19 @@ public class Main{
         Animal2.sounding();
         Dog2 Dog2 =new Dog2();
         Dog2.sounder(); 
+        System.out.println();
+
+      Shape shape;
+
+         shape = new Circle(7);
+         shape.calculateArea();
+
+          shape = new Rectangle(10, 5);
+         shape.calculateArea();
+
+          shape = new Triangle(8, 6);
+        shape.calculateArea();
+
     }
 }
 
