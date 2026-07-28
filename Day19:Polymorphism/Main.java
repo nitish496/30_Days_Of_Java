@@ -171,7 +171,7 @@ class Payment{
         System.out.println("Processing payment...");
     }
 }
-class upiPayment extends payment{
+class upiPayment extends Payment{
     public void pay(){
         System.out.println("Payment is being made using upi.");
     }
@@ -242,6 +242,16 @@ public class Main{
         Cat3.soo();
         Cow3 Cow3 = new Cow3();
         Cow3.soo();
+        //p-10:
+        System.out.println();
+        Payment payment = new Payment();
+        payment.pay();
+        upiPayment upi = new upiPayment();
+        upi.pay();
+        cardPayment card = new cardPayment();
+        card.pay();
+        cashPayment cash = new cashPayment();
+        cash.pay();
 
     }
 }
