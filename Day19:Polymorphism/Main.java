@@ -57,6 +57,17 @@ class Cat extends Dog{
         System.out.println("Cat meows.");
     }
 }
+//p-7:
+class Animal2{
+    public final void sounding(){
+        System.out.println("Animal makes a sound.");
+    }
+}
+class Dog2 extends Animal2{
+    public void sounder(){
+       System.out.println("Dog barks.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -86,6 +97,12 @@ public class Main{
         //p-6:
         Cat cat1 = new Cat();
         cat1.sound();
+        //p-7:
+        System.out.println();
+        Animal2 Animal2 = new Animal2();
+        Animal2.sounding();
+        Dog2 Dog2 =new Dog2();
+        Dog2.sounder(); 
     }
 }
 
