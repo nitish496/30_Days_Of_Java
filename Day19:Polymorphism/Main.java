@@ -165,6 +165,27 @@ class Cow3 extends Cat3{
         System.out.println("cow moos.");
     }
 }
+//p-10:
+class Payment{
+    public void pay(){
+        System.out.println("Processing payment...");
+    }
+}
+class upiPayment extends payment{
+    public void pay(){
+        System.out.println("Payment is being made using upi.");
+    }
+}
+class cardPayment extends upiPayment{
+    public void pay(){
+        System.out.println("payment is being made by using card.");
+    }
+}
+class cashPayment extends cardPayment{
+    public void pay(){
+        System.out.println("payment is being made by using card.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
