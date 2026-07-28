@@ -220,7 +220,7 @@ public class Main{
         Cat3 Cat3 = new Cat3();
         Cat3.soo();
         Cow3 Cow3 = new Cow3();
-        Cow3.soo()
+        Cow3.soo();
 
     }
 }
