@@ -5,6 +5,15 @@ class Display{
     }
 }
 
+//p-2:
+class Calculator{
+    public void add(int a,int b){
+        System.out.println("sum of a and b:"+(a+b));
+    }
+    public void add(int a , int b,int c){
+        System.out.println("Sum of three numbers:"+(a+b+c));
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
