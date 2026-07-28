@@ -26,6 +26,7 @@ class Gamechanger{
         System.out.println("String number:"+text);
     }
 }
+//p-4:
 class Multipler{
     public void multi(int a, int b){
         System.out.println("mutliplication between two numbers:"+(a*b));
@@ -35,6 +36,18 @@ class Multipler{
     }
     public void multi(int a, int b,int c ,int d){
         System.out.println("mutliplication between two numbers:"+(a*b*c*d));
+    }
+}
+//p-5:
+class Animal{
+    public void sound(){
+        System.out.println("Animal makes the sound");
+    }
+}
+class Dog extends Animal{
+    @Override
+    public void sound(){
+        System.out.println("Dog barks");
     }
 }
 public class Main{
@@ -52,10 +65,17 @@ public class Main{
         g1.changer(19);
         g1.changer(19.0);
         g1.changer("kick");
+        //p-4:
         Multipler m1 = new Multipler();
         m1.multi(10, 20);
         m1.multi(10, 20, 30);
         m1.multi(10, 20, 30, 40);
+        System.out.println();
+        Animal a1 = new Animal();
+        a1.sound();
+
+        Dog dog1 =  new Dog();
+        dog1.sound();
     }
 }
 
