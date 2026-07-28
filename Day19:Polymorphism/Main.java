@@ -50,6 +50,13 @@ class Dog extends Animal{
         System.out.println("Dog barks");
     }
 }
+//p-6:
+class Cat extends Dog{
+    @Override
+    public void sound(){
+        System.out.println("Cat meows.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -76,6 +83,9 @@ public class Main{
 
         Dog dog1 =  new Dog();
         dog1.sound();
+        //p-6:
+        Cat cat1 = new Cat();
+        cat1.sound();
     }
 }
 
