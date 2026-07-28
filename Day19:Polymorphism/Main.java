@@ -14,6 +14,18 @@ class Calculator{
         System.out.println("Sum of three numbers:"+(a+b+c));
     }
 }
+//p-3:
+class Gamechanger{
+    public void changer(int number){
+        System.out.println("Integer Number:"+number);
+    }
+    public void changer(Double number){
+        System.out.println("Double Number:"+number);
+    }
+    public void changer(String text){
+        System.out.println("String number:"+text);
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Display d1 = new Display();
@@ -23,6 +35,12 @@ public class Main{
         c1.add(10,20);
         Calculator c2 = new Calculator();
         c2.add(10,20,30);
+        //p-3:
+        Gamechanger g1 = new Gamechanger();
+        System.out.println();
+        g1.changer(19);
+        g1.changer(19.0);
+        g1.changer("kick");
     }
 }
 
