@@ -131,7 +131,7 @@ This repository is perfect for:
 | ✅ Day 16 | Constructors | Completed |
 | ✅ Day 17 | Encapsulation | Completed |
 | ✅ Day 18 | Inheritance | Completed |
-| ⏳ Day 19 | Polymorphism | Planned |
+| ✅ Day 19 | Polymorphism | Completed |
 | ⏳ Day 20 | Abstraction | Planned |
 | ⏳ Day 21 | Interfaces | Planned |
 | ⏳ Day 22 | Exception Handling | Planned |
