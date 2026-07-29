@@ -44,7 +44,7 @@ abstract class Employee{
 class softwarePerson extends Employee{
     @Override
     void work(){
-        System.out.println("The person is working.");
+        System.out.println("The person is working");
     }
 }
 
