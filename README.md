@@ -2,184 +2,105 @@
 
 # ☕ 30 Days of Java
 
-### 📘 Learn • 💻 Practice • 🚀 Build • 🎯 Master
+### Learn • Practice • Build • Master
 
-> **Master Java from scratch in 30 days through structured lessons, hands-on coding, detailed notes, real-world examples, interview questions, and practical mini projects.**
+> A beginner-friendly, 30-day Java roadmap with notes and runnable examples for each lesson.
 
-🟧 **Java 21+** • 📅 **30 Days Challenge** • 🟢 **Status: In Progress** • 📄 **MIT License**
+**Java 21+** · **30-day challenge** · **20 / 30 days completed** · [MIT License](LICENSE)
 
-### 📈 Course Progress
-
-## 📊 Progress
+## Progress
 
 ```text
-████████████████████░░░░░░░░░░  **66.7%**
-
-**Completed:** 20 / 30 Days
+████████████████████░░░░░░░░░░  66.7%
 ```
-
-
 
 </div>
 
----
+## About
 
-# 📖 About This Repository
+This repository is a structured Java learning journey. Each day focuses on one concept, pairs explanatory notes with code, and builds toward a practical understanding of core Java programming.
 
-Welcome to **30 Days of Java** — a structured, beginner-friendly Java course designed to help you build a strong foundation in Java programming through consistent daily learning.
+It is intended for beginners, students revising fundamentals, and anyone who prefers a clear daily roadmap over disconnected tutorials.
 
-Instead of jumping between random tutorials and videos, this repository follows a carefully planned roadmap where each day introduces new concepts step by step. Every topic includes clear explanations, well-commented Java programs, practical examples, and revision material to reinforce learning.
+## What you will find
 
-Whether you're learning Java for the first time or revising the fundamentals, this repository provides everything you need in one place.
+- Concise notes for every topic
+- Runnable Java examples
+- A progression from syntax and control flow to object-oriented programming
+- Practice-oriented lessons and mini projects
 
----
+## Start here
 
-# ✨ What You'll Find
+1. Clone the repository.
+2. Open a completed day and read its `notes.md` file.
+3. Compile and run its Java example from that folder.
 
-Every day includes:
+```bash
+cd "Day01:Introduction"
+javac Main.java
+java Main
+```
 
-- 📘 Beginner-friendly notes with detailed explanations
-- 💻 Well-commented Java programs
-- 📊 Simple diagrams and visual illustrations
-- 💡 Important concepts and key points
-- ⚠️ Common beginner mistakes
-- 🎤 Interview questions with answers
-- 📝 Practice exercises
-- 📌 Quick revision notes
-- 🎯 Chapter summary and key takeaways
+> Every lesson is independent. Compile each `Main.java` from its own directory because many lessons use the same `Main` class name.
 
----
+## Learning roadmap
 
-# 🎯 Objectives
+| Day | Topic | Status |
+| --- | --- | --- |
+| 01 | [Introduction](<Day01:Introduction/>) | ✅ Completed |
+| 02 | [Variables & Data Types](<Day02:Variables_And_DataTypes/>) | ✅ Completed |
+| 03 | [Operators](<Day03:Operators/>) | ✅ Completed |
+| 04 | [Input & Output](<Day04:Input & Output (Scanner Class)/>) | ✅ Completed |
+| 05 | [Conditional Statements](<Day05:Conditional Statements/>) | ✅ Completed |
+| 06 | [Loops](<Day06:Loops />) | ✅ Completed |
+| 07 | [Pattern Printing](<Day07: Pattern Printing/>) | ✅ Completed |
+| 08 | [Arrays](<Day08:Array/>) | ✅ Completed |
+| 09 | [Methods](<Day09:Methods/>) | ✅ Completed |
+| 10 | [Strings](<Day10:Strings/>) | ✅ Completed |
+| 11 | [2D Arrays](<Day11:2D Array/>) | ✅ Completed |
+| 12 | [ArrayList](<Day12:ArrayList/>) | ✅ Completed |
+| 13 | [Wrapper Classes & Autoboxing](<Day13:Wrapper Classes & Autoboxing/>) | ✅ Completed |
+| 14 | [Object-Oriented Programming](<Day14:ObjectOrientedProgramming/>) | ✅ Completed |
+| 15 | [Classes & Objects](<Day15:Classes & Objects/>) | ✅ Completed |
+| 16 | [Constructors](<Day16:Constructors/>) | ✅ Completed |
+| 17 | [Encapsulation](<Day17:Encapsulation/>) | ✅ Completed |
+| 18 | [Inheritance](<Day18:Inheritance/>) | ✅ Completed |
+| 19 | [Polymorphism](<Day19:Polymorphism/>) | ✅ Completed |
+| 20 | [Abstraction](<Day20:Abstraction/>) | ✅ Completed |
+| 21 | Interfaces | ⏳ Planned |
+| 22 | Exception Handling | ⏳ Planned |
+| 23 | File Handling | ⏳ Planned |
+| 24 | Collections Framework | ⏳ Planned |
+| 25 | Generics | ⏳ Planned |
+| 26 | Multithreading | ⏳ Planned |
+| 27 | Java 8 Features | ⏳ Planned |
+| 28 | JDBC | ⏳ Planned |
+| 29 | Mini Project | ⏳ Planned |
+| 30 | Final Project | ⏳ Planned |
 
-- ☕ Build a strong foundation in Java.
-- 💻 Learn by writing clean and structured Java code.
-- 📚 Understand concepts through simple explanations.
-- 🧠 Improve logical thinking and problem-solving skills.
-- 🎯 Prepare for college exams and coding interviews.
-- 🚀 Build confidence through daily hands-on practice.
-- 🌍 Create a free, beginner-friendly Java learning resource.
-
----
-
-# 👨‍💻 Who Is This Repository For?
-
-This repository is perfect for:
-
-- 🌱 Complete beginners learning Java from scratch.
-- 🎓 School and college students.
-- 💼 Developers revising Java fundamentals.
-- 🎤 Students preparing for coding interviews.
-- 📚 Self-learners looking for a structured roadmap.
-- 🚀 Anyone interested in mastering Java step by step.
-
----
-
-# 📂 Repository Structure
+## Repository layout
 
 ```text
 30_Days_Of_Java/
-│
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── Day01_Introduction/
+├── Day01:Introduction/
 │   ├── Main.java
 │   └── notes.md
-│
-├── Day02_Variables_And_Data_Types/
-│   ├── Main.java
-│   └── notes.md
-│
-├── Day03_Operators/
-│   ├── Main.java
-│   └── notes.md
-│
-├── Day04_Input_And_Output/
-│   ├── Main.java
-│   └── notes.md
-│
 ├── ...
-│
-└── Day30_Final_Project/
-    ├── Main.java
-    └── notes.md
+├── Day20:Abstraction/
+│   ├── Main.java
+│   └── notes.md
+├── LICENSE
+└── README.md
 ```
 
----
+## Contributing
 
-# 🗺️ Learning Roadmap
+Suggestions, clearer examples, typo fixes, and improvements to the notes are welcome. Please fork the repository, create a focused branch, and open a pull request describing the change.
 
-| Day | Topic | Status |
-|------|-------------------------------|--------|
-| ✅ Day 01 | Introduction to Java | Completed |
-| ✅ Day 02 | Variables & Data Types | Completed |
-| ✅ Day 03 | Operators | Completed |
-| ✅ Day 04 | Input & Output | Completed |
-| ✅ Day 05 | Conditionals | Completed |
-| ✅ Day 06 | Loops | Completed |
-| ✅ Day 07 | Pattern Printing | Completed |
-| ✅ Day 08 | Arrays | Completed |
-| ✅ Day 09 | Methods | Completed |
-| ✅ Day 10 | Strings | Completed |
-| ✅ Day 11 | 2D Arrays | Completed |
-| ✅ Day 12 | ArrayList | Completed |
-| ✅ Day 13 | Wrapper Classes & Autoboxing | Completed |
-| ✅ Day 14 | OOP Basics | Completed |
-| ✅ Day 15 | Classes & Objects | Completed |
-| ✅ Day 16 | Constructors | Completed |
-| ✅ Day 17 | Encapsulation | Completed |
-| ✅ Day 18 | Inheritance | Completed |
-| ✅ Day 19 | Polymorphism | Completed |
-| ⏳ Day 20 | Abstraction | Planned |
-| ⏳ Day 21 | Interfaces | Planned |
-| ⏳ Day 22 | Exception Handling | Planned |
-| ⏳ Day 23 | File Handling | Planned |
-| ⏳ Day 24 | Collections Framework | Planned |
-| ⏳ Day 25 | Generics | Planned |
-| ⏳ Day 26 | Multithreading | Planned |
-| ⏳ Day 27 | Java 8 Features | Planned |
-| ⏳ Day 28 | JDBC | Planned |
-| ⏳ Day 29 | Mini Project | Planned |
-| ⏳ Day 30 | Final Project | Planned |
-
----
-
-# 🌟 Why This Repository?
-
-✅ Beginner-Friendly Explanations
-
-✅ Hands-on Coding Practice
-
-✅ Well-Structured Learning Path
-
-✅ Interview Preparation
-
-✅ Daily Revision Material
-
-✅ Real-World Mini Projects
-
-✅ Clean & Readable Code
-
-✅ Open Source and Free to Learn
-
----
-
-# 🤝 Contributions
-
-Contributions are always welcome!
-
-If you'd like to improve explanations, fix issues, or add better examples, feel free to fork the repository and submit a pull request.
-
-If you find this repository helpful, don't forget to ⭐ **star the repository** to support the project!
-
----
+If this roadmap helps you, consider starring the repository.
 
 <div align="center">
 
-### ☕ Happy Coding!
-
-**Learn • Practice • Build • Master 🚀**
+### Happy coding! 🚀
 
 </div>
