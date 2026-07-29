@@ -37,6 +37,16 @@ class car extends vechile{
         System.out.println("The car starts working.");
     }
 }
+//p-4:
+abstract class Employee{
+    abstract void work();
+}
+class softwarePerson extends Employee{
+    @Override
+    void wok(){
+        System.out.println("The person is working.");
+    }
+}
 public class Main{
     public static void main(String[]args){
         Dog d1 = new Dog();
