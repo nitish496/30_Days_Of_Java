@@ -43,10 +43,11 @@ abstract class Employee{
 }
 class softwarePerson extends Employee{
     @Override
-    void wok(){
+    void work(){
         System.out.println("The person is working.");
     }
 }
+
 public class Main{
     public static void main(String[]args){
         Dog d1 = new Dog();
@@ -56,5 +57,7 @@ public class Main{
         d2.sound();
         car c1 = new car();
         c1.start();
+        Softwareenginer1 e1 = new Softwareenginer1();
+        e1.work();
     }
 }
