@@ -47,7 +47,19 @@ class softwarePerson extends Employee{
         System.out.println("The person is working");
     }
 }
-
+//p-5:
+abstract class Employee1{
+   Employee1(){
+    System.out.println("Employee constructor is called.");
+   }
+   abstract void work();
+}
+class Softwareenginer1 extends Employee1{
+    @Override
+    void work(){
+        System.out.println("Your work is to devlop backend or frontend.");
+    }
+}
 public class Main{
     public static void main(String[]args){
         Dog d1 = new Dog();
