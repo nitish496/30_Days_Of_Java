@@ -172,6 +172,29 @@ class Bike3 extends Vehicle3{
         System.out.println("Bike stopped.");
     }
 }
+// Problem 10
+abstract class Payment1{
+   abstract void processPayment();
+}
+class UPI1 extends Payment1{
+    @Override
+    void processPayment(){
+        System.out.println("Payment processed using UPI.");
+    }
+}
+class CreditCard1 extends Payment1{
+    @Override
+    void processPayment(){
+        System.out.println("Payment processed using a credit card.");
+    }
+}
+
+class NetBanking1 extends Payment1{
+    @Override
+    void processPayment(){
+        System.out.println("Payment processed using net banking.");
+    }
+}
 
 public class Main{
     public static void main(String[]args){
@@ -219,5 +242,13 @@ System.out.println();
 vehicle = new Bike3();
 vehicle.start();
 vehicle.stop();
+System.out.println();
+Payment1 payment;
+payment = new CreditCard1();
+payment.processPayment();
+payment = new UPI1();
+payment.processPayment();
+payment = new NetBanking1();
+payment.processPayment();
     }
 }
