@@ -60,6 +60,23 @@ class Softwareenginer1 extends Employee1{
         System.out.println("Your work is to devlop backend or frontend.");
     }
 }
+//p-6:
+interface Call{
+    void calling();
+}
+interface music{
+    void musicplayer();
+}
+class Smartphone implements Call,music{
+    @Override
+    public void calling(){
+        System.out.println("your phone is calling...");
+    }
+    @Override
+    public void musicplayer(){
+        System.out.println("your phone is playing music");
+    }
+}
 public class Main{
     public static void main(String[]args){
         Dog d1 = new Dog();
@@ -71,5 +88,9 @@ public class Main{
         c1.start();
         Softwareenginer1 e1 = new Softwareenginer1();
         e1.work();
+        System.out.println();
+        Smartphone p1 = new Smartphone();
+        p1.musicplayer();
+        p1.calling();
     }
 }
