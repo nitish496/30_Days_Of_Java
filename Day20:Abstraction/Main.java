@@ -1,4 +1,4 @@
-//p-1:
+// Problem 1
 abstract class Animal{
     abstract void sound();
 
@@ -12,10 +12,10 @@ class Dog extends Animal{
 
 }
 
-//p-2:
+// Problem 2
 abstract class Animal2{
     void eat(){
-        System.out.println("Animal's eat food.");
+        System.out.println("Animals eat food.");
 
     }
     abstract void sound();
@@ -27,54 +27,94 @@ class Dog2 extends Animal2{
         System.out.println("Dog2 barks");
     }
 }
-//p-3:
-abstract class vechile{
+// Problem 3
+abstract class Vehicle{
     abstract void start();
 }
-class car extends vechile{
+class Car extends Vehicle{
     @Override
     void start(){
         System.out.println("The car starts working.");
     }
 }
-//p-4:
+// Problem 4
 abstract class Employee{
     abstract void work();
 }
-class softwarePerson extends Employee{
+class SoftwarePerson extends Employee{
     @Override
     void work(){
         System.out.println("The person is working");
     }
 }
-//p-5:
+// Problem 5
 abstract class Employee1{
    Employee1(){
     System.out.println("Employee constructor is called.");
    }
    abstract void work();
 }
-class Softwareenginer1 extends Employee1{
+class SoftwareEngineer1 extends Employee1{
     @Override
     void work(){
-        System.out.println("Your work is to devlop backend or frontend.");
+        System.out.println("Your work is to develop the backend or frontend.");
     }
 }
-//p-6:
+// Problem 6
 interface Call{
     void calling();
 }
-interface music{
-    void musicplayer();
+interface Music{
+    void playMusic();
 }
-class Smartphone implements Call,music{
+class Smartphone implements Call, Music{
     @Override
     public void calling(){
-        System.out.println("your phone is calling...");
+        System.out.println("Your phone is calling...");
     }
     @Override
-    public void musicplayer(){
-        System.out.println("your phone is playing music");
+    public void playMusic(){
+        System.out.println("Your phone is playing music.");
+    }
+}
+// Problem 7
+abstract class Vehicle2{
+    public void start(){
+        System.out.println("Vehicle started.");
+    }
+    abstract void drive();
+}
+interface MusicSystem{
+    void playMusic();
+}
+
+class Car2 extends Vehicle2 implements MusicSystem{
+    @Override
+    void drive(){
+        System.out.println("Car is moving");
+    }
+    @Override
+    public void playMusic(){
+        System.out.println("Playing music");
+    }
+}
+// Problem 8
+abstract class BankAccount{
+    public void deposit(){
+        System.out.println("Money deposited successfully.");
+    }
+    abstract void withdraw();
+}
+class SavingsAccount extends BankAccount{
+    @Override
+    void withdraw(){
+        System.out.println("Money successfully withdrawn from the savings account.");
+    }
+}
+class CurrentAccount extends BankAccount{
+    @Override
+    void withdraw(){
+        System.out.println("Money successfully withdrawn from the current account.");
     }
 }
 public class Main{
@@ -84,13 +124,33 @@ public class Main{
         Dog2 d2 = new Dog2();
         d2.eat();
         d2.sound();
-        car c1 = new car();
+        Car c1 = new Car();
         c1.start();
-        Softwareenginer1 e1 = new Softwareenginer1();
+        SoftwareEngineer1 e1 = new SoftwareEngineer1();
         e1.work();
         System.out.println();
         Smartphone p1 = new Smartphone();
-        p1.musicplayer();
+        p1.playMusic();
         p1.calling();
+        System.out.println();
+
+      System.out.println();
+      Car2 car = new Car2();
+      car.start();
+      car.drive();
+      car.playMusic();
+      System.out.println();
+
+BankAccount account;
+
+account = new SavingsAccount();
+account.deposit();
+account.withdraw();
+
+System.out.println();
+
+account = new CurrentAccount();
+account.deposit();
+account.withdraw();
     }
 }
