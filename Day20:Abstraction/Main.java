@@ -117,6 +117,62 @@ class CurrentAccount extends BankAccount{
         System.out.println("Money successfully withdrawn from the current account.");
     }
 }
+
+//p-9:
+abstract class vechile4{
+    abstract void start();
+    abstract void stop();
+}
+class car3 extends vechile4{
+    @Override
+    void start(){
+        System.out.println("The car has been started.");
+    }
+    @Override
+    void stop(){
+        System.out.println("The car has been stop.");
+    }
+}
+class bike3 extends car3{
+    @Override
+    void start(){
+        System.out.println("The bike has been self started.");
+    }
+    @Override
+    void stop(){
+        System.out.println("The bike has been stoped.");
+    }
+}
+// Problem 9
+abstract class Vehicle3{
+    abstract void start();
+    abstract void stop();
+}
+
+class Car3 extends Vehicle3{
+    @Override
+    void start(){
+        System.out.println("Car started.");
+    }
+
+    @Override
+    void stop(){
+        System.out.println("Car stopped.");
+    }
+}
+
+class Bike3 extends Vehicle3{
+    @Override
+    void start(){
+        System.out.println("Bike started.");
+    }
+
+    @Override
+    void stop(){
+        System.out.println("Bike stopped.");
+    }
+}
+
 public class Main{
     public static void main(String[]args){
         Dog d1 = new Dog();
@@ -153,5 +209,15 @@ account = new CurrentAccount();
 account.deposit();
 account.withdraw();
 account.withdraw();
+System.out.println();
+System.out.println();
+Vehicle3 vehicle;
+vehicle = new Car3();
+vehicle.start();
+vehicle.stop();
+System.out.println();
+vehicle = new Bike3();
+vehicle.start();
+vehicle.stop();
     }
 }
