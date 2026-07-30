@@ -114,6 +114,16 @@ class Message implements printer{
         System.out.println("the message has been printed.");
     }
 }
+//p-9:
+interface printable{
+
+}
+class Documents implements printable{
+    public void display(){
+        System.out.println("printing document.");
+    }
+}
+
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -147,6 +157,8 @@ public class Main{
         System.out.println();
         Message m1 = new Message();
         m1.print();
-
+      System.out.println();
+      Documents d1 = new Documents();
+      d1.display();
     }
 }
