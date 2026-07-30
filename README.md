@@ -133,7 +133,7 @@ This repository is perfect for:
 | ✅ Day 18 | Inheritance | Completed |
 | ✅ Day 19 | Polymorphism | Completed |
 | ✅ Day 20 | Abstraction | Completed |
-| ⏳ Day 21 | Interfaces | Planned |
+| ✅ Day 21 | Interfaces | Completed |
 | ⏳ Day 22 | Exception Handling | Planned |
 | ⏳ Day 23 | File Handling | Planned |
 | ⏳ Day 24 | Collections Framework | Planned |
