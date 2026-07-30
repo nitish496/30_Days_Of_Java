@@ -89,6 +89,19 @@ class Television5 implements Remote{
         System.out.println("television has been turned on.");
     }
 }
+//p-7:
+interface Calculator{
+    void addition();
+    static void basic(){
+        System.out.println("Welcome to the calculator.");
+    }
+}
+class BasicCalculator implements Calculator{
+    @Override
+    public void addition(){
+        System.out.println("Your calculator can do addition.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -115,5 +128,10 @@ public class Main{
         Television5 t5 = new Television5();
         t5.turnOn();
         t5.turnOff();
+        System.out.println();
+        Calculator.basic();
+        BasicCalculator c1 = new BasicCalculator();
+        c1.addition();
+
     }
 }
