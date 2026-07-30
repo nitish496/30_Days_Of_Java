@@ -76,6 +76,19 @@ class Smartphone4 implements Company{
     System.out.println("Company_Name:"+Company_Name);
  }
 }
+//p-6:
+interface Remote{
+    void turnOn();
+     default void turnOff(){
+      System.out.println("Device is turning off.");   
+    }
+}
+class Television5 implements Remote{
+    @Override
+    public void turnOn(){
+        System.out.println("television has been turned on.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -98,5 +111,9 @@ public class Main{
         System.out.println();
         Smartphone4 p4 = new Smartphone4();
         p4.Display();
+        System.out.println();
+        Television5 t5 = new Television5();
+        t5.turnOn();
+        t5.turnOff();
     }
 }
