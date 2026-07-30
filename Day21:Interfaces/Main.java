@@ -123,7 +123,26 @@ class Documents implements printable{
         System.out.println("printing document.");
     }
 }
+//p-10:
+interface SamrtDevice{
+    void turnOn();
+   default void turnOff(){
+    System.out.println("Smart device has been turned off.");
+   }
+}
+class SmartLight implements SamrtDevice{
+    @Override
+    public void turnOn(){
+        System.out.println("Smart light has been turned on.");
+    }
+}
+class SmartFan implements SamrtDevice{
+    @Override
+   public void turnOn(){
+    System.out.println("Smart fan been turned on.");
+   }
 
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -160,5 +179,12 @@ public class Main{
       System.out.println();
       Documents d1 = new Documents();
       d1.display();
+      System.out.println();
+      SmartLight q1 = new SmartLight();
+        q1.turnOn();
+        q1.turnOff();
+      SmartFan q2 = new SmartFan();
+        q2.turnOn();
+        q2.turnOff();
     }
 }
