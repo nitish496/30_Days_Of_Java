@@ -50,6 +50,23 @@ class Television2 implements Switchable3{
         System.out.println("tv has been turned off.");
     }
 }
+//p-4:
+interface Camera{
+    void Photo();
+}
+interface call{
+    void Calling();
+}
+class Smartphone implements Camera,call{
+    @Override
+    public void Photo(){
+        System.out.println("photo has been taken and stored in phone");
+    }
+    @Override
+    public void Calling(){
+        System.out.println("your phone is caling someone. ");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -66,5 +83,8 @@ public class Main{
       t2.turnOn();
       t2.turnOff();
         System.out.println();
+        Smartphone p1 = new Smartphone();
+        p1.Photo();
+        p1.Calling();
     }
 }
