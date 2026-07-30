@@ -67,6 +67,15 @@ class Smartphone implements Camera,call{
         System.out.println("your phone is caling someone. ");
     }
 }
+//p-5:
+interface Company{
+    String Company_Name = "SIRI SOlUTION'S";
+}
+class Smartphone4 implements Company{
+ public void Display(){
+    System.out.println("Company_Name:"+Company_Name);
+ }
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -86,5 +95,8 @@ public class Main{
         Smartphone p1 = new Smartphone();
         p1.Photo();
         p1.Calling();
+        System.out.println();
+        Smartphone4 p4 = new Smartphone4();
+        p4.Display();
     }
 }
