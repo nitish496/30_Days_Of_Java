@@ -102,6 +102,18 @@ class BasicCalculator implements Calculator{
         System.out.println("Your calculator can do addition.");
     }
 }
+//p-8:
+@FunctionalInterface
+interface printer{
+    void print();
+
+}
+class Message implements printer{
+    @Override
+    public void print(){
+        System.out.println("the message has been printed.");
+    }
+}
 public class Main{
     public static void main(String[] args) {
         Laptop l1 = new Laptop();
@@ -132,6 +144,9 @@ public class Main{
         Calculator.basic();
         BasicCalculator c1 = new BasicCalculator();
         c1.addition();
+        System.out.println();
+        Message m1 = new Message();
+        m1.print();
 
     }
 }
