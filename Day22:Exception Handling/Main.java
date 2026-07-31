@@ -1,10 +1,4 @@
-Here is the updated, perfectly formatted, and **100% GitHub-ready** code for **Day 22 – Exception Handling**, now fully equipped with **Program 10**! 
 
-I seamlessly integrated your `BankAccount` class into the file and created a dedicated `program10()` execution block in the `main` method to match the professional structure we've been using. 
-
-Just click **Copy code** and commit it directly to your repository! 🚀✨
-
-```java
 /*
 ==========================================
         DAY 22 - EXCEPTION HANDLING
