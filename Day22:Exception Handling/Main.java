@@ -30,12 +30,14 @@ public class Main{
         int result1 = 10/0;
         System.out.println(result1);
     }catch(ArithmeticException e){
-        System.out.println("Cannot be divisible by zero."+e.getMessage());
+        System.out.println("Cannot be divisible by zero.");
     }finally{
         System.out.println("finally block executed.");
     }
     System.out.println("Program ended.");
    }
+   //p-4:
+
  public static void main(String[]args){
     program1();
     program2();
