@@ -20,8 +20,6 @@ public class Main{
             System.out.println("Arithmetic exception occurred"+e.getMessage());
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Array index out of bounds"+e.getMessage());
-        }finally{
-            System.out.println("Program ended.");
         }
     }
  
