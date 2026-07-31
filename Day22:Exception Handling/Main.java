@@ -53,10 +53,25 @@ static void program4(){
     }
     System.out.println("program has been ended.");
 }
+//p-5:
+static void checkAge(int age) throws ArithmeticException{
+    if(age<18){
+        throw new ArithmeticException("Age must be 18 or above.");
+    }
+    System.out.println("You are eligible.");
+}
  public static void main(String[]args){
     program1();
     program2();
     program3();
     program4();
+    //p-5:
+    System.out.println("Program-5:");
+    try{
+        checkAge(19);
+    }catch(ArithmeticException e){
+        System.out.println(e.getMessage());
+    }
+    System.out.println("Program ended.");
  }
 }
