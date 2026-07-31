@@ -11,6 +11,7 @@ public class Main{
             System.out.println("Program ended.");
         }
     }
+    //p-2:
     static void program2(){
         System.out.println("Program-2");
         try{
@@ -22,9 +23,22 @@ public class Main{
             System.out.println("Array index out of bounds"+e.getMessage());
         }
     }
- 
+   //p-3:
+   static void program3(){
+    System.out.println("program-3");
+    try{
+        int result1 = 10/0;
+        System.out.println(result1);
+    }catch(ArithmeticException e){
+        System.out.println("Cannot be divisible by zero."+e.getMessage());
+    }finally{
+        System.out.println("finally block executed.");
+    }
+    System.out.println("Program ended.");
+   }
  public static void main(String[]args){
     program1();
     program2();
+    program3();
  }
 }
