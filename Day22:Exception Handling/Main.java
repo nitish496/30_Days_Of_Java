@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 //p-1:
 public class Main{
     static void program1(){
@@ -106,6 +110,21 @@ static void program8(){
 
     System.out.println("Program ended.");
 }
+//p-9:
+static void program9(){
+    System.out.println("Program-9:");
+    try{
+        File file = new File("student.txt");
+        Scanner scanner = new Scanner(file);
+        while(scanner.hasNextLine()){
+            System.out.println(scanner.nextLine());
+        }
+        scanner.close();
+    }catch(FileNotFoundException e){
+        System.out.println("File not found");
+    }
+    System.out.println("Program ended.");
+}
  public static void main(String[]args){
     program1();
     program2();
@@ -129,6 +148,7 @@ static void program8(){
     System.out.println("Program ended.");
     program7();
     program8();
+    program9();
  }
 }
 
