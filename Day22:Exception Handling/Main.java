@@ -84,8 +84,27 @@ static void program7(){
     System.out.println("Arithmetic exception cannot divide by zero.");
    }
    System.out.println("program ended.");
+}
+//p-8:
+static void validateAge(int age){
+    if(age<0){
+       throw new IllegalArgumentException("Age cannot be negitive.");
+    }else{
+        System.out.println("valid age:"+age);
+    }
+}
+//p-8:
+static void program8(){
+    System.out.println("Program-8:");
 
-   
+    try{
+        validateAge(20);
+        validateAge(-5);
+    }catch(IllegalArgumentException e){
+        System.out.println(e.getMessage());
+    }
+
+    System.out.println("Program ended.");
 }
  public static void main(String[]args){
     program1();
@@ -109,6 +128,7 @@ static void program7(){
     }
     System.out.println("Program ended.");
     program7();
+    program8();
  }
 }
 
