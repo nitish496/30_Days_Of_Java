@@ -60,6 +60,13 @@ static void checkAge(int age) throws ArithmeticException{
     }
     System.out.println("You are eligible.");
 }
+//p-6:
+static void ageCheck(int age) throws InvalidAgeException{
+ if(age<18){
+    throw new InvalidAgeException("Age must be above 18.");
+ }
+ System.out.println("you are eligible");
+}
  public static void main(String[]args){
     program1();
     program2();
@@ -73,5 +80,19 @@ static void checkAge(int age) throws ArithmeticException{
         System.out.println(e.getMessage());
     }
     System.out.println("Program ended.");
+    //p-6:
+    System.out.println("program-6:");
+    try{
+    ageCheck(16);
+    }catch(InvalidAgeException e){
+    System.out.println(e.getMessage());
+    }
+    System.out.println("Program ended.");
  }
+}
+
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String message) {
+        super(message);
+    }
 }
