@@ -67,6 +67,26 @@ static void ageCheck(int age) throws InvalidAgeException{
  }
  System.out.println("you are eligible");
 }
+//p-7:
+static void program7(){
+    System.out.println("program-7");
+    try{
+        System.out.println("Outer try block.");
+    try{
+        int[]arr= {10,20,30};
+        System.out.println(arr[6]);
+    }catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Inner catch array index is out of bounds.");
+    }
+    int result = 10/0;
+    System.out.println(result);
+   }catch(ArithmeticException e){
+    System.out.println("Arithmetic exception cannot divide by zero.");
+   }
+   System.out.println("program ended.");
+
+   
+}
  public static void main(String[]args){
     program1();
     program2();
@@ -88,6 +108,7 @@ static void ageCheck(int age) throws InvalidAgeException{
     System.out.println(e.getMessage());
     }
     System.out.println("Program ended.");
+    program7();
  }
 }
 
