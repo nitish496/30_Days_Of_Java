@@ -25,7 +25,7 @@ public class Main{
     }
    //p-3:
    static void program3(){
-    System.out.println("program-3");
+    System.out.println("program-3:");
     try{
         int result1 = 10/0;
         System.out.println(result1);
@@ -37,10 +37,26 @@ public class Main{
     System.out.println("Program ended.");
    }
    //p-4:
-
+static void program4(){
+    System.out.println("Program-4:");
+    int age =16;
+    try{
+        if(age<18){
+            throw new ArithmeticException("Age must be 18 or above.");
+        }else{
+            System.out.println("you're eligible. ");
+        }
+    }catch(ArithmeticException e){
+        System.out.println(e.getMessage());
+    }finally{
+        System.out.println("Finally block has been executed.");
+    }
+    System.out.println("program has been ended.");
+}
  public static void main(String[]args){
     program1();
     program2();
     program3();
+    program4();
  }
 }
