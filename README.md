@@ -134,7 +134,7 @@ This repository is perfect for:
 | ✅ Day 19 | Polymorphism | Completed |
 | ✅ Day 20 | Abstraction | Completed |
 | ✅ Day 21 | Interfaces | Completed |
-| ⏳ Day 22 | Exception Handling | Planned |
+| ✅ Day 22 | Exception Handling | Completed |
 | ⏳ Day 23 | File Handling | Planned |
 | ⏳ Day 24 | Collections Framework | Planned |
 | ⏳ Day 25 | Generics | Planned |
