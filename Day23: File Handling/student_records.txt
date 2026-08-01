@@ -1,0 +1,5 @@
+Name: nitish
+Roll Number: 7459
+Course: ai and ml
+Marks: 1000
+------------------------------
