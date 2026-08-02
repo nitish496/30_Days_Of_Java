@@ -13,5 +13,14 @@ public class ListDemo{
         linkList.add("queen");
         linkList.add("prince");
         System.out.println("linkedlist:"+linkList);
+        List<Integer> vector = new Vector<>();
+        vector.add(10);
+        vector.add(20);
+        System.out.println("Vector: " + vector);
+
+        List<Integer> vectors = new Vector<>();
+        vectors.add(10);
+        vectors.add(20);
+        System.out.println("Vector: " + vectors);
     }
-} 
+}
