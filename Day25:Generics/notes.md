@@ -1,8 +1,4 @@
-Here is the updated **GitHub Cheat Sheet** for **Day 25 – Generics**. 
 
-I have expanded every single section so that all 10 programs now feature the **full, standalone, runnable Java code** with the `main` method, just like we did for Days 23 and 24! 
-
-Click **Copy code** and drop it straight into your repository! 🚀✨
 
 ```markdown
 # 📅 Day 25 – Generics in Java
