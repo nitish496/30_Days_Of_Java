@@ -1,8 +1,3 @@
-Here is the ultra-refined, high-density **GitHub Cheat Sheet** version for **Day 23 – File Handling**. 
-
-This is formatted exactly the way you like it—mapped perfectly to your 10 programs, with all the fluff removed and the code front-and-center! 
-
-Click **Copy code** and drop it straight into your repository! 🚀✨
 
 ```markdown
 # 📅 Day 23 – File Handling
