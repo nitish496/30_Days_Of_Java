@@ -136,7 +136,7 @@ This repository is perfect for:
 | ✅ Day 21 | Interfaces | Completed |
 | ✅ Day 22 | Exception Handling | Completed |
 | ✅ Day 23 | File Handling | Completed|
-| ⏳ Day 24 | Collections Framework | Planned |
+| ✅ Day 24 | Collections Framework | Completed|
 | ⏳ Day 25 | Generics | Planned |
 | ⏳ Day 26 | Multithreading | Planned |
 | ⏳ Day 27 | Java 8 Features | Planned |
