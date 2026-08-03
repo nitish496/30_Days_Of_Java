@@ -1,5 +1,3 @@
-
-```markdown
 # 📅 Day 24 – Java Collections Framework
 
 Welcome to Day 24! 🚀 Say goodbye to fixed-size arrays forever!
@@ -296,4 +294,3 @@ public class Program10 {
 # 🚀 Next Day Preview: Day 25 – Generics
 You've been writing `List<String>`, `Set<Integer>` and `Map<String, Integer>` all day — those angle brackets `<>` aren't magic, they're **Generics**! 🔍
 Tomorrow, we peel back the curtain and learn how to write our own generic classes and methods, letting a single piece of code work safely with any data type while catching type errors at compile time instead of runtime. Get ready to type-proof your Java! 🚀🔥
-```
