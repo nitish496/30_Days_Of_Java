@@ -4,7 +4,6 @@ To make it truly 100% GitHub-ready and perfectly matching your code file, I have
 
 Everything is checked, perfectly spaced, and completely ready. Click **Copy code** and post it to GitHub! 🚀✨
 
-```markdown
 # 📅 Day 18 – Inheritance
 
 Welcome to Day 18! 🚀 Today, we unlock code reusability! Instead of writing the same code over and over, we will learn how to make a Child class inherit properties from a Parent class using the `extends` keyword! 🧬
@@ -253,4 +252,3 @@ class Manager extends Employee {
 # 🚀 Next Day Preview: Day 19 – Polymorphism
 You've learned how to inherit methods. But what if a single method could change its shape depending on the situation? 🧬
 Tomorrow, you'll learn **Polymorphism**—the ultimate magic of OOP! We will cover Method Overloading (Compile-time) and Dynamic Method Dispatch (Run-time). Prepare to write extremely flexible code! 
-```
