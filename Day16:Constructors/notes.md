@@ -2,7 +2,6 @@ This is the absolute **final, polished, 100% GitHub-ready** version. I have tigh
 
 Click **Copy code** and commit it directly! 🚀✨
 
-```markdown
 # 📅 Day 16 – Constructors
 
 Welcome to Day 16! Yesterday we manually assigned data to our objects line-by-line. Today, we learn **Constructors**—special methods that allow us to build an object AND assign its data in a single, powerful line of code! ⚡
@@ -272,4 +271,3 @@ class StudentRecord {
 # 🚀 Next Day Preview: Day 17 – Encapsulation
 Right now, anyone can access and change our variables (`s1.age = -999;`). This is dangerous! 🚨 
 Tomorrow, we learn **Encapsulation**—how to lock our variables in a digital vault 🔒 and protect them using `private` modifiers and `Getters/Setters`!
-```
