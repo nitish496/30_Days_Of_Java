@@ -2,7 +2,6 @@ Here is the absolute final, completely refined, 100% error-free version of your 
 
 Click **Copy code** and commit it directly to your GitHub repository! 🚀✨
 
-```markdown
 # 📅 Day 19 – Polymorphism
 
 Welcome to Day 19! 🚀 Today, we unlock the ultimate flexibility in Object-Oriented Programming. Polymorphism means **"Many Forms"**. It allows a single action to behave differently depending on the object performing it! 🎭
@@ -261,4 +260,3 @@ public class Main {
 You know how to share code (Inheritance) and change its form (Polymorphism). But what if you want to force a class to follow rules *without* writing the code for it? 🧠
 
 Tomorrow, we dive into **Abstraction**! You will learn about **Abstract Classes** (incomplete blueprints) and **Interfaces** (100% pure rules). Prepare to master the final pillar of OOP! 
-```
