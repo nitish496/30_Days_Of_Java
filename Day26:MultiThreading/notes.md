@@ -1,8 +1,6 @@
-
-```markdown
 # 📅 Day 26 – Multithreading in Java
 
-Welcome to Day 26! 🚀 Today, we shatter the single-threaded speed limit. 
+Welcome to Day 26! 🚀 Today, we shatter the single-threaded speed limit.
 Multithreading allows your Java programs to perform multiple tasks simultaneously, utilizing the full power of your multi-core CPU! ⚙️💻
 
 ✅ Thread Class | ✅ Runnable Interface | ✅ Synchronization | ✅ Inter-Thread Communication
@@ -17,22 +15,43 @@ Multithreading allows your Java programs to perform multiple tasks simultaneousl
 
 ---
 
+# 🗂️ Program Index
+
+| # | Topic | File |
+|---|-------|------|
+| 1 | Extending `Thread` | `Program01.java` |
+| 2 | Implementing `Runnable` | `Program02.java` |
+| 3 | Thread via Lambda | `Program03.java` |
+| 4 | `Thread.sleep()` | `Program04.java` |
+| 5 | `join()` | `Program05.java` |
+| 6 | Thread Priorities | `Program06.java` |
+| 7 | Race Condition | `Program07.java` |
+| 8 | Synchronization | `Program08.java` |
+| 9 | Thread States (`isAlive`) | `Program09.java` |
+| 10 | Daemon Threads | `Program10.java` |
+
+`Main.java` runs all ten in sequence.
+
+---
+
 # =========================================
 # 1. Creating a Thread (Extending `Thread`) 🧵
 # =========================================
 **🎯 Objective:** Create a thread using the older, inheritance-based method.
+📄 `Program01.java`
 ```java
-class MyThread extends Thread {
+class MyThread01 extends Thread {
     @Override
-    public void run() { 
-        System.out.println("Thread is running natively!"); 
+    public void run() {
+        System.out.println("MyThread running via extends Thread.");
     }
 }
 
-public class Program1 {
-    public static void main(String[] args) {
-        MyThread t1 = new MyThread();
+public class Program01 {
+    public static void main(String[] args) throws InterruptedException {
+        MyThread01 t1 = new MyThread01();
         t1.start(); // Spawns the new thread!
+        t1.join();
     }
 }
 ```
@@ -43,19 +62,20 @@ public class Program1 {
 # 2. Creating a Thread (`Runnable`) ✅
 # =========================================
 **🎯 Objective:** The Best Practice! Implement Runnable so your class is free to extend other classes.
+📄 `Program02.java`
 ```java
-class MyRunnable implements Runnable {
+class MyRunnable02 implements Runnable {
     @Override
-    public void run() { 
-        System.out.println("Runnable thread is executing!"); 
+    public void run() {
+        System.out.println("MyRunnable running via implements Runnable.");
     }
 }
 
-public class Program2 {
-    public static void main(String[] args) {
-        MyRunnable task = new MyRunnable();
-        Thread t1 = new Thread(task);
-        t1.start(); // Spawns the new thread!
+public class Program02 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread t2 = new Thread(new MyRunnable02());
+        t2.start(); // Spawns the new thread!
+        t2.join();
     }
 }
 ```
@@ -63,53 +83,78 @@ public class Program2 {
 ---
 
 # =========================================
-# 3. Thread Sleep ⏳
+# 3. Thread via Lambda 🎯
+# =========================================
+**🎯 Objective:** `Runnable` is a functional interface, so the whole task collapses into one lambda.
+📄 `Program03.java`
+```java
+public class Program03 {
+    public static void main(String[] args) throws InterruptedException {
+        // No named class needed at all
+        Thread t3 = new Thread(() -> System.out.println("Thread running via lambda Runnable."));
+        t3.start();
+        t3.join();
+    }
+}
+```
+> This is the shortest of the three creation styles — compare it with Programs 1 and 2.
+
+---
+
+# =========================================
+# 4. Thread Sleep ⏳
 # =========================================
 **🎯 Objective:** Pause a thread for a specific number of milliseconds.
+📄 `Program04.java`
 ```java
-public class Program3 {
-    public static void main(String[] args) {
-        System.out.println("Starting countdown...");
-        
-        for (int i = 3; i > 0; i--) {
-            System.out.println(i);
-            try {
-                // Pauses the main thread for 1 second (1000ms)
-                Thread.sleep(1000); 
-            } catch (InterruptedException e) {
-                System.out.println("Thread was interrupted!");
-            }
-        }
-        
-        System.out.println("Countdown complete!");
+public class Program04 {
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("Sleeping for 500ms...");
+
+        long start = System.currentTimeMillis();
+        Thread.sleep(500);
+        long end = System.currentTimeMillis();
+
+        System.out.println("Woke up after ~" + (end - start) + "ms");
     }
 }
+```
+
+**💡 Variation — countdown timer:**
+```java
+System.out.println("Starting countdown...");
+
+for (int i = 3; i > 0; i--) {
+    System.out.println(i);
+    try {
+        Thread.sleep(1000); // Pauses the main thread for 1 second
+    } catch (InterruptedException e) {
+        System.out.println("Thread was interrupted!");
+    }
+}
+
+System.out.println("Countdown complete!");
 ```
 
 ---
 
 # =========================================
-# 4. Thread Join 🤝
+# 5. Thread Join 🤝
 # =========================================
-**🎯 Objective:** Force the Main thread to wait until Thread A finishes before continuing.
+**🎯 Objective:** Force the Main thread to wait until a worker thread finishes before continuing.
+📄 `Program05.java`
 ```java
-public class Program4 {
-    public static void main(String[] args) {
-        Thread worker = new Thread(() -> {
-            try { 
-                Thread.sleep(2000); 
-                System.out.println("Worker thread finished its heavy task.");
-            } catch (InterruptedException e) {}
+public class Program05 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread t5 = new Thread(() -> {
+            for (int i = 1; i <= 3; i++) {
+                System.out.println("t5 working: " + i);
+            }
         });
 
-        worker.start();
-        
-        try {
-            System.out.println("Main thread is waiting for worker...");
-            worker.join(); // Main thread FREEZES here until 'worker' dies
-        } catch (InterruptedException e) {}
-        
-        System.out.println("Main thread resumes! Worker is completely done.");
+        t5.start();
+        t5.join(); // Main thread FREEZES here until 't5' dies
+        System.out.println("t5 finished, main thread continues.");
     }
 }
 ```
@@ -117,97 +162,105 @@ public class Program4 {
 ---
 
 # =========================================
-# 5. Thread Priorities 🥇
+# 6. Thread Priorities 🥇
 # =========================================
 **🎯 Objective:** Suggest to the JVM which thread is more important (1 to 10).
+📄 `Program06.java`
 ```java
-public class Program5 {
-    public static void main(String[] args) {
-        Thread tLow = new Thread(() -> System.out.println("Low Priority executed"));
-        Thread tHigh = new Thread(() -> System.out.println("High Priority executed"));
-        
+public class Program06 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread low = new Thread(() -> System.out.println("Low priority thread running."));
+        Thread high = new Thread(() -> System.out.println("High priority thread running."));
+
         // Suggest priority to the Thread Scheduler
-        tLow.setPriority(Thread.MIN_PRIORITY); // 1
-        tHigh.setPriority(Thread.MAX_PRIORITY); // 10
-        
-        tLow.start();
-        tHigh.start();
+        low.setPriority(Thread.MIN_PRIORITY);  // 1
+        high.setPriority(Thread.MAX_PRIORITY); // 10
+
+        System.out.println("Low priority value: " + low.getPriority());
+        System.out.println("High priority value: " + high.getPriority());
+
+        low.start();
+        high.start();
+        low.join();
+        high.join();
     }
 }
 ```
+> ⚠️ Priority is only a *hint*. The scheduler is free to ignore it, so never rely on it for correctness.
 
 ---
 
 # =========================================
-# 6. Race Condition (The Problem) 🏎️
+# 7. Race Condition (The Problem) 🏎️
 # =========================================
 **🎯 Objective:** See what happens when multiple threads edit the same variable at the exact same time without locks!
+📄 `Program07.java`
 ```java
-class UnsafeCounter {
-    int count = 0;
-    
-    // UNSAFE! Threads will overwrite each other's work!
-    public void increment() { 
-        count++; 
-    }
+class Counter07 {
+    private int count = 0;
+
+    // UNSAFE! count++ is read-modify-write, not atomic.
+    public void increment() { count++; }
+
+    public int getCount() { return count; }
 }
 
-public class Program6 {
-    public static void main(String[] args) {
-        UnsafeCounter counter = new UnsafeCounter();
-        
-        Runnable task = () -> {
-            for (int i = 0; i < 10000; i++) counter.increment();
+public class Program07 {
+    public static void main(String[] args) throws InterruptedException {
+        Counter07 unsafe = new Counter07();
+
+        Runnable unsafeTask = () -> {
+            for (int i = 0; i < 10000; i++) unsafe.increment();
         };
 
-        Thread t1 = new Thread(task);
-        Thread t2 = new Thread(task);
-        
-        t1.start();
-        t2.start();
-        
-        try { t1.join(); t2.join(); } catch (Exception e) {}
-        
-        // Expected 20000, but will likely be much lower due to Race Conditions!
-        System.out.println("Final Count (Corrupted): " + counter.count);
+        Thread u1 = new Thread(unsafeTask);
+        Thread u2 = new Thread(unsafeTask);
+        u1.start();
+        u2.start();
+        u1.join();
+        u2.join();
+
+        // Expected 20000, but will be lower due to lost updates!
+        System.out.println("Expected: 20000, Actual: " + unsafe.getCount());
     }
 }
 ```
+> A real run of this printed **10937** — nearly half the increments vanished. The number changes every run.
 
 ---
 
 # =========================================
-# 7. Synchronization (The Solution) 🔒
+# 8. Synchronization (The Solution) 🔒
 # =========================================
 **🎯 Objective:** Force threads to form a single-file line to access the method.
+📄 `Program08.java`
 ```java
-class SafeCounter {
-    int count = 0;
-    
+class SafeCounter08 {
+    private int count = 0;
+
     // SAFE! Only one thread can enter at a time.
-    public synchronized void increment() { 
-        count++; 
-    }
+    public synchronized void increment() { count++; }
+
+    public int getCount() { return count; }
 }
 
-public class Program7 {
-    public static void main(String[] args) {
-        SafeCounter counter = new SafeCounter();
-        
-        Runnable task = () -> {
-            for (int i = 0; i < 10000; i++) counter.increment();
+public class Program08 {
+    public static void main(String[] args) throws InterruptedException {
+        SafeCounter08 safe = new SafeCounter08();
+
+        Runnable safeTask = () -> {
+            for (int i = 0; i < 10000; i++) safe.increment();
         };
 
-        Thread t1 = new Thread(task);
-        Thread t2 = new Thread(task);
-        
-        t1.start();
-        t2.start();
-        
-        try { t1.join(); t2.join(); } catch (Exception e) {}
-        
+        Thread s1 = new Thread(safeTask);
+        Thread s2 = new Thread(safeTask);
+        s1.start();
+        s2.start();
+        s1.join();
+        s2.join();
+
         // Guaranteed to be exactly 20000 every single time!
-        System.out.println("Final Count (Safe): " + counter.count);
+        System.out.println("Expected: 20000, Actual: " + safe.getCount());
     }
 }
 ```
@@ -215,8 +268,76 @@ public class Program7 {
 ---
 
 # =========================================
-# 8. Inter-Thread Communication 🗣️
+# 9. Thread States (`isAlive`) 🚦
 # =========================================
+**🎯 Objective:** Observe a thread move through its lifecycle: NEW → RUNNABLE → TERMINATED.
+📄 `Program09.java`
+```java
+public class Program09 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread t9 = new Thread(() -> {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        });
+
+        System.out.println("Before start - isAlive: " + t9.isAlive()); // false (NEW)
+        t9.start();
+        System.out.println("After start  - isAlive: " + t9.isAlive()); // true  (RUNNABLE)
+        t9.join();
+        System.out.println("After join   - isAlive: " + t9.isAlive()); // false (TERMINATED)
+    }
+}
+```
+> A thread cannot be restarted. Calling `start()` twice throws `IllegalThreadStateException`.
+
+---
+
+# =========================================
+# 10. Daemon Threads 👻
+# =========================================
+**🎯 Objective:** Create a low-priority background thread that dies automatically when the app closes.
+📄 `Program10.java`
+```java
+public class Program10 {
+    public static void main(String[] args) throws InterruptedException {
+        Thread daemon = new Thread(() -> System.out.println("Daemon thread running (background task)."));
+
+        // Must be set BEFORE start()!
+        daemon.setDaemon(true);
+        System.out.println("Is daemon? " + daemon.isDaemon());
+
+        daemon.start();
+        daemon.join();
+    }
+}
+```
+
+**💡 Variation — endless background worker:**
+```java
+Thread daemon = new Thread(() -> {
+    while (true) {
+        System.out.println("Daemon running in background...");
+        try { Thread.sleep(500); } catch (Exception e) {}
+    }
+});
+
+daemon.setDaemon(true); // Won't stop the program from exiting!
+daemon.start();
+
+try { Thread.sleep(1200); } catch (Exception e) {}
+System.out.println("Main thread shutting down. Daemon will be killed instantly.");
+```
+
+---
+
+# 🎁 Bonus Topics (no program file yet)
+
+These two go beyond the ten programs above — worth knowing, and good candidates to turn into code later.
+
+## Inter-Thread Communication 🗣️
 **🎯 Objective:** Use `wait()` and `notify()` to make threads talk to each other.
 ```java
 class Bakery {
@@ -236,10 +357,10 @@ class Bakery {
     }
 }
 
-public class Program8 {
+public class BakeryDemo {
     public static void main(String[] args) {
         Bakery shop = new Bakery();
-        
+
         Thread customer = new Thread(() -> shop.eatBread());
         Thread baker = new Thread(() -> {
             try { Thread.sleep(1000); } catch (Exception e) {}
@@ -252,61 +373,30 @@ public class Program8 {
 }
 ```
 
----
-
-# =========================================
-# 9. Daemon Threads 👻
-# =========================================
-**🎯 Objective:** Create a low-priority background thread that dies automatically when the app closes.
-```java
-public class Program9 {
-    public static void main(String[] args) {
-        Thread daemon = new Thread(() -> {
-            while (true) {
-                System.out.println("Daemon running in background...");
-                try { Thread.sleep(500); } catch (Exception e){}
-            }
-        });
-        
-        // Must be set BEFORE start()!
-        // Because it is a Daemon, it will not stop the program from exiting!
-        daemon.setDaemon(true); 
-        daemon.start();
-        
-        try { Thread.sleep(1200); } catch (Exception e){}
-        System.out.println("Main thread shutting down. Daemon will be killed instantly.");
-    }
-}
-```
-
----
-
-# =========================================
-# 10. ExecutorService (Thread Pools) 🏊‍♂️
-# =========================================
+## ExecutorService (Thread Pools) 🏊‍♂️
 **🎯 Objective:** Stop managing threads manually. Use a pool of recycled threads for massive performance!
 ```java
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Program10 {
+public class PoolDemo {
     public static void main(String[] args) {
         // Creates a pool with exactly 2 reusable threads
         ExecutorService pool = Executors.newFixedThreadPool(2);
-        
+
         Runnable task = () -> {
             System.out.println(Thread.currentThread().getName() + " is processing a task.");
         };
 
-        // Submit 4 tasks to a 2-thread pool. 
+        // Submit 4 tasks to a 2-thread pool.
         // Threads will recycle to handle the backlog!
         pool.execute(task);
         pool.execute(task);
         pool.execute(task);
         pool.execute(task);
-        
+
         // Critical step to prevent memory leaks!
-        pool.shutdown(); 
+        pool.shutdown();
     }
 }
 ```
@@ -324,4 +414,3 @@ public class Program10 {
 
 # 🚀 Next Day Preview: Day 27 – Java 8 Features
 Multithreading makes your code fast, but what makes your code *beautiful*? Tomorrow, we dive into the modern era of Java. You will learn **Lambda Expressions `()->{}`**, the incredible **Stream API**, and how to write 10 lines of code in just 1 single line! Get ready to write code like a senior architect! 🌟🔥
-```
