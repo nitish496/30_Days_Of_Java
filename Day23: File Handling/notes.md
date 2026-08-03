@@ -1,5 +1,3 @@
-
-```markdown
 # 📅 Day 23 – File Handling
 
 Welcome to Day 23! 🚀 Today, we make our data permanent!
@@ -302,4 +300,3 @@ public class Program10 {
 You've learned standard Arrays (`int[] arr = new int[5]`), but they have a fatal flaw: **Their size is fixed.** If you want to add a 6th element, the array explodes! 💥
 
 Tomorrow, we dive into the **Collections Framework**, starting with the legendary `ArrayList`. You will learn how to create arrays that can shrink, grow, and adapt dynamically. Get ready to supercharge your data structures! 🚀🔥
-```
