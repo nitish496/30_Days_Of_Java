@@ -1,6 +1,3 @@
-
-
-```markdown
 # 📅 Day 25 – Generics in Java
 
 Welcome to Day 25! 🚀 Today, we learn how to write highly reusable, dynamic, and 100% type-safe code.
@@ -327,4 +324,3 @@ public class Program10 {
 
 # 🚀 Next Day Preview: Day 26 – Multithreading
 Everything you have written so far in Java has been "Single-Threaded" (executing one line at a time). Tomorrow, we unlock the true power of your computer's CPU: **Multithreading**! You will learn how to split your program into multiple threads that run simultaneously. Get ready to enter the matrix! 🌐🔥
-```
