@@ -2,7 +2,6 @@ Here is the exact, flawlessly formatted "GitHub copyable" version using your sig
 
 Just click **Copy code** and paste it straight into your repo! 🚀
 
-```markdown
 # 📅 Day 14 – OOP Basics
 
 Welcome to Day 14! Today we stop writing simple scripts and start building software the way the pros do. 
@@ -174,4 +173,3 @@ public class Main {
 # 🚀 Next Day Preview: Day 15 – Constructors
 Today, we manually assigned data to objects line-by-line (`s1.name = "Alice";`). This is slow!
 Tomorrow, we learn **Constructors**—special methods that allow us to build an object AND give it data in a single line of code!
-```
