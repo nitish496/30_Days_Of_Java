@@ -2,7 +2,6 @@ Here is the absolute final, perfectly refined, 100% GitHub-ready version for Day
 
 Click **Copy code** and commit it directly! 🚀
 
-```markdown
 # 📅 Day 15 – Classes & Objects
 
 ✅ Classes | ✅ Objects | ✅ Multiple Instances | ✅ References | ✅ Stack vs Heap
@@ -234,4 +233,3 @@ public class Program9 {
 # 🚀 Next Day Preview: Day 16 – Constructors
 Today, we assigned data to our objects manually (`b1.title = "Java";`). This is repetitive! 
 Tomorrow, we learn **Constructors**—special blocks of code that let you build an object AND assign its data in a single line of code!
-```
