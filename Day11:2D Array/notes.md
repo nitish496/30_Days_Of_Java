@@ -1,6 +1,5 @@
 Here is the exact, ultra-refined version inside a single code block. You can easily click the **Copy code** button in the top right corner of the block below and paste it directly into your `notes.md` file on GitHub!
 
-```markdown
 # 📅 Day 11 - 2D Arrays
 
 Welcome to Day 11! Today we learn to store data in grids (rows and columns) using **2D Arrays (Matrices)**.
@@ -279,4 +278,3 @@ public class Program10 {
 Arrays have a massive flaw: **Fixed Size.** Tomorrow, we unlock dynamic memory!
 - **What is it?** A resizable array!
 - **Core Methods:** `add()`, `get()`, `set()`, `remove()`, `size()`.
-```
