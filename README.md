@@ -138,7 +138,7 @@ This repository is perfect for:
 | ✅ Day 23 | File Handling | Completed|
 | ✅ Day 24 | Collections Framework | Completed|
 | ✅ Day 25 | Generics | Completed|
-| ⏳ Day 26 | Multithreading | Planned |
+| ✅ Day 26 | Multithreading | Completed|
 | ⏳ Day 27 | Java 8 Features | Planned |
 | ⏳ Day 28 | JDBC | Planned |
 | ⏳ Day 29 | Mini Project | Planned |
