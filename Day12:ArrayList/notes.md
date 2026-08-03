@@ -1,6 +1,5 @@
 Here is the ultimate, lightning-fast, zero-fluff version for Day 12 in the exact "cheat-sheet" style you love. You can easily click **Copy code** below and paste it straight into your repository!
 
-```markdown
 # 📅 Day 12 – ArrayList
 
 Welcome to Day 12! Standard arrays have a massive flaw: **Fixed Size**. Today, we unlock dynamic memory using **ArrayList**, a built-in Java data structure that automatically grows and shrinks!
@@ -280,4 +279,3 @@ Today you saw we had to use `Integer` instead of `int`. Tomorrow we explore why!
 - **Autoboxing:** How Java automatically wraps primitives into Objects.
 - **Unboxing:** How Java unwraps Objects back into primitives.
 - Primitive vs Wrapper Classes: When to use which!
-```
