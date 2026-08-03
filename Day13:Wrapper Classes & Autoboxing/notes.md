@@ -1,6 +1,5 @@
 Here is the absolute maximum-density, zero-fluff version, refined to the extreme. It is stripped down to pure technical facts and code.
 
-```markdown
 # 📅 Day 13 – Wrapper Classes & Autoboxing
 
 ✅ Wrapper Classes | ✅ Autoboxing | ✅ Unboxing | ✅ Parsing | ✅ ArrayList Integration
@@ -167,4 +166,3 @@ Tomorrow, you create your OWN Objects!
 - **Classes:** The architectural blueprint.
 - **Objects:** The actual houses built from the blueprint.
 - **Attributes & Methods:** Giving objects data and behaviors.
-```
