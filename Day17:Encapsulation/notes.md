@@ -2,7 +2,6 @@ This version has been thoroughly checked. The Java code is 100% syntactically co
 
 Click **Copy code** and commit this masterpiece to your repository! 🚀✨
 
-```markdown
 # 📅 Day 17 – Encapsulation
 
 Welcome to Day 17! 🚀 Today, we secure our objects. If you leave your variables exposed, anyone can change them and break your software. We are going to lock our data inside a digital vault! 🏦
@@ -190,4 +189,3 @@ public class Program6 {
 # 🚀 Next Day Preview: Day 18 – Inheritance
 You've learned how to secure a single class. But what if you want to create a new class based on an existing one? 🧬
 Tomorrow, you'll learn **Inheritance**—how to use the `extends` keyword to pass down code from a Parent class to a Child class and massively increase your code reusability! 
-```
