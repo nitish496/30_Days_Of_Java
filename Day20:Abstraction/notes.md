@@ -2,7 +2,6 @@ Here is the absolute final, perfectly structured **Markdown Cheat Sheet** for Da
 
 Click **Copy code** and add this masterpiece directly to your GitHub repository! 🚀✨
 
-```markdown
 # 📅 Day 20 – Abstraction
 
 Welcome to Day 20! 🚀 Today, we conquer the third pillar of OOP: **Abstraction**. 
@@ -280,4 +279,3 @@ class CreditCard1 extends Payment1 {
 You got a sneak peek at them today! Java has a strict rule: **You can only extend ONE parent class.** So what do you do when you need abilities from MULTIPLE sources? 🧠
 
 Tomorrow, we dive deep into **Interfaces**! You will learn how to achieve **100% pure abstraction** and bypass the single-inheritance rule. Prepare to master the final piece of OOP architecture! 
-```
