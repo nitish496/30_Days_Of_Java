@@ -237,4 +237,3 @@ class BankAccount {
 Now that you know how to safely handle exceptions like `FileNotFoundException`, you are ready to interact with the Operating System! 
 
 Tomorrow, we dive into **File Handling**. You will learn how to Create files, Read text from files, Write data to files, and Delete files using Java. Get ready to make your data permanent! 📁💾🔥
-```
