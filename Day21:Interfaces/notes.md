@@ -1,4 +1,3 @@
-
 # 📅 Day 21 – Interfaces
 
 Welcome to Day 21! 🚀 Today, we conquer 100% pure abstraction using **Interfaces**. 
@@ -252,4 +251,3 @@ class SmartFan implements SmartDevice {
 You've built beautiful, object-oriented systems. But what happens when things go wrong? What happens when a user types a word instead of a number, or the database crashes? If you don't handle it, your program explodes! 💥
 
 Tomorrow, we dive into **Exception Handling**! You will learn how to catch errors before they crash your program using `try`, `catch`, `finally`, and `throw`. Get ready to make your code bulletproof! 🛡️💻🔥
-```
