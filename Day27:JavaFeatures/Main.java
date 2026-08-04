@@ -110,6 +110,22 @@ public class Main {
         System.out.println("Only evens: " + evenNumbers);
     }
 
+    // ---------- Program 8: Stream map() ----------
+    static void program8() {
+        System.out.println("===== Program 8 - Stream map() =====");
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        List<Integer> squares = numbers.stream()
+                .map(n -> n * n)                       // transform each number
+                .collect(Collectors.toList());
+
+        System.out.println("Original: " + numbers);
+        System.out.println("Squared:  " + squares);
+
+        // filter = REMOVE items | map = CHANGE items
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -132,5 +148,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 7: Stream filter() ===");
         program7();
+        System.out.println();
+        System.out.println("=== Program 8: Stream map() ===");
+        program8();
     }
 }
