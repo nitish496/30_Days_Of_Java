@@ -16,9 +16,34 @@ public class Main {
         }
     }
 
+    // ---------- Program 2: Creating the table ----------
+    static void program2() {
+        System.out.println("===== Program 2 - CREATE TABLE =====");
+        String sql = "CREATE TABLE IF NOT EXISTS students ("
+                + "id INTEGER PRIMARY KEY, "
+                + "name VARCHAR(50), "
+                + "marks INTEGER)";
+
+        try (Connection con = DriverManager.getConnection(URL);
+             Statement stmt = con.createStatement()) {
+
+            stmt.execute(sql);
+            System.out.println("Table 'students' ready.");
+
+            // Wipe old demo rows so this file gives the same output every run.
+            stmt.executeUpdate("DELETE FROM students");
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
         program1();
+        System.out.println();
+        System.out.println("=== Program 2: Creating the table ===");
+        program2();
     }
 }
