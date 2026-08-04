@@ -55,6 +55,17 @@ public class Main {
         System.out.println("Is 7 even?  " + isEven.test(7));
     }
 
+    // ---------- Program 4: Function for input to output ----------
+    static void program4() {
+        System.out.println("===== Program 4 - Function (input -> output) =====");
+
+        // Function<InputType, OutputType>
+        Function<String, Integer> getLength = word -> word.length();
+
+        System.out.println("Length of 'Java'   = " + getLength.apply("Java"));
+        System.out.println("Length of 'Python' = " + getLength.apply("Python"));
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -65,5 +76,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 3: Predicate for true/false checks ===");
         program3();
+        System.out.println();
+        System.out.println("=== Program 4: Function for input to output ===");
+        program4();
     }
 }
