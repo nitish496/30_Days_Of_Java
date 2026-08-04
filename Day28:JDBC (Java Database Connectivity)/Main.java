@@ -166,6 +166,41 @@ public class Main {
         }
     }
 
+    // ---------- Program 10: Transaction (all-or-nothing) ----------
+    static void program10() {
+        System.out.println("===== Program 10 - Transaction =====");
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(URL);
+            con.setAutoCommit(false);   // turn OFF auto-save
+
+            PreparedStatement ps = con.prepareStatement(
+                    "UPDATE students SET marks = marks + 5 WHERE id = ?");
+            ps.setInt(1, 1);
+            ps.executeUpdate();
+
+            con.commit();               // save all changes together
+            System.out.println("Transaction committed.");
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+            try {
+                if (con != null) {
+                    con.rollback();     // undo everything if anything failed
+                    System.out.println("Transaction rolled back.");
+                }
+            } catch (SQLException ex) {
+                System.out.println("Rollback failed: " + ex.getMessage());
+            }
+        } finally {
+            try {
+                if (con != null) con.close();
+            } catch (SQLException e) {
+                System.out.println("Close failed: " + e.getMessage());
+            }
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -194,5 +229,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 9: Batch Insert (many rows at once) ===");
         program9();
+        System.out.println();
+        System.out.println("=== Program 10: Transaction (all-or-nothing) ===");
+        program10();
     }
 }
