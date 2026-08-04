@@ -90,6 +90,22 @@ public class Main {
         }
     }
 
+    // ---------- Program 6: UPDATE ----------
+    static void program6() {
+        System.out.println("===== Program 6 - UPDATE =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             PreparedStatement ps = con.prepareStatement(
+                     "UPDATE students SET marks = ? WHERE id = ?")) {
+
+            ps.setInt(1, 95);
+            ps.setInt(2, 1);
+            System.out.println("Rows updated: " + ps.executeUpdate());
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -106,5 +122,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 5: INSERT using PreparedStatement (the safe way) ===");
         program5();
+        System.out.println();
+        System.out.println("=== Program 6: UPDATE ===");
+        program6();
     }
 }
