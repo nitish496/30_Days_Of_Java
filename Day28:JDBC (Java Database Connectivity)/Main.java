@@ -72,6 +72,24 @@ public class Main {
         }
     }
 
+    // ---------- Program 5: INSERT using PreparedStatement (the safe way) ----------
+    static void program5() {
+        System.out.println("===== Program 5 - INSERT (PreparedStatement) =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             PreparedStatement ps = con.prepareStatement(
+                     "INSERT INTO students VALUES (?, ?, ?)")) {
+
+            // ? are placeholders - filled in safely, prevents SQL injection
+            ps.setInt(1, 2);
+            ps.setString(2, "Bob");
+            ps.setInt(3, 85);
+            System.out.println("Rows inserted: " + ps.executeUpdate());
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -85,5 +103,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 4: SELECT using ResultSet ===");
         program4();
+        System.out.println();
+        System.out.println("=== Program 5: INSERT using PreparedStatement (the safe way) ===");
+        program5();
     }
 }
