@@ -126,6 +126,25 @@ public class Main {
         }
     }
 
+    // ---------- Program 8: SELECT with a WHERE condition ----------
+    static void program8() {
+        System.out.println("===== Program 8 - SELECT with WHERE =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             PreparedStatement ps = con.prepareStatement(
+                     "SELECT * FROM students WHERE marks > ?")) {
+
+            ps.setInt(1, 80);
+            ResultSet rs = ps.executeQuery();   // executeQuery = for SELECT
+
+            while (rs.next()) {
+                System.out.println(rs.getString("name") + " scored " + rs.getInt("marks"));
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -148,5 +167,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 7: DELETE ===");
         program7();
+        System.out.println();
+        System.out.println("=== Program 8: SELECT with a WHERE condition ===");
+        program8();
     }
 }
