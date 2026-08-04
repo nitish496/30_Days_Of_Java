@@ -106,6 +106,26 @@ public class Main {
         }
     }
 
+    // ---------- Program 7: DELETE ----------
+    static void program7() {
+        System.out.println("===== Program 7 - DELETE =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             PreparedStatement ps = con.prepareStatement(
+                     "DELETE FROM students WHERE id = ?")) {
+
+            // Insert a throwaway row first so there's something real to delete.
+            try (Statement setup = con.createStatement()) {
+                setup.executeUpdate("INSERT INTO students VALUES (99, 'Temp', 0)");
+            }
+
+            ps.setInt(1, 99);
+            System.out.println("Rows deleted: " + ps.executeUpdate());
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -125,5 +145,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 6: UPDATE ===");
         program6();
+        System.out.println();
+        System.out.println("=== Program 7: DELETE ===");
+        program7();
     }
 }
