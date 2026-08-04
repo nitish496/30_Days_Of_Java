@@ -145,6 +145,27 @@ public class Main {
         }
     }
 
+    // ---------- Program 9: Batch Insert (many rows at once) ----------
+    static void program9() {
+        System.out.println("===== Program 9 - Batch Insert =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             PreparedStatement ps = con.prepareStatement(
+                     "INSERT INTO students VALUES (?, ?, ?)")) {
+
+            ps.setInt(1, 3); ps.setString(2, "Charlie"); ps.setInt(3, 78);
+            ps.addBatch();
+
+            ps.setInt(1, 4); ps.setString(2, "Diana");   ps.setInt(3, 88);
+            ps.addBatch();
+
+            int[] result = ps.executeBatch();   // sends all at once - faster
+            System.out.println("Rows inserted in batch: " + result.length);
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -170,5 +191,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 8: SELECT with a WHERE condition ===");
         program8();
+        System.out.println();
+        System.out.println("=== Program 9: Batch Insert (many rows at once) ===");
+        program9();
     }
 }
