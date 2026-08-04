@@ -38,6 +38,21 @@ public class Main {
         }
     }
 
+    // ---------- Program 3: INSERT using Statement ----------
+    static void program3() {
+        System.out.println("===== Program 3 - INSERT (Statement) =====");
+        try (Connection con = DriverManager.getConnection(URL);
+             Statement stmt = con.createStatement()) {
+
+            String sql = "INSERT INTO students VALUES (1, 'Alice', 90)";
+            int rows = stmt.executeUpdate(sql);   // executeUpdate = for INSERT/UPDATE/DELETE
+            System.out.println("Rows inserted: " + rows);
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Connecting to the database ===");
@@ -45,5 +60,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 2: Creating the table ===");
         program2();
+        System.out.println();
+        System.out.println("=== Program 3: INSERT using Statement ===");
+        program3();
     }
 }
