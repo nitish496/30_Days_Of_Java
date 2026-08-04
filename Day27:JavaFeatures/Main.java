@@ -45,6 +45,16 @@ public class Main {
         System.out.println("10 * 5 = " + multiply.operate(10, 5));
     }
 
+    // ---------- Program 3: Predicate for true/false checks ----------
+    static void program3() {
+        System.out.println("===== Program 3 - Predicate (true/false) =====");
+
+        Predicate<Integer> isEven = n -> n % 2 == 0;
+
+        System.out.println("Is 10 even? " + isEven.test(10));
+        System.out.println("Is 7 even?  " + isEven.test(7));
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -52,5 +62,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 2: Lambda with parameters ===");
         program2();
+        System.out.println();
+        System.out.println("=== Program 3: Predicate for true/false checks ===");
+        program3();
     }
 }
