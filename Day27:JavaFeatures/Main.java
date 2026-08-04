@@ -33,9 +33,24 @@ public class Main {
         newWay.sayHello();
     }
 
+    // ---------- Program 2: Lambda with parameters ----------
+    static void program2() {
+        System.out.println("===== Program 2 - Lambda with Parameters =====");
+
+        // (a, b) are the inputs, everything after -> is what it does
+        Calculator add = (a, b) -> a + b;
+        Calculator multiply = (a, b) -> a * b;
+
+        System.out.println("10 + 5 = " + add.operate(10, 5));
+        System.out.println("10 * 5 = " + multiply.operate(10, 5));
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
         program1();
+        System.out.println();
+        System.out.println("=== Program 2: Lambda with parameters ===");
+        program2();
     }
 }
