@@ -126,6 +126,24 @@ public class Main {
         // filter = REMOVE items | map = CHANGE items
     }
 
+    // ---------- Program 9: Stream sorted() and count() ----------
+    static void program9() {
+        System.out.println("===== Program 9 - sorted() and count() =====");
+
+        List<Integer> messy = Arrays.asList(50, 10, 40, 20, 30);
+
+        List<Integer> sorted = messy.stream()
+                .sorted()
+                .collect(Collectors.toList());
+
+        long howMany = messy.stream()
+                .filter(n -> n > 20)
+                .count();
+
+        System.out.println("Sorted: " + sorted);
+        System.out.println("How many are greater than 20? " + howMany);
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -151,5 +169,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 8: Stream map() ===");
         program8();
+        System.out.println();
+        System.out.println("=== Program 9: Stream sorted() and count() ===");
+        program9();
     }
 }
