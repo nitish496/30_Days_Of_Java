@@ -66,6 +66,23 @@ public class Main {
         System.out.println("Length of 'Python' = " + getLength.apply("Python"));
     }
 
+    // ---------- Program 5: forEach the Java 8 way ----------
+    static void program5() {
+        System.out.println("===== Program 5 - forEach =====");
+
+        List<String> languages = Arrays.asList("Java", "Python", "C++");
+
+        // OLD WAY
+        System.out.println("Old for-each loop:");
+        for (String lang : languages) {
+            System.out.println(lang);
+        }
+
+        // NEW WAY
+        System.out.println("New forEach with lambda:");
+        languages.forEach(lang -> System.out.println(lang));
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -79,5 +96,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 4: Function for input to output ===");
         program4();
+        System.out.println();
+        System.out.println("=== Program 5: forEach the Java 8 way ===");
+        program5();
     }
 }
