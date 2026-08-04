@@ -144,6 +144,22 @@ public class Main {
         System.out.println("How many are greater than 20? " + howMany);
     }
 
+    // ---------- Program 10: Optional to avoid NullPointerException ----------
+    static void program10() {
+        System.out.println("===== Program 10 - Optional =====");
+
+        // Optional is a box that may or may not contain a value
+        Optional<String> hasValue = Optional.of("I have a value");
+        Optional<String> isEmpty = Optional.empty();
+
+        System.out.println("hasValue is present? " + hasValue.isPresent());
+        System.out.println("hasValue contains: " + hasValue.get());
+
+        System.out.println("isEmpty is present? " + isEmpty.isPresent());
+        // orElse gives a backup value instead of crashing
+        System.out.println("isEmpty gives us: " + isEmpty.orElse("a default instead"));
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -172,5 +188,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 9: Stream sorted() and count() ===");
         program9();
+        System.out.println();
+        System.out.println("=== Program 10: Optional to avoid NullPointerException ===");
+        program10();
     }
 }
