@@ -96,6 +96,20 @@ public class Main {
         // Read "System.out::println" as "just use the println method"
     }
 
+    // ---------- Program 7: Stream filter() ----------
+    static void program7() {
+        System.out.println("===== Program 7 - Stream filter() =====");
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+        List<Integer> evenNumbers = numbers.stream()   // 1. turn list into a stream
+                .filter(n -> n % 2 == 0)               // 2. keep only evens
+                .collect(Collectors.toList());         // 3. turn back into a list
+
+        System.out.println("Original: " + numbers);
+        System.out.println("Only evens: " + evenNumbers);
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -115,5 +129,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 6: Method references ===");
         program6();
+        System.out.println();
+        System.out.println("=== Program 7: Stream filter() ===");
+        program7();
     }
 }
