@@ -83,6 +83,19 @@ public class Main {
         languages.forEach(lang -> System.out.println(lang));
     }
 
+    // ---------- Program 6: Method references ----------
+    static void program6() {
+        System.out.println("===== Program 6 - Method Reference =====");
+
+        List<String> languages = Arrays.asList("Java", "Python", "C++");
+
+        // These two lines do EXACTLY the same thing:
+        languages.forEach(lang -> System.out.println(lang)); // lambda
+        languages.forEach(System.out::println);              // method reference
+
+        // Read "System.out::println" as "just use the println method"
+    }
+
     // ---------- main ----------
     public static void main(String[] args) {
         System.out.println("=== Program 1: Lambda basics - old way vs new way ===");
@@ -99,5 +112,8 @@ public class Main {
         System.out.println();
         System.out.println("=== Program 5: forEach the Java 8 way ===");
         program5();
+        System.out.println();
+        System.out.println("=== Program 6: Method references ===");
+        program6();
     }
 }
