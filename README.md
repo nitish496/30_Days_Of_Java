@@ -141,7 +141,7 @@ This repository is perfect for:
 | ✅ Day 26 | Multithreading | Completed|
 | ✅ Day 27 | Java 8 Features | Completed |
 | ✅ Day 28 | JDBC | Completed |
-| ⏳ Day 29 | Mini Project | Planned |
+| ✅ Day 29 | Mini Project | Completed |
 | ⏳ Day 30 | Final Project | Planned |
 
 ---
