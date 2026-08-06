@@ -42,6 +42,28 @@ class Student {
     }
 }
 
+// ---- Custom Exception ----
+class StudentNotFoundException extends Exception {
+    public StudentNotFoundException(String message) {
+        super(message);
+    }
+}
+
+// ---- Service class (business logic) ----
+class StudentManager {
+    private Map<Integer, Student> students = new LinkedHashMap<>();
+    private static final String FILE_NAME = "students.txt";
+
+    public void addStudent(Student s) {
+        if (students.containsKey(s.getId())) {
+            System.out.println("Error: ID " + s.getId() + " already exists.");
+            return;
+        }
+        students.put(s.getId(), s);
+        System.out.println("Student added successfully.");
+    }
+}
+
 // ---- Main application ----
 public class Main {
     public static void main(String[] args) {
@@ -63,5 +85,12 @@ public class Main {
         System.out.println("\nCSV form used for file storage:");
         System.out.println(s1.toFileString());
         System.out.println(s2.toFileString());
+
+        System.out.println("\n--- Storing students in the manager ---");
+        StudentManager manager = new StudentManager();
+        manager.addStudent(s1);
+        manager.addStudent(s2);
+        manager.addStudent(new Student(3, "Meera", 45));
+        manager.addStudent(new Student(1, "Duplicate Id", 50));
     }
 }
