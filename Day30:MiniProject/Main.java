@@ -6,6 +6,19 @@ import java.io.*;
 // Banking Management System 
 // =========================================
 
+// ---- CUSTOM EXCEPTIONS (Day 22) ----
+class InsufficientFundsException extends Exception {
+    public InsufficientFundsException(String msg) {
+        super(msg);
+    }
+}
+
+class AccountNotFoundException extends Exception {
+    public AccountNotFoundException(String msg) {
+        super(msg);
+    }
+}
+
 // ---- ABSTRACT CLASS (Day 20) ----
 // "Account" is a general idea. You can't open a plain "Account" —
 // you open a Savings or Current account. That's why it's abstract.
@@ -35,6 +48,14 @@ abstract class Account {
         }
         balance += amount;
         System.out.println("Deposited " + amount + ". New balance: " + balance);
+    }
+
+    public void withdraw(double amount) throws InsufficientFundsException {
+        if (amount > balance) {
+            throw new InsufficientFundsException("Not enough money. Balance: " + balance);
+        }
+        balance -= amount;
+        System.out.println("Withdrew " + amount + ". New balance: " + balance);
     }
 
     @Override
@@ -101,5 +122,13 @@ public class Main {
         System.out.println("\n--- Depositing money ---");
         acc1.deposit(5000);
         acc2.deposit(-100);
+
+        System.out.println("\n--- Withdrawing money ---");
+        try {
+            acc1.withdraw(2000);
+            acc1.withdraw(999999);
+        } catch (InsufficientFundsException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }
