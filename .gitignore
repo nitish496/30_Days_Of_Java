@@ -22,3 +22,15 @@
 bin/
 out/
 target/
+
+# Claude workflow tracker files (not course content)
+java_30_day_plan.md
+java_progress.json
+
+# JDBC driver jars (re-download instead of committing binaries)
+lib/*.jar
+
+# SQLite database files created by the Day 28 JDBC exercises
+*.db
+*.sqlite
+*.sqlite3
