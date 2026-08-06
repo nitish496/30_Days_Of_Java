@@ -134,10 +134,10 @@ public class Main {
                      "SELECT * FROM students WHERE marks > ?")) {
 
             ps.setInt(1, 80);
-            ResultSet rs = ps.executeQuery();   // executeQuery = for SELECT
-
-            while (rs.next()) {
-                System.out.println(rs.getString("name") + " scored " + rs.getInt("marks"));
+            try (ResultSet rs = ps.executeQuery()) {   // executeQuery = for SELECT
+                while (rs.next()) {
+                    System.out.println(rs.getString("name") + " scored " + rs.getInt("marks"));
+                }
             }
 
         } catch (SQLException e) {
