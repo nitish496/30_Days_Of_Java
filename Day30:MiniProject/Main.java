@@ -119,63 +119,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Account acc1 = new SavingsAccount(1001, "Nitish", 25000);
+        while (true) {
+            System.out.println("\n===== BANKING SYSTEM =====");
+            System.out.println("1. Open Account");
+            System.out.println("2. View All Accounts");
+            System.out.println("3. Deposit");
+            System.out.println("4. Withdraw");
+            System.out.println("5. Show Interest");
+            System.out.println("6. Save to File");
+            System.out.println("7. Load from File");
+            System.out.println("8. Exit");
+            System.out.print("Enter choice: ");
 
-        System.out.println("ACC | NAME | TYPE | BALANCE");
-        System.out.println("---------------------------");
-        System.out.println(acc1);
-        System.out.println("Interest on this account: " + acc1.calculateInterest());
+            try {
+                int choice = Integer.parseInt(sc.nextLine());
 
-        Account acc2 = new CurrentAccount(1002, "Aarav", 40000);
-        System.out.println(acc2);
-
-        System.out.println("\nOne Account reference, two different rules:");
-        for (Account acc : new Account[] { acc1, acc2 }) {
-            System.out.println(acc.getType() + " earns " + acc.calculateInterest());
-        }
-
-        System.out.println("\n--- Depositing money ---");
-        acc1.deposit(5000);
-        acc2.deposit(-100);
-
-        System.out.println("\n--- Withdrawing money ---");
-        try {
-            acc1.withdraw(2000);
-            acc1.withdraw(999999);
-        } catch (InsufficientFundsException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        System.out.println("\n--- Current account overdraft ---");
-        try {
-            acc2.withdraw(42000);       // allowed, dips into the 5000 cushion
-            acc2.withdraw(10000);       // rejected, past the cushion
-        } catch (InsufficientFundsException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        System.out.println("\n--- Every account in one registry ---");
-        accounts.put(acc1.getAccountNo(), acc1);
-        accounts.put(acc2.getAccountNo(), acc2);
-        accounts.put(1003, new SavingsAccount(1003, "Meera", 12000));
-        viewAll();
-
-        System.out.println("\n--- Interest report ---");
-        showInterest();
-
-        System.out.println("\n--- Saving and reloading from file ---");
-        saveToFile();
-        accounts.clear();
-        loadFromFile();
-        viewAll();
-
-        System.out.println("\n--- Registry lookup used by the console helpers ---");
-        Account found = accounts.get(1001);
-        if (found == null) {
-            System.out.println("No account with number 1001");
-        } else {
-            System.out.println("Found: " + found);
-            found.deposit(1500);
+                switch (choice) {
+                    case 1: openAccount();  break;
+                    case 2: viewAll();      break;
+                    case 3: deposit();      break;
+                    case 4: withdraw();     break;
+                    case 5: showInterest(); break;
+                    case 6: saveToFile();   break;
+                    case 7: loadFromFile(); break;
+                    case 8:
+                        System.out.println("Thank you!");
+                        return;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number.");
+            } catch (AccountNotFoundException | InsufficientFundsException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
     }
 
