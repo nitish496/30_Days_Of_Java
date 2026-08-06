@@ -28,6 +28,15 @@ abstract class Account {
     public abstract double calculateInterest();
     public abstract String getType();
 
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Amount must be positive.");
+            return;
+        }
+        balance += amount;
+        System.out.println("Deposited " + amount + ". New balance: " + balance);
+    }
+
     @Override
     public String toString() {
         return accountNo + " | " + holderName + " | " + getType() + " | " + balance;
@@ -88,5 +97,9 @@ public class Main {
         for (Account acc : new Account[] { acc1, acc2 }) {
             System.out.println(acc.getType() + " earns " + acc.calculateInterest());
         }
+
+        System.out.println("\n--- Depositing money ---");
+        acc1.deposit(5000);
+        acc2.deposit(-100);
     }
 }
