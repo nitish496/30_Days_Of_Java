@@ -158,6 +158,9 @@ public class Main {
         accounts.put(acc2.getAccountNo(), acc2);
         accounts.put(1003, new SavingsAccount(1003, "Meera", 12000));
         viewAll();
+
+        System.out.println("\n--- Interest report ---");
+        showInterest();
     }
 
     // ---- 2. View All ----
@@ -170,6 +173,18 @@ public class Main {
         System.out.println("---------------------------");
         for (Account acc : accounts.values()) {
             System.out.println(acc);
+        }
+    }
+
+    // ---- 5. Show Interest ----
+    static void showInterest() {
+        if (accounts.isEmpty()) {
+            System.out.println("No accounts yet.");
+            return;
+        }
+        // Same method call, different result per account type = POLYMORPHISM
+        for (Account acc : accounts.values()) {
+            System.out.println(acc.getHolderName() + " earns: " + acc.calculateInterest());
         }
     }
 }
