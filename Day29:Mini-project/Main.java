@@ -94,6 +94,17 @@ class StudentManager {
         students.remove(id);
         System.out.println("Deleted: " + s.getName());
     }
+
+    public void showTopper() {
+        if (students.isEmpty()) {
+            System.out.println("No students available.");
+            return;
+        }
+        Student topper = Collections.max(
+                students.values(),
+                Comparator.comparingInt(Student::getMarks));
+        System.out.println("Topper: " + topper.getName() + " with " + topper.getMarks() + " marks");
+    }
 }
 
 // ---- Main application ----
@@ -151,5 +162,8 @@ public class Main {
         } catch (StudentNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
         }
+
+        System.out.println("\n--- Finding the topper ---");
+        manager.showTopper();
     }
 }
