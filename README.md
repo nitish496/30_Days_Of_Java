@@ -6,7 +6,7 @@
 
 > **Master Java from scratch in 30 days through structured lessons, hands-on coding, detailed notes, real-world examples, interview questions, and practical mini projects.**
 
-🟧 **Java 21+** • 📅 **30 Days Challenge** • 🟢 **Status: In Progress** • 📄 **MIT License**
+🟧 **Java 21+** • 📅 **30 Days Challenge** • 🟢 **Status: Completed** • 📄 **MIT License**
 
 ### 📈 Course Progress
 
@@ -142,7 +142,7 @@ This repository is perfect for:
 | ✅ Day 27 | Java 8 Features | Completed |
 | ✅ Day 28 | JDBC | Completed |
 | ✅ Day 29 | Mini Project | Completed |
-| ⏳ Day 30 | Final Project | Planned |
+| ✅ Day 30 | Final Project | Completed |
 
 ---
 
