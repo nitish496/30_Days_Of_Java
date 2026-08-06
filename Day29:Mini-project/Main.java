@@ -35,6 +35,11 @@ class Student {
     public String toString() {
         return String.format("%-5d %-15s %-8d %-5s", id, name, marks, getGrade());
     }
+
+    // Format used when saving to file
+    public String toFileString() {
+        return id + "," + name + "," + marks;
+    }
 }
 
 // ---- Main application ----
@@ -47,5 +52,16 @@ public class Main {
         System.out.println("-----------------------------------");
         System.out.println(s1);
         System.out.println(s2);
+
+        System.out.println("\nGrade boundaries in action:");
+        System.out.println(new Student(3, "Meera", 45).getGrade());
+        System.out.println(new Student(4, "Kabir", 30).getGrade());
+
+        s2.setMarks(88);
+        System.out.println("\nAfter updating Aarav's marks -> " + s2);
+
+        System.out.println("\nCSV form used for file storage:");
+        System.out.println(s1.toFileString());
+        System.out.println(s2.toFileString());
     }
 }
