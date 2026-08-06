@@ -83,7 +83,7 @@ public class Main {
     // Program 8 - Method Returning a Value
     // =========================================
 
-    public static int addNumbers(int firstNumber, int secondNumber) {
+    public static int sumNumbers(int firstNumber, int secondNumber) {
 
         int sum = firstNumber + secondNumber;
 
@@ -178,7 +178,7 @@ public class Main {
         // Program 8 - Method Returning a Value
         // =========================================
 
-        int result = addNumbers(10, 20);
+        int result = sumNumbers(10, 20);
 
         System.out.println("Sum = " + result);
 
