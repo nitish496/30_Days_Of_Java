@@ -113,6 +113,9 @@ class CurrentAccount extends Account {
 // ---- MAIN APPLICATION ----
 public class Main {
 
+    // Collections (Day 24) - stores all accounts
+    static Map<Integer, Account> accounts = new LinkedHashMap<>();
+
     public static void main(String[] args) {
 
         Account acc1 = new SavingsAccount(1001, "Nitish", 25000);
@@ -148,6 +151,25 @@ public class Main {
             acc2.withdraw(10000);       // rejected, past the cushion
         } catch (InsufficientFundsException e) {
             System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println("\n--- Every account in one registry ---");
+        accounts.put(acc1.getAccountNo(), acc1);
+        accounts.put(acc2.getAccountNo(), acc2);
+        accounts.put(1003, new SavingsAccount(1003, "Meera", 12000));
+        viewAll();
+    }
+
+    // ---- 2. View All ----
+    static void viewAll() {
+        if (accounts.isEmpty()) {
+            System.out.println("No accounts yet.");
+            return;
+        }
+        System.out.println("ACC | NAME | TYPE | BALANCE");
+        System.out.println("---------------------------");
+        for (Account acc : accounts.values()) {
+            System.out.println(acc);
         }
     }
 }
