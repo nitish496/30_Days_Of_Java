@@ -234,4 +234,3 @@ System.out.println("isEmpty gives us: " + isEmpty.orElse("a default instead"));
 
 # 🚀 Next Day Preview: Day 28 – JDBC (Java Database Connectivity)
 We have mastered variables, OOP, Collections, Multithreading, and now Functional Programming. But our data still disappears when we close the app! Tomorrow, we learn **JDBC**! You will learn how to connect your Java applications directly to a massive MySQL Database, allowing you to save millions of records permanently. We are stepping into the world of Backend Engineering! 🗄️🔥
-```
