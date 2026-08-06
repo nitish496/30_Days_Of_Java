@@ -112,11 +112,11 @@ public class Main {
         try {
             if (age < 18) {
                 // Manually throwing an exception
-                throw new ArithmeticException("Age must be 18 or above.");
+                throw new IllegalArgumentException("Age must be 18 or above.");
             } else {
                 System.out.println("You are eligible.");
             }
-        } catch (ArithmeticException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Exception Caught: " + e.getMessage());
         } finally {
             System.out.println("Finally block has been executed.");
@@ -127,9 +127,9 @@ public class Main {
     // =========================================
     // Program 5 - The 'throws' keyword
     // =========================================
-    static void checkAge(int age) throws ArithmeticException {
+    static void checkAge(int age) throws IllegalArgumentException {
         if (age < 18) {
-            throw new ArithmeticException("Age must be 18 or above.");
+            throw new IllegalArgumentException("Age must be 18 or above.");
         }
         System.out.println("You are eligible.");
     }
@@ -238,7 +238,7 @@ public class Main {
         System.out.println("===== Program 5: The 'throws' keyword =====");
         try {
             checkAge(19); // Try passing 16 to see the exception
-        } catch (ArithmeticException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Exception Caught: " + e.getMessage());
         }
         System.out.println("Program ended.\n");
@@ -269,4 +269,3 @@ Next Topic:
 Multithreading
 ==========================================
 */
-```
