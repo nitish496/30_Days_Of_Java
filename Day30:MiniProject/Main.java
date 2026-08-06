@@ -115,6 +115,7 @@ public class Main {
 
     // Collections (Day 24) - stores all accounts
     static Map<Integer, Account> accounts = new LinkedHashMap<>();
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
@@ -167,6 +168,43 @@ public class Main {
         accounts.clear();
         loadFromFile();
         viewAll();
+
+        System.out.println("\n--- Registry lookup used by the console helpers ---");
+        Account found = accounts.get(1001);
+        if (found == null) {
+            System.out.println("No account with number 1001");
+        } else {
+            System.out.println("Found: " + found);
+            found.deposit(1500);
+        }
+    }
+
+    // ---- 1. Open Account ----
+    static void openAccount() {
+        System.out.print("Account No: ");
+        int accNo = Integer.parseInt(sc.nextLine());
+
+        if (accounts.containsKey(accNo)) {
+            System.out.println("This account number already exists.");
+            return;
+        }
+
+        System.out.print("Name: ");
+        String name = sc.nextLine();
+        System.out.print("Opening Balance: ");
+        double balance = Double.parseDouble(sc.nextLine());
+        System.out.print("Type (1 = Savings, 2 = Current): ");
+        int type = Integer.parseInt(sc.nextLine());
+
+        Account acc;
+        if (type == 1) {
+            acc = new SavingsAccount(accNo, name, balance);
+        } else {
+            acc = new CurrentAccount(accNo, name, balance);
+        }
+
+        accounts.put(accNo, acc);
+        System.out.println(acc.getType() + " account created for " + name);
     }
 
     // ---- 2. View All ----
@@ -180,6 +218,31 @@ public class Main {
         for (Account acc : accounts.values()) {
             System.out.println(acc);
         }
+    }
+
+    // ---- Helper: find an account or throw ----
+    static Account findAccount() throws AccountNotFoundException {
+        System.out.print("Account No: ");
+        int accNo = Integer.parseInt(sc.nextLine());
+        Account acc = accounts.get(accNo);
+        if (acc == null) {
+            throw new AccountNotFoundException("No account with number " + accNo);
+        }
+        return acc;
+    }
+
+    // ---- 3. Deposit ----
+    static void deposit() throws AccountNotFoundException {
+        Account acc = findAccount();
+        System.out.print("Amount: ");
+        acc.deposit(Double.parseDouble(sc.nextLine()));
+    }
+
+    // ---- 4. Withdraw ----
+    static void withdraw() throws AccountNotFoundException, InsufficientFundsException {
+        Account acc = findAccount();
+        System.out.print("Amount: ");
+        acc.withdraw(Double.parseDouble(sc.nextLine()));
     }
 
     // ---- 5. Show Interest ----
