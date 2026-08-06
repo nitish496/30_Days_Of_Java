@@ -62,6 +62,18 @@ class StudentManager {
         students.put(s.getId(), s);
         System.out.println("Student added successfully.");
     }
+
+    public void viewAll() {
+        if (students.isEmpty()) {
+            System.out.println("No students to display.");
+            return;
+        }
+        System.out.printf("%-5s %-15s %-8s %-5s%n", "ID", "NAME", "MARKS", "GRADE");
+        System.out.println("-----------------------------------");
+        for (Student s : students.values()) {
+            System.out.println(s);
+        }
+    }
 }
 
 // ---- Main application ----
@@ -92,5 +104,8 @@ public class Main {
         manager.addStudent(s2);
         manager.addStudent(new Student(3, "Meera", 45));
         manager.addStudent(new Student(1, "Duplicate Id", 50));
+
+        System.out.println("\n--- All students on record ---");
+        manager.viewAll();
     }
 }
