@@ -142,65 +142,82 @@ class StudentManager {
 // ---- Main application ----
 public class Main {
     public static void main(String[] args) {
-        Student s1 = new Student(1, "Nitish", 92);
-        Student s2 = new Student(2, "Aarav", 67);
-
-        System.out.printf("%-5s %-15s %-8s %-5s%n", "ID", "NAME", "MARKS", "GRADE");
-        System.out.println("-----------------------------------");
-        System.out.println(s1);
-        System.out.println(s2);
-
-        System.out.println("\nGrade boundaries in action:");
-        System.out.println(new Student(3, "Meera", 45).getGrade());
-        System.out.println(new Student(4, "Kabir", 30).getGrade());
-
-        s2.setMarks(88);
-        System.out.println("\nAfter updating Aarav's marks -> " + s2);
-
-        System.out.println("\nCSV form used for file storage:");
-        System.out.println(s1.toFileString());
-        System.out.println(s2.toFileString());
-
-        System.out.println("\n--- Storing students in the manager ---");
+        Scanner sc = new Scanner(System.in);
         StudentManager manager = new StudentManager();
-        manager.addStudent(s1);
-        manager.addStudent(s2);
-        manager.addStudent(new Student(3, "Meera", 45));
-        manager.addStudent(new Student(1, "Duplicate Id", 50));
 
-        System.out.println("\n--- All students on record ---");
-        manager.viewAll();
+        while (true) {
+            System.out.println("\n===== STUDENT MANAGEMENT SYSTEM =====");
+            System.out.println("1. Add Student");
+            System.out.println("2. View All Students");
+            System.out.println("3. Search Student");
+            System.out.println("4. Update Marks");
+            System.out.println("5. Delete Student");
+            System.out.println("6. Show Topper");
+            System.out.println("7. Save to File");
+            System.out.println("8. Load from File");
+            System.out.println("9. Exit");
+            System.out.print("Enter choice: ");
 
-        System.out.println("\n--- Searching by ID ---");
-        try {
-            System.out.println(manager.search(2));
-            System.out.println(manager.search(99));
-        } catch (StudentNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
+            try {
+                int choice = Integer.parseInt(sc.nextLine());
+
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter ID: ");
+                        int id = Integer.parseInt(sc.nextLine());
+                        System.out.print("Enter Name: ");
+                        String name = sc.nextLine();
+                        System.out.print("Enter Marks: ");
+                        int marks = Integer.parseInt(sc.nextLine());
+                        manager.addStudent(new Student(id, name, marks));
+                        break;
+
+                    case 2:
+                        manager.viewAll();
+                        break;
+
+                    case 3:
+                        System.out.print("Enter ID to search: ");
+                        System.out.println(manager.search(Integer.parseInt(sc.nextLine())));
+                        break;
+
+                    case 4:
+                        System.out.print("Enter ID: ");
+                        int uid = Integer.parseInt(sc.nextLine());
+                        System.out.print("Enter new marks: ");
+                        manager.updateMarks(uid, Integer.parseInt(sc.nextLine()));
+                        break;
+
+                    case 5:
+                        System.out.print("Enter ID to delete: ");
+                        manager.delete(Integer.parseInt(sc.nextLine()));
+                        break;
+
+                    case 6:
+                        manager.showTopper();
+                        break;
+
+                    case 7:
+                        manager.saveToFile();
+                        break;
+
+                    case 8:
+                        manager.loadFromFile();
+                        break;
+
+                    case 9:
+                        System.out.println("Exiting... Goodbye!");
+                        sc.close();
+                        return;
+
+                    default:
+                        System.out.println("Invalid choice. Try 1-9.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Please enter a valid number.");
+            } catch (StudentNotFoundException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         }
-
-        System.out.println("\n--- Updating marks ---");
-        try {
-            manager.updateMarks(3, 78);
-            manager.viewAll();
-        } catch (StudentNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        System.out.println("\n--- Deleting a record ---");
-        try {
-            manager.delete(2);
-            manager.viewAll();
-        } catch (StudentNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        System.out.println("\n--- Finding the topper ---");
-        manager.showTopper();
-
-        System.out.println("\n--- Saving and reloading from file ---");
-        manager.saveToFile();
-        manager.loadFromFile();
-        manager.viewAll();
     }
 }
