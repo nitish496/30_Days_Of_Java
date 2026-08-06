@@ -105,6 +105,38 @@ class StudentManager {
                 Comparator.comparingInt(Student::getMarks));
         System.out.println("Topper: " + topper.getName() + " with " + topper.getMarks() + " marks");
     }
+
+    public void saveToFile() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
+            for (Student s : students.values()) {
+                writer.write(s.toFileString());
+                writer.newLine();
+            }
+            System.out.println("Data saved to " + FILE_NAME);
+        } catch (IOException e) {
+            System.out.println("Error saving file: " + e.getMessage());
+        }
+    }
+
+    public void loadFromFile() {
+        File file = new File(FILE_NAME);
+        if (!file.exists()) {
+            System.out.println("No saved data found.");
+            return;
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+            String line;
+            students.clear();
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                students.put(Integer.parseInt(parts[0]),
+                        new Student(Integer.parseInt(parts[0]), parts[1], Integer.parseInt(parts[2])));
+            }
+            System.out.println("Data loaded from " + FILE_NAME);
+        } catch (IOException e) {
+            System.out.println("Error loading file: " + e.getMessage());
+        }
+    }
 }
 
 // ---- Main application ----
@@ -165,5 +197,10 @@ public class Main {
 
         System.out.println("\n--- Finding the topper ---");
         manager.showTopper();
+
+        System.out.println("\n--- Saving and reloading from file ---");
+        manager.saveToFile();
+        manager.loadFromFile();
+        manager.viewAll();
     }
 }
