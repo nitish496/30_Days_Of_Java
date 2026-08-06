@@ -161,6 +161,12 @@ public class Main {
 
         System.out.println("\n--- Interest report ---");
         showInterest();
+
+        System.out.println("\n--- Saving and reloading from file ---");
+        saveToFile();
+        accounts.clear();
+        loadFromFile();
+        viewAll();
     }
 
     // ---- 2. View All ----
@@ -185,6 +191,52 @@ public class Main {
         // Same method call, different result per account type = POLYMORPHISM
         for (Account acc : accounts.values()) {
             System.out.println(acc.getHolderName() + " earns: " + acc.calculateInterest());
+        }
+    }
+
+    // ---- 6. Save to File (Day 23) ----
+    static void saveToFile() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("accounts.txt"))) {
+            for (Account acc : accounts.values()) {
+                writer.write(acc.getType() + "," + acc.getAccountNo() + ","
+                           + acc.getHolderName() + "," + acc.getBalance());
+                writer.newLine();
+            }
+            System.out.println("Saved to accounts.txt");
+        } catch (IOException e) {
+            System.out.println("Could not save: " + e.getMessage());
+        }
+    }
+
+    // ---- 7. Load from File (Day 23) ----
+    static void loadFromFile() {
+        File file = new File("accounts.txt");
+        if (!file.exists()) {
+            System.out.println("No saved file found.");
+            return;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("accounts.txt"))) {
+            accounts.clear();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                String type = parts[0];
+                int accNo = Integer.parseInt(parts[1]);
+                String name = parts[2];
+                double balance = Double.parseDouble(parts[3]);
+
+                Account acc;
+                if (type.equals("SAVINGS")) {
+                    acc = new SavingsAccount(accNo, name, balance);
+                } else {
+                    acc = new CurrentAccount(accNo, name, balance);
+                }
+                accounts.put(accNo, acc);
+            }
+            System.out.println("Loaded " + accounts.size() + " accounts.");
+        } catch (IOException e) {
+            System.out.println("Could not load: " + e.getMessage());
         }
     }
 }
