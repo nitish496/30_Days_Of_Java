@@ -97,6 +97,17 @@ class CurrentAccount extends Account {
     public String getType() {
         return "CURRENT";
     }
+
+    // POLYMORPHISM (Day 19)
+    // Same method name, different rule: current accounts can go 5000 negative
+    @Override
+    public void withdraw(double amount) throws InsufficientFundsException {
+        if (amount > balance + 5000) {
+            throw new InsufficientFundsException("Overdraft limit crossed.");
+        }
+        balance -= amount;
+        System.out.println("Withdrew " + amount + ". New balance: " + balance);
+    }
 }
 
 // ---- MAIN APPLICATION ----
@@ -127,6 +138,14 @@ public class Main {
         try {
             acc1.withdraw(2000);
             acc1.withdraw(999999);
+        } catch (InsufficientFundsException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println("\n--- Current account overdraft ---");
+        try {
+            acc2.withdraw(42000);       // allowed, dips into the 5000 cushion
+            acc2.withdraw(10000);       // rejected, past the cushion
         } catch (InsufficientFundsException e) {
             System.out.println("Error: " + e.getMessage());
         }
