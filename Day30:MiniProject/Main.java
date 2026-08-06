@@ -52,6 +52,23 @@ class SavingsAccount extends Account {
     }
 }
 
+class CurrentAccount extends Account {
+
+    public CurrentAccount(int accountNo, String name, double balance) {
+        super(accountNo, name, balance);
+    }
+
+    @Override
+    public double calculateInterest() {
+        return 0;                   // current account earns nothing
+    }
+
+    @Override
+    public String getType() {
+        return "CURRENT";
+    }
+}
+
 // ---- MAIN APPLICATION ----
 public class Main {
 
@@ -63,5 +80,13 @@ public class Main {
         System.out.println("---------------------------");
         System.out.println(acc1);
         System.out.println("Interest on this account: " + acc1.calculateInterest());
+
+        Account acc2 = new CurrentAccount(1002, "Aarav", 40000);
+        System.out.println(acc2);
+
+        System.out.println("\nOne Account reference, two different rules:");
+        for (Account acc : new Account[] { acc1, acc2 }) {
+            System.out.println(acc.getType() + " earns " + acc.calculateInterest());
+        }
     }
 }
