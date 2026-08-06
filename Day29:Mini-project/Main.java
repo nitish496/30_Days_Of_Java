@@ -74,6 +74,14 @@ class StudentManager {
             System.out.println(s);
         }
     }
+
+    public Student search(int id) throws StudentNotFoundException {
+        Student s = students.get(id);
+        if (s == null) {
+            throw new StudentNotFoundException("No student found with ID: " + id);
+        }
+        return s;
+    }
 }
 
 // ---- Main application ----
@@ -107,5 +115,13 @@ public class Main {
 
         System.out.println("\n--- All students on record ---");
         manager.viewAll();
+
+        System.out.println("\n--- Searching by ID ---");
+        try {
+            System.out.println(manager.search(2));
+            System.out.println(manager.search(99));
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }
