@@ -82,6 +82,12 @@ class StudentManager {
         }
         return s;
     }
+
+    public void updateMarks(int id, int newMarks) throws StudentNotFoundException {
+        Student s = search(id);
+        s.setMarks(newMarks);
+        System.out.println("Marks updated for " + s.getName());
+    }
 }
 
 // ---- Main application ----
@@ -120,6 +126,14 @@ public class Main {
         try {
             System.out.println(manager.search(2));
             System.out.println(manager.search(99));
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println("\n--- Updating marks ---");
+        try {
+            manager.updateMarks(3, 78);
+            manager.viewAll();
         } catch (StudentNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
         }
