@@ -88,6 +88,12 @@ class StudentManager {
         s.setMarks(newMarks);
         System.out.println("Marks updated for " + s.getName());
     }
+
+    public void delete(int id) throws StudentNotFoundException {
+        Student s = search(id);
+        students.remove(id);
+        System.out.println("Deleted: " + s.getName());
+    }
 }
 
 // ---- Main application ----
@@ -133,6 +139,14 @@ public class Main {
         System.out.println("\n--- Updating marks ---");
         try {
             manager.updateMarks(3, 78);
+            manager.viewAll();
+        } catch (StudentNotFoundException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println("\n--- Deleting a record ---");
+        try {
+            manager.delete(2);
             manager.viewAll();
         } catch (StudentNotFoundException e) {
             System.out.println("Error: " + e.getMessage());
